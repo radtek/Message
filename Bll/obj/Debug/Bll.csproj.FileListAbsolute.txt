@@ -1,0 +1,12 @@
+D:\vs\WindowsFormsApplication1\Bll\bin\Debug\Bll.dll
+D:\vs\WindowsFormsApplication1\Bll\bin\Debug\Bll.pdb
+D:\vs\WindowsFormsApplication1\Bll\bin\Debug\Dal.dll
+D:\vs\WindowsFormsApplication1\Bll\bin\Debug\Model.dll
+D:\vs\WindowsFormsApplication1\Bll\bin\Debug\MySql.Data.dll
+D:\vs\WindowsFormsApplication1\Bll\bin\Debug\Commmon.dll
+D:\vs\WindowsFormsApplication1\Bll\bin\Debug\Dal.pdb
+D:\vs\WindowsFormsApplication1\Bll\bin\Debug\Model.pdb
+D:\vs\WindowsFormsApplication1\Bll\bin\Debug\Commmon.pdb
+D:\vs\WindowsFormsApplication1\Bll\obj\Debug\Bll.csprojResolveAssemblyReference.cache
+D:\vs\WindowsFormsApplication1\Bll\obj\Debug\Bll.dll
+D:\vs\WindowsFormsApplication1\Bll\obj\Debug\Bll.pdb
