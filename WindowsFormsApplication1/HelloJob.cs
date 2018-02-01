@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         {
             //MessageBox.Show("dffff");
 
-            //SendMsg.Send();
+            SendMsg.Send();
 
         }
 

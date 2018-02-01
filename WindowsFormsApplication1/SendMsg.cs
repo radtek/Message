@@ -26,7 +26,10 @@ namespace WindowsFormsApplication1
                 foreach (DataRow dr in dt.Rows)
                 {
                     patient_id = dr["Patient_id"].ToString();
-                    patient = dr["Patient_name"].ToString();
+                    //patient_id = "0012528999";
+                    //patient ="管爱红之子20180131";
+                    string s = dr["Patient_name"].ToString();
+                    patient = s.Length>5?s.Substring(0,5):s;
                     Item = dr["Item_name"].ToString();
                     score = dr["Current_result"].ToString();
                     limit = dr["Limit_ref"].ToString();
@@ -41,8 +44,8 @@ namespace WindowsFormsApplication1
                                 
                                 foreach (DataRow dr2 in dt2.Rows)
                                 {
-                                    //phone = dr2["EmpMobileNum"].ToString();
-                                    phone = "15261277153";
+                                    phone = dr2["EmpMobileNum"].ToString();
+                                    //phone = "15261277153";
                                     doctor = dr2["EMPNAME"].ToString();
                                     //string sms = "5272718510496|" + doctor + "|" + patient + "|" + "在" + Item + "项目上分值为" + score;
                                     //string strSql = "insert into sms_outbox (sismsid, extcode, destaddr, messagecontent, reqdeliveryreport,msgfmt, sendmethod, requesttime, applicationid)VALUES('" + id + "', '','" + phone + "', '" + sms + "',1,15,2, '" + _add_time + "', 'APP128')";
@@ -68,7 +71,7 @@ namespace WindowsFormsApplication1
                                             model.applicationid = "APP128";
                                             if (bll.Add(model))
                                             {
-                                                return ++i;
+                                                 ++i;
                                             }
                                         }
                                         

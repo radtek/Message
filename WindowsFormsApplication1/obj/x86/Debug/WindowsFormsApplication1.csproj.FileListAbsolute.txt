@@ -24,4 +24,3 @@ D:\vs\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Dal.dll
 D:\vs\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Bll.pdb
 D:\vs\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Model.pdb
 D:\vs\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Dal.pdb
-D:\vs\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
