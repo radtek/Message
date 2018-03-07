@@ -71,6 +71,7 @@ namespace WindowsFormsApplication1
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 Model.BIF01022 model = new Model.BIF01022();
                                                 model.Patient_id = patient_id;
                                                 model.Item_name = Item;
@@ -78,6 +79,9 @@ namespace WindowsFormsApplication1
                                                 model.EmpMobileNum = phone;
                                                 model.State = 1;
                                                 bll2.Update(model);
+=======
+                                                 ++i;
+>>>>>>> 66ccdcc4874453ee0178be9d2f23e6d3a62b10a5
 =======
                                                  ++i;
 >>>>>>> 66ccdcc4874453ee0178be9d2f23e6d3a62b10a5
