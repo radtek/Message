@@ -58,27 +58,66 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Bll.Sms_outbox bll = new Bll.Sms_outbox();
+            Bll.BIF01022 bll2 = new Bll.BIF01022();
+            DateTime beginTime = Convert.ToDateTime(bll.getSentSms());
+            DateTime endTime = beginTime.AddMinutes(5); 
+            bool s = bll.ExistMinute("13951190130", "2018-03-01 17:23:55", "2018-03-01 17:28:55");
+            if (s == true)
+            {
+                //Model.BIF01022 model = new Model.BIF01022();
+                //model.Patient_id = "1";
+                //model.Item_name = "3";
+                //model.Current_result = "4";
+                //model.EmpMobileNum = "13951190130";
+                //model.State = 1;
+                //if (bll2.Update(model))
+                //{
+                //    label1.Text = "更新成功";
+                //}
 
-            
-            WebReference.Service1 _client = new WebReference.Service1();
-            DataSet ds_report = _client.GetReport();
-            if (ds_report != null && ds_report.Tables[0].Rows.Count != 0)
-            {
-                int i = SendMsg.Send();
-                if (i > 0)
+                string Patient_id = "1";
+                string Item_name = "3";
+                string Current_result = "4";
+                string EmpMobileNum = "13951190130";
+                if (bll2.Exists(EmpMobileNum, Item_name, Current_result, Patient_id,1))
                 {
-                    label1.Text = i+"条发送成功！";
+                    label1.Text = "下次不用发了";
                 }
-                else
-                {
-                    label1.Text = "发送失败！";
-                }
+
             }
-            else
-            {
-                label1.Text = "暂无数据";
-            }
-            
+            //Model.BIF01022 model = new Model.BIF01022();
+            //model.Patient_id = "12";
+            //model.Patient_name="张三";
+            //model.Item_name = "项目";
+            //model.Current_result = "99";
+            //model.EmpMobileNum = "15261277153";
+            //model.EMPNAME = "医生";
+            //model.State = 0;
+            //model.Add_time = "2018-03-05";
+            //if (bll2.Add(model))
+            //{
+            //    label1.Text = "success";
+            //}
+            //WebReference.Service1 _client = new WebReference.Service1();
+            //DataSet ds_report = _client.GetReport();
+            //if (ds_report != null && ds_report.Tables[0].Rows.Count != 0)
+            //{
+            //    int i = SendMsg.Send();
+            //    if (i > 0)
+            //    {
+            //        label1.Text = i+"条发送成功！";
+            //    }
+            //    else
+            //    {
+            //        label1.Text = "发送失败！";
+            //    }
+            //}
+            //else
+            //{
+            //    label1.Text = "暂无数据";
+            //}
+
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)

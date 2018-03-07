@@ -49,5 +49,17 @@ namespace Dal
 
             return DbHelperMySQL.Exists(strSql.ToString(), parameters);
         }
+        public string getSentSms()
+        {
+            string sql = "select requesttime from sms_sent order by requesttime DESC limit 1 ";
+            return DbHelperMySQL.GetSingle(sql) + "";
+        }
+        
+        public bool ExistMinute(string phone,string beginTime,string endTime)
+        {
+            string sql = "select count(1) from sms_inbox where extcode='01' and sourceaddr='"+phone+ "' and receivetime between '" + beginTime+ "' and '" + endTime + "' ";
+            return DbHelperMySQL.Exists(sql);
+        }
+
     }
 }

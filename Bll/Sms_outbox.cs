@@ -14,7 +14,15 @@ namespace Bll
         }
         public bool Exists(string extcode, string phone)
         {
-            return dal.Exists(extcode,phone);
+            return dal.Exists(extcode, phone);
+        }
+        public string getSentSms()
+        {
+            return dal.getSentSms();
+        }
+        public bool ExistMinute(string phone, string beginTime, string endTime)
+        {
+            return dal.ExistMinute(phone, beginTime, endTime);
         }
     }
 }
