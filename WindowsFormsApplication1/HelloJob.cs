@@ -14,9 +14,9 @@ namespace WindowsFormsApplication1
     {
         public void Execute(IJobExecutionContext context)
         {
-           // MessageBox.Show("dffff");
+            //MessageBox.Show("dffff");
 
-           // SendMsg.Send();
+           SendMsg.Send();
 
         }
 

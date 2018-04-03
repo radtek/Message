@@ -9,7 +9,80 @@ namespace WindowsFormsApplication1
 {
     public class SendMsg
     {
-        
+        public static int SendJob()
+        {
+            Bll.Sms_outbox bll = new Bll.Sms_outbox();
+            DbHelperSQLP db = new DbHelperSQLP(PubConstant.GetConnectionString("ConnectionString2"));
+            //string sql = "select B.EMDID, BuildingName,orgname,equipmentname,TemperatureValue,HumidityValue,Phone,MonitoringTime"
+            //            + " from MonitorITEM A"
+            //            + " INNER join EMDMAIN B  on A.EMDID = B.EMDID AND A.NODEIndex = B.NODEIndex"
+            //            + " where(TemperatureValue < 2 or TemperatureValue > 8)"
+            //            + " and MonitoringTime between convert(char(19), DATEADD(hour, -1, GETDATE()), 120) and CONVERT(varchar, GETDATE(), 120)";
+
+            string sql = "select B.EMDID, BuildingName,orgname,equipmentname,TemperatureValue,HumidityValue,Phone,MonitoringTime,NEXTTIME,B.NODEIndex"
+                        + " from MonitorITEM A"
+                        + " INNER join EMDMAIN B  on A.EMDID = B.EMDID AND A.NODEIndex = B.NODEIndex"
+                        + " where(TemperatureValue < 2 or TemperatureValue > 8) and NEXTTIME< GETDATE()"
+                        + " and MonitoringTime between convert(char(19), DATEADD(hour, -1, GETDATE()), 120) and CONVERT(varchar, GETDATE(), 120)";
+            DataSet ds_report = db.Query(sql);
+            int i = 0, NODEIndex = 0;
+            DataTable dt = null;
+            string BuildingName = "", orgname = "", equipmentname = "", TemperatureValue = "", HumidityValue = "", Phone = "", EMDID="" , NEXTTIME="";
+            string messageID2 = System.Configuration.ConfigurationManager.AppSettings["MessageID2"].ToString();
+            if (ds_report != null && ds_report.Tables[0].Rows.Count != 0)
+            {
+                dt = ds_report.Tables[0];
+                foreach (DataRow dr in dt.Rows)
+                {
+                    BuildingName = dr["BuildingName"].ToString();
+                    orgname = dr["orgname"].ToString();
+                    equipmentname = dr["equipmentname"].ToString();
+                    TemperatureValue = dr["TemperatureValue"].ToString();
+                    HumidityValue = dr["HumidityValue"].ToString();
+                    Phone = dr["Phone"].ToString();
+                    //Phone = "15261277153";
+
+                    EMDID= dr["EMDID"].ToString();
+                    NODEIndex = Convert.ToInt32(dr["NODEIndex"].ToString());
+                    NEXTTIME= dr["NEXTTIME"].ToString();
+                    Guid guid = Guid.NewGuid();
+                    string id = guid.ToString();
+                    string _add_time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    if (!string.IsNullOrEmpty(BuildingName) && !string.IsNullOrEmpty(orgname) && !string.IsNullOrEmpty(equipmentname) && !string.IsNullOrEmpty(TemperatureValue) && !string.IsNullOrEmpty(HumidityValue) && !string.IsNullOrEmpty(Phone))
+                    {
+                        if (!bll.Exists("01", Phone))
+                        {
+                            Model.Sms_outbox model = new Model.Sms_outbox();
+                            model.sismsid = id;
+                            model.extcode = "01";
+                            model.destaddr = Phone;
+                            model.messagecontent = messageID2 + "|" + BuildingName + "|" + orgname + "|" + equipmentname + "|" + TemperatureValue + "|" + HumidityValue;
+                            model.reqdeliveryreport = 1;
+                            model.msgfmt = 15;
+                            model.sendmethod = 2;
+                            model.requesttime = _add_time;
+                            model.applicationid = "APP128";
+                            if (bll.Add(model))
+                            {
+                                string date = Convert.ToDateTime(NEXTTIME).AddHours(1).ToString("yyyy-MM-dd HH:mm:ss");
+                                string sql2 = "update A set NEXTTIME='"+ date + "' from MonitorITEM A "
+                                            + " INNER join EMDMAIN B  on A.EMDID = B.EMDID AND A.NODEIndex = B.NODEIndex"
+                                            + " where(TemperatureValue < 2 or TemperatureValue > 8) and NEXTTIME< GETDATE()"
+                                            + " and MonitoringTime between convert(char(19), DATEADD(hour, -1, GETDATE()), 120) and CONVERT(varchar, GETDATE(), 120) and B.EMDID = '"+ EMDID + "' and B.NODEIndex = "+ NODEIndex + "";
+                                db.ExecuteSql(sql2);
+                                //return i++;
+                                i++;
+                            }
+
+                        }
+
+
+                    }
+                }
+            }
+
+            return i;
+        }
         public static int Send()
         {
             Bll.Sms_outbox bll = new Bll.Sms_outbox();
@@ -45,8 +118,8 @@ namespace WindowsFormsApplication1
                                 
                                 foreach (DataRow dr2 in dt2.Rows)
                                 {
-                                    //phone = dr2["EmpMobileNum"].ToString();
-                                    phone = "15261277153";
+                                    phone = dr2["EmpMobileNum"].ToString();
+                                    //phone = "15261277153";
                                     doctor = dr2["EMPNAME"].ToString();
                                     //string sms = "5272718510496|" + doctor + "|" + patient + "|" + "在" + Item + "项目上分值为" + score;
                                     //string strSql = "insert into sms_outbox (sismsid, extcode, destaddr, messagecontent, reqdeliveryreport,msgfmt, sendmethod, requesttime, applicationid)VALUES('" + id + "', '','" + phone + "', '" + sms + "',1,15,2, '" + _add_time + "', 'APP128')";
@@ -72,7 +145,8 @@ namespace WindowsFormsApplication1
                                             model.applicationid = "APP128";
                                             if (bll.Add(model))
                                             {
-                                                return i++;
+                                                //return i++;
+                                                i++;
                                             }
 
                                         }
