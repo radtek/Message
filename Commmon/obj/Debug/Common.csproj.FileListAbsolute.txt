@@ -3,4 +3,3 @@ D:\vs\WindowsFormsApplication1\Commmon\bin\Debug\Commmon.pdb
 D:\vs\WindowsFormsApplication1\Commmon\bin\Debug\MySql.Data.dll
 D:\vs\WindowsFormsApplication1\Commmon\obj\Debug\Commmon.dll
 D:\vs\WindowsFormsApplication1\Commmon\obj\Debug\Commmon.pdb
-D:\vs\WindowsFormsApplication1\Commmon\obj\Debug\Common.csprojResolveAssemblyReference.cache

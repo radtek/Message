@@ -37,6 +37,16 @@ namespace WindowsFormsApplication1
                 x.SetDisplayName("Stuff2");                       //8
                 x.SetServiceName("Stuff2");                       //9
             });
+
+            HostFactory.Run(x =>                                 //1
+            {
+                x.Service<HelloJob3>();
+                x.RunAsLocalSystem();                            //6
+
+                x.SetDescription("Sample3 Topshelf Host");        //7
+                x.SetDisplayName("Stuff3");                       //8
+                x.SetServiceName("Stuff3");                       //9
+            });
             InitializeComponent();
         }
 
@@ -44,6 +54,7 @@ namespace WindowsFormsApplication1
         {
             int second =Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second"]);
             int second2 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second2"]);
+            int second3 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second3"]);
             //从工厂中获取一个调度器实例化
             IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
 
@@ -56,6 +67,9 @@ namespace WindowsFormsApplication1
                 .Build();
             IJobDetail job2 = JobBuilder.Create<HelloJob2>()  //创建一个作业
                 .WithIdentity("作业名称2", "作业组2")
+                .Build();
+            IJobDetail job3 = JobBuilder.Create<HelloJob3>()  //创建一个作业
+                .WithIdentity("作业名称3", "作业组3")
                 .Build();
 
             ITrigger trigger1 = TriggerBuilder.Create()
@@ -72,9 +86,17 @@ namespace WindowsFormsApplication1
                                             .WithIntervalInSeconds(second2)
                                             .RepeatForever())              //不间断重复执行
                                         .Build();
+            ITrigger trigger3 = TriggerBuilder.Create()
+                                        .WithIdentity("触发器名称3", "触发器组3")
+                                        .StartNow()                        //现在开始
+                                        .WithSimpleSchedule(x => x         //触发时间，5秒一次。
+                                            .WithIntervalInSeconds(second3)
+                                            .RepeatForever())              //不间断重复执行
+                                        .Build();
 
             scheduler.ScheduleJob(job1, trigger1);      //把作业，触发器加入调度器。
             scheduler.ScheduleJob(job2, trigger2);
+            scheduler.ScheduleJob(job3, trigger3);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -144,7 +166,7 @@ namespace WindowsFormsApplication1
             //{
             //    label1.Text = "暂无数据";
             //}
-
+            label1.Text = SendMsg.SendPACS()+"";
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)

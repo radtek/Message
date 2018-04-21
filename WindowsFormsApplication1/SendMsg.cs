@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using Commmon;
+using System.Text.RegularExpressions;
 
 namespace WindowsFormsApplication1
 {
@@ -243,5 +244,211 @@ namespace WindowsFormsApplication1
             return i;
         }
 
+
+        public static int SendPACS()
+        {
+            Bll.Sms_outbox bll = new Bll.Sms_outbox();
+            Bll.BIF01022 bll2 = new Bll.BIF01022();
+            int i = 0;
+            
+            DataTable dt = null;
+            DataTable dt2 = null;
+            string _time = DateTime.Now.ToString("yyyy-MM-dd");
+            //DataSet ds_report = _client.GetReport();
+            string sql = "select patientID,patientName,birthDate,inspect,reportDoc,ApplyTypeID from BIF01021 where reportDate >= '"+ _time + " 00:00:00' and reportDate<='" + _time + " 23:59:59'";
+            DataSet ds_report = DbHelperSQL.Query(sql);
+            string patientID = "", birthDate = "", inspect = "无", patientName = "", reportDoc = "", ApplyTypeID = "",inspect_Doc="",report_Doc="", inspect_phone="", report_phone = "", report_Name = "";
+            string messageID = System.Configuration.ConfigurationManager.AppSettings["MessageID_inspect"].ToString();
+
+
+            if (ds_report != null && ds_report.Tables[0].Rows.Count != 0)
+            {
+                dt = ds_report.Tables[0];
+                foreach (DataRow dr in dt.Rows)
+                {
+                    patientID = dr["patientID"].ToString();
+                    string s = dr["inspect"].ToString();
+                    foreach (Match match in new Regex(@"[\u4e00-\u9fa5]+", RegexOptions.Singleline).Matches(s))
+                    {
+                        s = match.ToString();
+                    }
+                    inspect = s.Length > 20 ? s.Substring(0, 20) : s;
+                    patientName = dr["patientName"].ToString();
+                    reportDoc = dr["reportDoc"].ToString();
+                    string[] username = reportDoc.Split(',');
+                    if (username.Length == 2)
+                    {
+                        inspect_Doc = username[0];
+                        report_Doc = username[1];
+                    }
+                    else
+                    {
+                        inspect_Doc = reportDoc;
+                    }
+                    ApplyTypeID = dr["ApplyTypeID"].ToString();
+                    string[] typeID = ApplyTypeID.Split('-');
+                    if (typeID.Length == 2)
+                    {
+                        ApplyTypeID = typeID[1];
+                    }
+                    birthDate = dr["birthDate"].ToString();
+                    if (!String.IsNullOrEmpty(patientID) && !String.IsNullOrEmpty(inspect) && !String.IsNullOrEmpty(patientName) && !String.IsNullOrEmpty(birthDate) && !String.IsNullOrEmpty(ApplyTypeID))
+                    {
+                        inspect_phone = getPhone(inspect_Doc);//GetDoctorPhone
+                        report_Doc = (inspect_phone == report_Doc) ? "" : report_Doc;
+                        report_phone = getPhone(report_Doc);
+                        report_Name = getName(report_Doc);
+                        //inspect_phone = "15261277153";
+                        //report_Name = "吴晓磊";
+                        //report_phone = "18936979026";
+                        Guid guid = Guid.NewGuid();
+                        string id = guid.ToString();
+                        string _add_time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        
+                        if (!String.IsNullOrEmpty(inspect_phone))
+                        {
+                            string nowTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                            DateTime beginTime = Convert.ToDateTime(nowTime).AddMinutes(-15);
+                            bool s1 = bll.ExistMinute(inspect_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                            bool hasValue = bll2.Exists(inspect_phone, inspect, "", patientID, 0);
+                            if (s1 == true)//十五分钟之内
+                            {
+                                if (hasValue)//存在
+                                {
+                                    Model.BIF01022 model = new Model.BIF01022();
+                                    model.Patient_id = patientID;
+                                    model.Item_name = inspect;
+                                    model.Current_result = "";
+                                    model.EmpMobileNum = inspect_phone;
+                                    model.State = 1;
+                                    bll2.Update(model);
+                                }
+                                if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1))//不存在或者状态为0 发送
+                                {
+                                    Model.Sms_outbox model = new Model.Sms_outbox();
+                                    model.sismsid = id;
+                                    model.extcode = "01";
+                                    model.destaddr = inspect_phone;
+                                    model.messagecontent = messageID + "|" + inspect_Doc + "|" + patientName + "|" + birthDate + "|" + ApplyTypeID + "|" + inspect;
+                                    model.reqdeliveryreport = 1;
+                                    model.msgfmt = 15;
+                                    model.sendmethod = 2;
+                                    model.requesttime = _add_time;
+                                    model.applicationid = "APP128";
+                                    if (bll.Add(model))
+                                    {
+                                        Model.BIF01022 model2 = new Model.BIF01022();
+                                        model2.Patient_id = patientID;
+                                        model2.Patient_name = patientName;
+                                        model2.Item_name = inspect;
+                                        model2.Current_result = "";
+                                        model2.EmpMobileNum = inspect_phone;
+                                        model2.EMPNAME = inspect_Doc;
+                                        model2.State = 0;
+                                        model2.Add_time = _add_time;
+                                        bll2.Add(model2);
+                                        //return ++i;
+                                    }
+
+                                }
+                            }
+                            else
+                            {
+                                if (hasValue&&!String.IsNullOrEmpty(report_phone))//状态为0 发送给报告医生
+                                {
+                                    Model.Sms_outbox model = new Model.Sms_outbox();
+                                    model.sismsid = id;
+                                    model.extcode = "01";
+                                    model.destaddr = report_phone;
+                                    model.messagecontent = "5272718510009|" + report_Name + "|" + inspect_Doc;
+                                    model.reqdeliveryreport = 1;
+                                    model.msgfmt = 15;
+                                    model.sendmethod = 2;
+                                    model.requesttime = _add_time;
+                                    model.applicationid = "APP128";
+                                    if (bll.Add(model))
+                                    {
+                                        Model.BIF01022 model2 = new Model.BIF01022();
+                                        model2.Patient_id = patientID;
+                                        model2.Patient_name = patientName;
+                                        model2.Item_name = inspect;
+                                        model2.Current_result = "";
+                                        model2.EmpMobileNum = report_phone;
+                                        model2.EMPNAME = report_Name;
+                                        model2.State = 2;
+                                        model2.Add_time = _add_time;
+                                        bll2.Add(model2);
+                                    }
+                                }
+                                if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1))//不存在或者状态为0 发送
+                                {
+                                    Model.Sms_outbox model = new Model.Sms_outbox();
+                                    model.sismsid = id;
+                                    model.extcode = "01";
+                                    model.destaddr = inspect_phone;
+                                    model.messagecontent = messageID + "|" + inspect_Doc + "|" + patientName + "|" + birthDate + "|" + ApplyTypeID + "|" + inspect;
+                                    model.reqdeliveryreport = 1;
+                                    model.msgfmt = 15;
+                                    model.sendmethod = 2;
+                                    model.requesttime = _add_time;
+                                    model.applicationid = "APP128";
+                                    if (bll.Add(model))
+                                    {
+                                        Model.BIF01022 model2 = new Model.BIF01022();
+                                        model2.Patient_id = patientID;
+                                        model2.Patient_name = patientName;
+                                        model2.Item_name = inspect;
+                                        model2.Current_result = "";
+                                        model2.EmpMobileNum = inspect_phone;
+                                        model2.EMPNAME = inspect_Doc;
+                                        model2.State = 0;
+                                        model2.Add_time = _add_time;
+                                        bll2.Add(model2);
+                                        //return ++i;
+                                    }
+
+                                }
+                                //return i;
+                            }
+                        }
+
+                        
+                        
+                        //return i;
+
+                    }
+                }
+            }
+
+            return i;
+        }
+        private static string getPhone(string empid)
+        {
+            WebReference.Service1 _client = new WebReference.Service1();
+            DataSet ds = _client.GetDoctorPhone(empid);
+            if (ds != null && ds.Tables[0].Rows.Count != 0)
+            {
+                DataTable dt = ds.Tables[0];
+                foreach (DataRow dr in dt.Rows)
+                {
+                    return dr["EmpMobileNum"].ToString();
+                }
+            }
+            return "";
+        }
+        private static string getName(string empid)
+        {
+            WebReference.Service1 _client = new WebReference.Service1();
+            DataSet ds = _client.GetDoctorPhone(empid);
+            if (ds != null && ds.Tables[0].Rows.Count != 0)
+            {
+                DataTable dt = ds.Tables[0];
+                foreach (DataRow dr in dt.Rows)
+                {
+                    return dr["EMPNAME"].ToString();
+                }
+            }
+            return "";
+        }
     }
 }
