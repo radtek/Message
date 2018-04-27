@@ -19,10 +19,11 @@ namespace Model
 		private string _empname;
 		private int? _state;
 		private string _add_time;
-		/// <summary>
-		/// 
-		/// </summary>
-		public string Patient_id
+        private string _update_time;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Patient_id
 		{
 			set{ _patient_id=value;}
 			get{return _patient_id;}
@@ -83,8 +84,13 @@ namespace Model
 			set{ _add_time=value;}
 			get{return _add_time;}
 		}
-		#endregion Model
+        public string Update_time
+        {
+            set { _update_time = value; }
+            get { return _update_time; }
+        }
+        #endregion Model
 
-	}
+    }
 }
 

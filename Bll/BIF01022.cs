@@ -31,10 +31,14 @@ namespace Bll
 			return dal.Update(model);
 		}
 
-		/// <summary>
-		/// 删除一条数据
-		/// </summary>
-		public bool Delete()
+        public bool Update2(Model.BIF01022 model)
+        {
+            return dal.Update2(model);
+        }
+        /// <summary>
+        /// 删除一条数据
+        /// </summary>
+        public bool Delete()
 		{
 			//该表无主键信息，请自定义主键/条件字段
 			return dal.Delete();
@@ -129,6 +133,11 @@ namespace Bll
         public bool Exists(string EmpMobileNum, string Item_name, string Current_result, string Patient_id,int state)
         {
             return dal.Exists(EmpMobileNum,Item_name,Current_result,Patient_id, state);
+        }
+
+        public string getUpdate_time(string EmpMobileNum, string Item_name, string Current_result, string Patient_id, int state)
+        {
+            return dal.getUpdate_time(EmpMobileNum, Item_name, Current_result, Patient_id, state);
         }
 
         public string GetState(string EmpMobileNum, string Item_name, string Current_result, string Patient_id, int state)

@@ -47,12 +47,21 @@ namespace WindowsFormsApplication1
                 x.SetDisplayName("Stuff3");                       //8
                 x.SetServiceName("Stuff3");                       //9
             });
+            HostFactory.Run(x =>                                 //1
+            {
+                x.Service<JCIJob>();
+                x.RunAsLocalSystem();                            //6
+
+                x.SetDescription("JCIJob Topshelf Host");        //7
+                x.SetDisplayName("JCIJob");                       //8
+                x.SetServiceName("JCIJob");                       //9
+            });
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            int second =Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second"]);
+            int second = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second"]);
             int second2 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second2"]);
             int second3 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second3"]);
             //从工厂中获取一个调度器实例化
@@ -71,6 +80,9 @@ namespace WindowsFormsApplication1
             IJobDetail job3 = JobBuilder.Create<HelloJob3>()  //创建一个作业
                 .WithIdentity("作业名称3", "作业组3")
                 .Build();
+            IJobDetail job4 = JobBuilder.Create<JCIJob>()  //创建一个作业
+                .WithIdentity("作业名称4", "作业组4")
+                .Build();
 
             ITrigger trigger1 = TriggerBuilder.Create()
                                         .WithIdentity("触发器名称", "触发器组")
@@ -81,22 +93,31 @@ namespace WindowsFormsApplication1
                                         .Build();
             ITrigger trigger2 = TriggerBuilder.Create()
                                         .WithIdentity("触发器名称2", "触发器组2")
-                                        .StartNow()                        //现在开始
-                                        .WithSimpleSchedule(x => x         //触发时间，5秒一次。
+                                        .StartNow()                        
+                                        .WithSimpleSchedule(x => x         
                                             .WithIntervalInSeconds(second2)
-                                            .RepeatForever())              //不间断重复执行
+                                            .RepeatForever())             
                                         .Build();
             ITrigger trigger3 = TriggerBuilder.Create()
                                         .WithIdentity("触发器名称3", "触发器组3")
-                                        .StartNow()                        //现在开始
-                                        .WithSimpleSchedule(x => x         //触发时间，5秒一次。
+                                        .StartNow()                        
+                                        .WithSimpleSchedule(x => x         
                                             .WithIntervalInSeconds(second3)
-                                            .RepeatForever())              //不间断重复执行
+                                            .RepeatForever())              
+                                        .Build();
+
+            ITrigger trigger4 = TriggerBuilder.Create()
+                                        .WithIdentity("触发器名称4", "触发器组4")
+                                        .StartNow()                        
+                                        .WithSimpleSchedule(x => x         
+                                            .WithIntervalInHours(24)
+                                            .RepeatForever())              
                                         .Build();
 
             scheduler.ScheduleJob(job1, trigger1);      //把作业，触发器加入调度器。
             scheduler.ScheduleJob(job2, trigger2);
             scheduler.ScheduleJob(job3, trigger3);
+            scheduler.ScheduleJob(job4, trigger4);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -166,7 +187,9 @@ namespace WindowsFormsApplication1
             //{
             //    label1.Text = "暂无数据";
             //}
-            label1.Text = SendMsg.SendPACS()+"";
+            //label1.Text = SendMsg.SendPACS()+"";
+            
+            label1.Text = "OK";
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)

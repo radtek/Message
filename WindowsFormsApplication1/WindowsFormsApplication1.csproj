@@ -94,6 +94,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="JCIJob.cs" />
     <Compile Include="HelloJob3.cs" />
     <Compile Include="HelloJob2.cs" />
     <Compile Include="HelloJob.cs" />
@@ -104,6 +105,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SendJCI.cs" />
     <Compile Include="SendMsg.cs" />
     <Compile Include="Web References\WebReference\Reference.cs">
       <AutoGen>True</AutoGen>

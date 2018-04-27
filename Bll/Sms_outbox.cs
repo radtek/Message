@@ -24,5 +24,10 @@ namespace Bll
         {
             return dal.ExistMinute(phone, beginTime, endTime);
         }
+
+        public string getReceivetime(string phone, string beginTime, string endTime)
+        {
+            return dal.getReceivetime(phone, beginTime, endTime);
+        }
     }
 }

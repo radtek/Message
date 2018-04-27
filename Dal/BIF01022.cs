@@ -100,11 +100,53 @@ namespace DAL
 				return false;
 			}
 		}
+        public bool Update2(Model.BIF01022 model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update BIF01022 set ");
+            //strSql.Append("Patient_id=@Patient_id,");
+            //strSql.Append("Patient_name=@Patient_name,");
+            //strSql.Append("Item_name=@Item_name,");
+            //strSql.Append("Current_result=@Current_result,");
+            //strSql.Append("EmpMobileNum=@EmpMobileNum,");
+            strSql.Append("Update_time=@Update_time,");
+            strSql.Append("State=@State ");
+            //strSql.Append("Add_time=@Add_time");
+            strSql.Append(" where EmpMobileNum=@EmpMobileNum and Item_name=@Item_name and Current_result=@Current_result and Patient_id=@Patient_id and state=0 ");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@Patient_id", SqlDbType.VarChar,50),
+                    new SqlParameter("@Patient_name", SqlDbType.VarChar,50),
+                    new SqlParameter("@Item_name", SqlDbType.VarChar,50),
+                    new SqlParameter("@Current_result", SqlDbType.VarChar,50),
+                    new SqlParameter("@EmpMobileNum", SqlDbType.VarChar,50),
+                    new SqlParameter("@EMPNAME", SqlDbType.VarChar,50),
+                    new SqlParameter("@State", SqlDbType.Int,4),
+                    new SqlParameter("@Add_time", SqlDbType.VarChar,50),
+                    new SqlParameter("@Update_time", SqlDbType.VarChar, 50)};
+            parameters[0].Value = model.Patient_id;
+            parameters[1].Value = model.Patient_name;
+            parameters[2].Value = model.Item_name;
+            parameters[3].Value = model.Current_result;
+            parameters[4].Value = model.EmpMobileNum;
+            parameters[5].Value = model.EMPNAME;
+            parameters[6].Value = model.State;
+            parameters[7].Value = model.Add_time;
+            parameters[8].Value = model.Update_time;
 
-		/// <summary>
-		/// 删除一条数据
-		/// </summary>
-		public bool Delete()
+            int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// 删除一条数据
+        /// </summary>
+        public bool Delete()
 		{
 			//该表无主键信息，请自定义主键/条件字段
 			StringBuilder strSql=new StringBuilder();
@@ -308,6 +350,12 @@ namespace DAL
         {
             string sql = "select * from BIF01022 where EmpMobileNum='"+ EmpMobileNum + "' and Item_name='"+ Item_name + "' and Current_result='"+Current_result+"' and Patient_id='"+Patient_id+"' and state="+state+" ";
             return DbHelperSQL.Exists(sql);
+        }
+
+        public string getUpdate_time(string EmpMobileNum, string Item_name, string Current_result, string Patient_id, int state)
+        {
+            string sql = "select Update_time from BIF01022 where EmpMobileNum='" + EmpMobileNum + "' and Item_name='" + Item_name + "' and Current_result='" + Current_result + "' and Patient_id='" + Patient_id + "' and state=" + state + " ";
+            return DbHelperSQL.GetSingle(sql)+"";
         }
 
         public string GetState(string EmpMobileNum, string Item_name, string Current_result, string Patient_id, int state)

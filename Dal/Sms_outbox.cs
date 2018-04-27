@@ -60,6 +60,10 @@ namespace Dal
             string sql = "select count(1) from sms_inbox where extcode='01' and sourceaddr='"+phone+ "' and receivetime between '" + beginTime+ "' and '" + endTime + "' ";
             return DbHelperMySQL.Exists(sql);
         }
-
+        public string getReceivetime(string phone, string beginTime, string endTime)
+        {
+            string sql = "select receivetime from sms_inbox where extcode='01' and sourceaddr='" + phone + "' and receivetime between '" + beginTime + "' and '" + endTime + "' ";
+            return DbHelperMySQL.GetSingle(sql) + "";
+        }
     }
 }

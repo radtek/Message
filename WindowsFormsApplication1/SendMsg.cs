@@ -315,13 +315,23 @@ namespace WindowsFormsApplication1
                             {
                                 if (hasValue)//存在
                                 {
+                                    string updateTime = bll2.getUpdate_time(inspect_phone, inspect, "", patientID, 0);
                                     Model.BIF01022 model = new Model.BIF01022();
                                     model.Patient_id = patientID;
                                     model.Item_name = inspect;
                                     model.Current_result = "";
                                     model.EmpMobileNum = inspect_phone;
                                     model.State = 1;
-                                    bll2.Update(model);
+                                    if (!String.IsNullOrEmpty(updateTime))
+                                    {
+                                        bll2.Update(model);
+                                    }
+                                    else
+                                    {
+                                        model.Update_time = bll.getReceivetime(inspect_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                        bll2.Update2(model);
+                                    }
+                                   
                                 }
                                 if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1))//不存在或者状态为0 发送
                                 {
@@ -377,7 +387,22 @@ namespace WindowsFormsApplication1
                                         model2.EMPNAME = report_Name;
                                         model2.State = 2;
                                         model2.Add_time = _add_time;
-                                        bll2.Add(model2);
+                                        if (bll2.Add(model2))
+                                        {
+                                            bool s3 = bll.ExistMinute(report_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                            if (s3 == true)
+                                            {
+                                                Model.BIF01022 model3 = new Model.BIF01022();
+                                                model3.Patient_id = patientID;
+                                                model3.Item_name = inspect;
+                                                model3.Current_result = "";
+                                                model3.EmpMobileNum = inspect_phone;
+                                                model3.State = 1;
+                                                bll2.Update(model3);
+                                            }
+                                            
+                                        }
+
                                     }
                                 }
                                 if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1))//不存在或者状态为0 发送
