@@ -255,7 +255,7 @@ namespace WindowsFormsApplication1
             DataTable dt2 = null;
             string _time = DateTime.Now.ToString("yyyy-MM-dd");
             //DataSet ds_report = _client.GetReport();
-            string sql = "select patientID,patientName,birthDate,inspect,reportDoc,ApplyTypeID from BIF01021 where reportDate >= '"+ _time + " 00:00:00' and reportDate<='" + _time + " 23:59:59'";
+            string sql = "select patientID,patientName,birthDate,inspect,reportDoc,ApplyTypeID from BIF01021 where reportDate >= '2018-05-01 00:00:00' and reportDate<='" + _time + " 23:59:59'";
             DataSet ds_report = DbHelperSQL.Query(sql);
             string patientID = "", birthDate = "", inspect = "无", patientName = "", reportDoc = "", ApplyTypeID = "",inspect_Doc="",report_Doc="", inspect_phone="", report_phone = "", report_Name = "";
             string messageID = System.Configuration.ConfigurationManager.AppSettings["MessageID_inspect"].ToString();
@@ -294,11 +294,11 @@ namespace WindowsFormsApplication1
                     birthDate = dr["birthDate"].ToString();
                     if (!String.IsNullOrEmpty(patientID) && !String.IsNullOrEmpty(inspect) && !String.IsNullOrEmpty(patientName) && !String.IsNullOrEmpty(birthDate) && !String.IsNullOrEmpty(ApplyTypeID))
                     {
-                        inspect_phone = getPhone(inspect_Doc);//GetDoctorPhone
+                        //inspect_phone = getPhone(inspect_Doc);//GetDoctorPhone
                         report_Doc = (inspect_phone == report_Doc) ? "" : report_Doc;
                         report_phone = getPhone(report_Doc);
                         report_Name = getName(report_Doc);
-                        //inspect_phone = "15261277153";
+                        inspect_phone = "15261277153";
                         //report_Name = "吴晓磊";
                         //report_phone = "18936979026";
                         Guid guid = Guid.NewGuid();
