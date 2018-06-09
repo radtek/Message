@@ -18,106 +18,126 @@ namespace WindowsFormsApplication1
 
         public Form2()
         {
-            //HostFactory.Run(x =>                                 //1
-            //{
-            //    x.Service<HelloJob>();
-            //    x.RunAsLocalSystem();                            //6
+            HostFactory.Run(x =>                                 //1
+            {
+                x.Service<HelloJob>();
+                x.RunAsLocalSystem();                            //6
 
-            //    x.SetDescription("Sample Topshelf Host");        //7
-            //    x.SetDisplayName("Stuff");                       //8
-            //    x.SetServiceName("Stuff");                       //9
-            //});
+                x.SetDescription("Sample Topshelf Host");        //7
+                x.SetDisplayName("Stuff");                       //8
+                x.SetServiceName("Stuff");                       //9
+            });
 
-            //HostFactory.Run(x =>                                 //1
-            //{
-            //    x.Service<HelloJob2>();
-            //    x.RunAsLocalSystem();                            //6
+            HostFactory.Run(x =>                                 //1
+            {
+                x.Service<HelloJob2>();
+                x.RunAsLocalSystem();                            //6
 
-            //    x.SetDescription("Sample2 Topshelf Host");        //7
-            //    x.SetDisplayName("Stuff2");                       //8
-            //    x.SetServiceName("Stuff2");                       //9
-            //});
+                x.SetDescription("Sample2 Topshelf Host");        //7
+                x.SetDisplayName("Stuff2");                       //8
+                x.SetServiceName("Stuff2");                       //9
+            });
 
-            //HostFactory.Run(x =>                                 //1
-            //{
-            //    x.Service<HelloJob3>();
-            //    x.RunAsLocalSystem();                            //6
+            HostFactory.Run(x =>                                 //1
+            {
+                x.Service<HelloJob3>();
+                x.RunAsLocalSystem();                            //6
 
-            //    x.SetDescription("Sample3 Topshelf Host");        //7
-            //    x.SetDisplayName("Stuff3");                       //8
-            //    x.SetServiceName("Stuff3");                       //9
-            //});
-            //HostFactory.Run(x =>                                 //1
-            //{
-            //    x.Service<JCIJob>();
-            //    x.RunAsLocalSystem();                            //6
+                x.SetDescription("Sample3 Topshelf Host");        //7
+                x.SetDisplayName("Stuff3");                       //8
+                x.SetServiceName("Stuff3");                       //9
+            });
+            HostFactory.Run(x =>                                 //1
+            {
+                x.Service<JCIJob>();
+                x.RunAsLocalSystem();                            //6
 
-            //    x.SetDescription("JCIJob Topshelf Host");        //7
-            //    x.SetDisplayName("JCIJob");                       //8
-            //    x.SetServiceName("JCIJob");                       //9
-            //});
+                x.SetDescription("JCIJob Topshelf Host");        //7
+                x.SetDisplayName("JCIJob");                       //8
+                x.SetServiceName("JCIJob");                       //9
+            });
+            HostFactory.Run(x =>                                 //1
+            {
+                x.Service<HelloJob4>();
+                x.RunAsLocalSystem();                            //6
+
+                x.SetDescription("HelloJob4 Topshelf Host");        //7
+                x.SetDisplayName("HelloJob4");                       //8
+                x.SetServiceName("HelloJob4");                       //9
+            });
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //int second = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second"]);
-            //int second2 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second2"]);
-            //int second3 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second3"]);
-            ////从工厂中获取一个调度器实例化
-            //IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
+            int second = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second"]);
+            int second2 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second2"]);
+            int second3 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second3"]);
+            //从工厂中获取一个调度器实例化
+            IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
 
-            //scheduler.Start();       //开启调度器
+            scheduler.Start();       //开启调度器
 
-            ////==========例子1（简单使用）===========
+            //==========例子1（简单使用）===========
 
-            //IJobDetail job1 = JobBuilder.Create<HelloJob>()  //创建一个作业
-            //    .WithIdentity("作业名称", "作业组")
-            //    .Build();
-            //IJobDetail job2 = JobBuilder.Create<HelloJob2>()  //创建一个作业
-            //    .WithIdentity("作业名称2", "作业组2")
-            //    .Build();
-            //IJobDetail job3 = JobBuilder.Create<HelloJob3>()  //创建一个作业
-            //    .WithIdentity("作业名称3", "作业组3")
-            //    .Build();
-            //IJobDetail job4 = JobBuilder.Create<JCIJob>()  //创建一个作业
-            //    .WithIdentity("作业名称4", "作业组4")
-            //    .Build();
+            IJobDetail job1 = JobBuilder.Create<HelloJob>()  //创建一个作业
+                .WithIdentity("作业名称", "作业组")
+                .Build();
+            IJobDetail job2 = JobBuilder.Create<HelloJob2>()  //创建一个作业
+                .WithIdentity("作业名称2", "作业组2")
+                .Build();
+            IJobDetail job3 = JobBuilder.Create<HelloJob3>()  //创建一个作业
+                .WithIdentity("作业名称3", "作业组3")
+                .Build();
+            IJobDetail job4 = JobBuilder.Create<JCIJob>()  //创建一个作业
+                .WithIdentity("作业名称4", "作业组4")
+                .Build();
+            IJobDetail jboDoor = JobBuilder.Create<HelloJob4>()  //创建一个作业
+                .WithIdentity("作业名称door", "作业组door")
+                .Build();
 
-            //ITrigger trigger1 = TriggerBuilder.Create()
-            //                            .WithIdentity("触发器名称", "触发器组")
-            //                            .StartNow()                        //现在开始
-            //                            .WithSimpleSchedule(x => x         //触发时间，5秒一次。
-            //                                .WithIntervalInSeconds(second)
-            //                                .RepeatForever())              //不间断重复执行
-            //                            .Build();
-            //ITrigger trigger2 = TriggerBuilder.Create()
-            //                            .WithIdentity("触发器名称2", "触发器组2")
-            //                            .StartNow()                        
-            //                            .WithSimpleSchedule(x => x         
-            //                                .WithIntervalInSeconds(second2)
-            //                                .RepeatForever())             
-            //                            .Build();
-            //ITrigger trigger3 = TriggerBuilder.Create()
-            //                            .WithIdentity("触发器名称3", "触发器组3")
-            //                            .StartNow()                        
-            //                            .WithSimpleSchedule(x => x         
-            //                                .WithIntervalInSeconds(second3)
-            //                                .RepeatForever())              
-            //                            .Build();
+            ITrigger trigger1 = TriggerBuilder.Create()
+                                        .WithIdentity("触发器名称", "触发器组")
+                                        .StartNow()                        //现在开始
+                                        .WithSimpleSchedule(x => x         //触发时间，5秒一次。
+                                            .WithIntervalInSeconds(second)
+                                            .RepeatForever())              //不间断重复执行
+                                        .Build();
+            ITrigger trigger2 = TriggerBuilder.Create()
+                                        .WithIdentity("触发器名称2", "触发器组2")
+                                        .StartNow()
+                                        .WithSimpleSchedule(x => x
+                                            .WithIntervalInSeconds(second2)
+                                            .RepeatForever())
+                                        .Build();
+            ITrigger trigger3 = TriggerBuilder.Create()
+                                        .WithIdentity("触发器名称3", "触发器组3")
+                                        .StartNow()
+                                        .WithSimpleSchedule(x => x
+                                            .WithIntervalInSeconds(second3)
+                                            .RepeatForever())
+                                        .Build();
 
-            //ITrigger trigger4 = TriggerBuilder.Create()
-            //                            .WithIdentity("触发器名称4", "触发器组4")
-            //                            .StartNow()                        
-            //                            .WithSimpleSchedule(x => x         
-            //                                .WithIntervalInHours(24)
-            //                                .RepeatForever())              
-            //                            .Build();
+            ITrigger trigger4 = TriggerBuilder.Create()
+                                        .WithIdentity("触发器名称4", "触发器组4")
+                                        .StartNow()
+                                        .WithSimpleSchedule(x => x
+                                            .WithIntervalInHours(24)
+                                            .RepeatForever())
+                                        .Build();
+            ITrigger tgDoor = TriggerBuilder.Create()
+                                        .WithIdentity("触发器名称tgDoor", "触发器组tgDoor")
+                                        .StartNow()
+                                        .WithSimpleSchedule(x => x
+                                            .WithIntervalInHours(24)
+                                            .RepeatForever())
+                                        .Build();
 
-            //scheduler.ScheduleJob(job1, trigger1);      //把作业，触发器加入调度器。
-            //scheduler.ScheduleJob(job2, trigger2);
-            //scheduler.ScheduleJob(job3, trigger3);
-            //scheduler.ScheduleJob(job4, trigger4);
+            scheduler.ScheduleJob(job1, trigger1);      //把作业，触发器加入调度器。
+            scheduler.ScheduleJob(job2, trigger2);
+            scheduler.ScheduleJob(job3, trigger3);
+            scheduler.ScheduleJob(job4, trigger4);
+            scheduler.ScheduleJob(jboDoor, tgDoor);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -187,9 +207,11 @@ namespace WindowsFormsApplication1
             //{
             //    label1.Text = "暂无数据";
             //}
-            label1.Text = SendMsg.SendPACS()+"";
-            
+            //label1.Text = SendMsg.SendJob()+"";
+            label1.Text=SendMsg.SendLis()+"";
+            //SendJCI.SendDoor();
             //label1.Text = "OK";
+            //SendMsg.SendJob();
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)

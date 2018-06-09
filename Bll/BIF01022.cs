@@ -30,10 +30,21 @@ namespace Bll
 		{
 			return dal.Update(model);
 		}
-
+        public bool UpdateData(Model.BIF01022 model,int state)
+        {
+            return dal.UpdateData(model,state);
+        }
+        public bool Update1(Model.BIF01022 model)
+        {
+            return dal.Update1(model);
+        }
         public bool Update2(Model.BIF01022 model)
         {
             return dal.Update2(model);
+        }
+        public bool Update3(Model.BIF01022 model)
+        {
+            return dal.Update3(model);
         }
         /// <summary>
         /// 删除一条数据
@@ -134,12 +145,18 @@ namespace Bll
         {
             return dal.Exists(EmpMobileNum,Item_name,Current_result,Patient_id, state);
         }
-
+        public bool Exists1(string EmpMobileNum, string Item_name, string Patient_id, int state)
+        {
+            return dal.Exists1(EmpMobileNum, Item_name, Patient_id, state);
+        }
         public string getUpdate_time(string EmpMobileNum, string Item_name, string Current_result, string Patient_id, int state)
         {
             return dal.getUpdate_time(EmpMobileNum, Item_name, Current_result, Patient_id, state);
         }
-
+        public string getUpdate_time1(string EmpMobileNum, string Item_name, string Patient_id, int state)
+        {
+            return dal.getUpdate_time1(EmpMobileNum, Item_name, Patient_id, state);
+        }
         public string GetState(string EmpMobileNum, string Item_name, string Current_result, string Patient_id, int state)
         {
             return dal.GetState(EmpMobileNum,Item_name,Current_result,Patient_id,state);

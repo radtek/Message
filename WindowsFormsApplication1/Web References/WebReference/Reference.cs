@@ -30,76 +30,6 @@ namespace WindowsFormsApplication1.WebReference {
     [System.Web.Services.WebServiceBindingAttribute(Name="Service1Soap", Namespace="http://www.dlnsoft.com/")]
     public partial class Service1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback GetOrdsInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrdsInfo_CateOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrdItemInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetEMPNameOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetQrCodeOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetQrCodeForPathOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetQrCodeImgageOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetQrCodeIDOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetPatiInfoBaseOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetPatiInfoBase_OperatorOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetPatiInfoBaseByIDOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetEmpImageOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrInHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgInHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgInHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrInHosp_ByDiagOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrInHosp_ByDiag_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOutHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgOutHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOutHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgOutHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrLeaveHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgLeaveHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrLeaveHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgLeaveHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrDayInHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgDayInHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrDayInHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgDayInHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrCriticallyIllInHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgCriticallyIllInHospNumOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrCriticallyIllInHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetInpatientInfo_Only_ByEmpIDOperationCompleted;
-        
         private System.Threading.SendOrPostCallback GetYesterdayOutNumOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetYesterdayAmountOperationCompleted;
@@ -107,6 +37,10 @@ namespace WindowsFormsApplication1.WebReference {
         private System.Threading.SendOrPostCallback ReportApplyResultOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetReportOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PatientStateOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getORGIDOperationCompleted;
         
         private System.Threading.SendOrPostCallback SendMessageOperationCompleted;
         
@@ -128,15 +62,33 @@ namespace WindowsFormsApplication1.WebReference {
         
         private System.Threading.SendOrPostCallback GetNurOrdersOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetNurOrders_BOWOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetNurOrdersTestOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetNurOrdersItemDPOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetNurOrdersControlOperationCompleted;
         
         private System.Threading.SendOrPostCallback NursingExecOperationCompleted;
         
+        private System.Threading.SendOrPostCallback NursingExec_BOWOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback NursingExec_TraceOperationCompleted;
+        
         private System.Threading.SendOrPostCallback NursingExec_EMPIDOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetNurOrders_ZYOperationCompleted;
+        
         private System.Threading.SendOrPostCallback NursingExec_ZYOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback NursingExec_AdminOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback NursingExec_BIW_OrderOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback NursingExec_BIWOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback NursingExec_MeetingOperationCompleted;
         
         private System.Threading.SendOrPostCallback NursingExec_KFOperationCompleted;
         
@@ -169,94 +121,6 @@ namespace WindowsFormsApplication1.WebReference {
         private System.Threading.SendOrPostCallback GetOrderInHospitalInfoOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetEquipInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetHospInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrgInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrgBaseInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GETCODEINFOOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetDoctorInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetResInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback AddPersonOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback CreadCardOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback RegCheckOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback RegDataOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback UnRegDataOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrdInfotollOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback SetOrdInftollTwoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrdInftollTwoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrdInftollTwo_FeeOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetQueOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback findAllReportOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback findAllReportByPatiIDOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback findCheckReportOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback findCompleteReportOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetADayOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetSubscriptionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback SetDepositOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetWindNoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetDayFeeItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback MicroPayOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback MicroPayQryOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback CreateOrderOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ITEMIINFOOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback EMRTYPEOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback TEMINFOOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback PATIINFOOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback DEPARTMENTSOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback DOCTOROperationCompleted;
-        
-        private System.Threading.SendOrPostCallback OPERITEMOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback OPERDICTOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ORGINFOOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ORDDERINFOOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrds_JPOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrgInfo_JPOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrdInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetSTOrdInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetDrugInfoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetOrdItemObjOperationCompleted;
         
         private System.Threading.SendOrPostCallback SetFlagOperationCompleted;
         
@@ -316,6 +180,168 @@ namespace WindowsFormsApplication1.WebReference {
         
         private System.Threading.SendOrPostCallback GetInpatientInfo_OnlyOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetOrdsInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrdsInfo_CateOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrdItemInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetEMPNameOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetQrCodeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetQrCodeForPathOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetQrCodeImgageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetQrCodeIDOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetPatiInfoBaseOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetPatiInfoBase_BOWOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetPatiInfoBase_OperatorOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetPatiInfoBaseByIDOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetEmpImageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrInHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgInHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgInHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrInHosp_ByDiagOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrInHosp_ByDiag_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOutHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgOutHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOutHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgOutHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrLeaveHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgLeaveHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrLeaveHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgLeaveHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrDayInHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgDayInHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrDayInHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgDayInHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrCriticallyIllInHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgCriticallyIllInHospNumOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrCriticallyIllInHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetInpatientInfo_Only_ByEmpIDOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetHospInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrgInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrgBaseInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GETCODEINFOOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetDoctorInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetResInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AddPersonOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CreadCardOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RegCheckOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RegDataOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UnRegDataOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrdInfotollOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SetOrdInftollTwoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrdInftollTwoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrdInftollTwo_FeeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetQueOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback findAllReportOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback findAllReportByPatiIDOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback findCheckReportOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback findCompleteReportOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetADayOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetSubscriptionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SetDepositOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetWindNoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetDayFeeItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback MicroPayOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback MicroPayQryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback MicroPayCancelOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CreateOrderOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ITEMIINFOOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EMRTYPEOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback TEMINFOOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PATIINFOOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DEPARTMENTSOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DOCTOROperationCompleted;
+        
+        private System.Threading.SendOrPostCallback OPERITEMOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback OPERDICTOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ORGINFOOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ORDDERINFOOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrds_JPOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrgInfo_JPOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrdInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetSTOrdInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetDrugInfoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetOrdItemObjOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -355,111 +381,6 @@ namespace WindowsFormsApplication1.WebReference {
         }
         
         /// <remarks/>
-        public event GetOrdsInfoCompletedEventHandler GetOrdsInfoCompleted;
-        
-        /// <remarks/>
-        public event GetOrdsInfo_CateCompletedEventHandler GetOrdsInfo_CateCompleted;
-        
-        /// <remarks/>
-        public event GetOrdItemInfoCompletedEventHandler GetOrdItemInfoCompleted;
-        
-        /// <remarks/>
-        public event GetEMPNameCompletedEventHandler GetEMPNameCompleted;
-        
-        /// <remarks/>
-        public event GetQrCodeCompletedEventHandler GetQrCodeCompleted;
-        
-        /// <remarks/>
-        public event GetQrCodeForPathCompletedEventHandler GetQrCodeForPathCompleted;
-        
-        /// <remarks/>
-        public event GetQrCodeImgageCompletedEventHandler GetQrCodeImgageCompleted;
-        
-        /// <remarks/>
-        public event GetQrCodeIDCompletedEventHandler GetQrCodeIDCompleted;
-        
-        /// <remarks/>
-        public event GetPatiInfoBaseCompletedEventHandler GetPatiInfoBaseCompleted;
-        
-        /// <remarks/>
-        public event GetPatiInfoBase_OperatorCompletedEventHandler GetPatiInfoBase_OperatorCompleted;
-        
-        /// <remarks/>
-        public event GetPatiInfoBaseByIDCompletedEventHandler GetPatiInfoBaseByIDCompleted;
-        
-        /// <remarks/>
-        public event GetEmpImageCompletedEventHandler GetEmpImageCompleted;
-        
-        /// <remarks/>
-        public event GetCurrInHospNumCompletedEventHandler GetCurrInHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgInHospNumCompletedEventHandler GetCurrOrgInHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgInHospNum_ItemCompletedEventHandler GetCurrOrgInHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrInHosp_ByDiagCompletedEventHandler GetCurrInHosp_ByDiagCompleted;
-        
-        /// <remarks/>
-        public event GetCurrInHosp_ByDiag_ItemCompletedEventHandler GetCurrInHosp_ByDiag_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOutHospNumCompletedEventHandler GetCurrOutHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgOutHospNumCompletedEventHandler GetCurrOrgOutHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOutHospNum_ItemCompletedEventHandler GetCurrOutHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgOutHospNum_ItemCompletedEventHandler GetCurrOrgOutHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrLeaveHospNumCompletedEventHandler GetCurrLeaveHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgLeaveHospNumCompletedEventHandler GetCurrOrgLeaveHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrLeaveHospNum_ItemCompletedEventHandler GetCurrLeaveHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgLeaveHospNum_ItemCompletedEventHandler GetCurrOrgLeaveHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrDayInHospNumCompletedEventHandler GetCurrDayInHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgDayInHospNumCompletedEventHandler GetCurrOrgDayInHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrDayInHospNum_ItemCompletedEventHandler GetCurrDayInHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgDayInHospNum_ItemCompletedEventHandler GetCurrOrgDayInHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrCriticallyIllInHospNumCompletedEventHandler GetCurrCriticallyIllInHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgCriticallyIllInHospNumCompletedEventHandler GetCurrOrgCriticallyIllInHospNumCompleted;
-        
-        /// <remarks/>
-        public event GetCurrCriticallyIllInHospNum_ItemCompletedEventHandler GetCurrCriticallyIllInHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventHandler GetCurrOrgCriticallyIllInHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventHandler GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompleted;
-        
-        /// <remarks/>
-        public event GetInpatientInfo_Only_ByEmpIDCompletedEventHandler GetInpatientInfo_Only_ByEmpIDCompleted;
-        
-        /// <remarks/>
         public event GetYesterdayOutNumCompletedEventHandler GetYesterdayOutNumCompleted;
         
         /// <remarks/>
@@ -470,6 +391,12 @@ namespace WindowsFormsApplication1.WebReference {
         
         /// <remarks/>
         public event GetReportCompletedEventHandler GetReportCompleted;
+        
+        /// <remarks/>
+        public event PatientStateCompletedEventHandler PatientStateCompleted;
+        
+        /// <remarks/>
+        public event getORGIDCompletedEventHandler getORGIDCompleted;
         
         /// <remarks/>
         public event SendMessageCompletedEventHandler SendMessageCompleted;
@@ -502,7 +429,13 @@ namespace WindowsFormsApplication1.WebReference {
         public event GetNurOrdersCompletedEventHandler GetNurOrdersCompleted;
         
         /// <remarks/>
+        public event GetNurOrders_BOWCompletedEventHandler GetNurOrders_BOWCompleted;
+        
+        /// <remarks/>
         public event GetNurOrdersTestCompletedEventHandler GetNurOrdersTestCompleted;
+        
+        /// <remarks/>
+        public event GetNurOrdersItemDPCompletedEventHandler GetNurOrdersItemDPCompleted;
         
         /// <remarks/>
         public event GetNurOrdersControlCompletedEventHandler GetNurOrdersControlCompleted;
@@ -511,10 +444,31 @@ namespace WindowsFormsApplication1.WebReference {
         public event NursingExecCompletedEventHandler NursingExecCompleted;
         
         /// <remarks/>
+        public event NursingExec_BOWCompletedEventHandler NursingExec_BOWCompleted;
+        
+        /// <remarks/>
+        public event NursingExec_TraceCompletedEventHandler NursingExec_TraceCompleted;
+        
+        /// <remarks/>
         public event NursingExec_EMPIDCompletedEventHandler NursingExec_EMPIDCompleted;
         
         /// <remarks/>
+        public event GetNurOrders_ZYCompletedEventHandler GetNurOrders_ZYCompleted;
+        
+        /// <remarks/>
         public event NursingExec_ZYCompletedEventHandler NursingExec_ZYCompleted;
+        
+        /// <remarks/>
+        public event NursingExec_AdminCompletedEventHandler NursingExec_AdminCompleted;
+        
+        /// <remarks/>
+        public event NursingExec_BIW_OrderCompletedEventHandler NursingExec_BIW_OrderCompleted;
+        
+        /// <remarks/>
+        public event NursingExec_BIWCompletedEventHandler NursingExec_BIWCompleted;
+        
+        /// <remarks/>
+        public event NursingExec_MeetingCompletedEventHandler NursingExec_MeetingCompleted;
         
         /// <remarks/>
         public event NursingExec_KFCompletedEventHandler NursingExec_KFCompleted;
@@ -563,138 +517,6 @@ namespace WindowsFormsApplication1.WebReference {
         
         /// <remarks/>
         public event GetEquipInfoCompletedEventHandler GetEquipInfoCompleted;
-        
-        /// <remarks/>
-        public event GetHospInfoCompletedEventHandler GetHospInfoCompleted;
-        
-        /// <remarks/>
-        public event GetOrgInfoCompletedEventHandler GetOrgInfoCompleted;
-        
-        /// <remarks/>
-        public event GetOrgBaseInfoCompletedEventHandler GetOrgBaseInfoCompleted;
-        
-        /// <remarks/>
-        public event GETCODEINFOCompletedEventHandler GETCODEINFOCompleted;
-        
-        /// <remarks/>
-        public event GetDoctorInfoCompletedEventHandler GetDoctorInfoCompleted;
-        
-        /// <remarks/>
-        public event GetResInfoCompletedEventHandler GetResInfoCompleted;
-        
-        /// <remarks/>
-        public event AddPersonCompletedEventHandler AddPersonCompleted;
-        
-        /// <remarks/>
-        public event CreadCardCompletedEventHandler CreadCardCompleted;
-        
-        /// <remarks/>
-        public event RegCheckCompletedEventHandler RegCheckCompleted;
-        
-        /// <remarks/>
-        public event RegDataCompletedEventHandler RegDataCompleted;
-        
-        /// <remarks/>
-        public event UnRegDataCompletedEventHandler UnRegDataCompleted;
-        
-        /// <remarks/>
-        public event GetOrdInfotollCompletedEventHandler GetOrdInfotollCompleted;
-        
-        /// <remarks/>
-        public event SetOrdInftollTwoCompletedEventHandler SetOrdInftollTwoCompleted;
-        
-        /// <remarks/>
-        public event GetOrdInftollTwoCompletedEventHandler GetOrdInftollTwoCompleted;
-        
-        /// <remarks/>
-        public event GetOrdInftollTwo_FeeCompletedEventHandler GetOrdInftollTwo_FeeCompleted;
-        
-        /// <remarks/>
-        public event GetQueCompletedEventHandler GetQueCompleted;
-        
-        /// <remarks/>
-        public event findAllReportCompletedEventHandler findAllReportCompleted;
-        
-        /// <remarks/>
-        public event findAllReportByPatiIDCompletedEventHandler findAllReportByPatiIDCompleted;
-        
-        /// <remarks/>
-        public event findCheckReportCompletedEventHandler findCheckReportCompleted;
-        
-        /// <remarks/>
-        public event findCompleteReportCompletedEventHandler findCompleteReportCompleted;
-        
-        /// <remarks/>
-        public event GetADayCompletedEventHandler GetADayCompleted;
-        
-        /// <remarks/>
-        public event GetSubscriptionCompletedEventHandler GetSubscriptionCompleted;
-        
-        /// <remarks/>
-        public event SetDepositCompletedEventHandler SetDepositCompleted;
-        
-        /// <remarks/>
-        public event GetWindNoCompletedEventHandler GetWindNoCompleted;
-        
-        /// <remarks/>
-        public event GetDayFeeItemCompletedEventHandler GetDayFeeItemCompleted;
-        
-        /// <remarks/>
-        public event MicroPayCompletedEventHandler MicroPayCompleted;
-        
-        /// <remarks/>
-        public event MicroPayQryCompletedEventHandler MicroPayQryCompleted;
-        
-        /// <remarks/>
-        public event CreateOrderCompletedEventHandler CreateOrderCompleted;
-        
-        /// <remarks/>
-        public event ITEMIINFOCompletedEventHandler ITEMIINFOCompleted;
-        
-        /// <remarks/>
-        public event EMRTYPECompletedEventHandler EMRTYPECompleted;
-        
-        /// <remarks/>
-        public event TEMINFOCompletedEventHandler TEMINFOCompleted;
-        
-        /// <remarks/>
-        public event PATIINFOCompletedEventHandler PATIINFOCompleted;
-        
-        /// <remarks/>
-        public event DEPARTMENTSCompletedEventHandler DEPARTMENTSCompleted;
-        
-        /// <remarks/>
-        public event DOCTORCompletedEventHandler DOCTORCompleted;
-        
-        /// <remarks/>
-        public event OPERITEMCompletedEventHandler OPERITEMCompleted;
-        
-        /// <remarks/>
-        public event OPERDICTCompletedEventHandler OPERDICTCompleted;
-        
-        /// <remarks/>
-        public event ORGINFOCompletedEventHandler ORGINFOCompleted;
-        
-        /// <remarks/>
-        public event ORDDERINFOCompletedEventHandler ORDDERINFOCompleted;
-        
-        /// <remarks/>
-        public event GetOrds_JPCompletedEventHandler GetOrds_JPCompleted;
-        
-        /// <remarks/>
-        public event GetOrgInfo_JPCompletedEventHandler GetOrgInfo_JPCompleted;
-        
-        /// <remarks/>
-        public event GetOrdInfoCompletedEventHandler GetOrdInfoCompleted;
-        
-        /// <remarks/>
-        public event GetSTOrdInfoCompletedEventHandler GetSTOrdInfoCompleted;
-        
-        /// <remarks/>
-        public event GetDrugInfoCompletedEventHandler GetDrugInfoCompleted;
-        
-        /// <remarks/>
-        public event GetOrdItemObjCompletedEventHandler GetOrdItemObjCompleted;
         
         /// <remarks/>
         public event SetFlagCompletedEventHandler SetFlagCompleted;
@@ -784,1058 +606,247 @@ namespace WindowsFormsApplication1.WebReference {
         public event GetInpatientInfo_OnlyCompletedEventHandler GetInpatientInfo_OnlyCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdsInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetOrdsInfo(string Key, string Serialnumber) {
-            object[] results = this.Invoke("GetOrdsInfo", new object[] {
-                        Key,
-                        Serialnumber});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrdsInfoAsync(string Key, string Serialnumber) {
-            this.GetOrdsInfoAsync(Key, Serialnumber, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrdsInfoAsync(string Key, string Serialnumber, object userState) {
-            if ((this.GetOrdsInfoOperationCompleted == null)) {
-                this.GetOrdsInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdsInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetOrdsInfo", new object[] {
-                        Key,
-                        Serialnumber}, this.GetOrdsInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetOrdsInfoOperationCompleted(object arg) {
-            if ((this.GetOrdsInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrdsInfoCompleted(this, new GetOrdsInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdsInfo_Cate", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetOrdsInfo_Cate(string Key, string Serialnumber, string CateID) {
-            object[] results = this.Invoke("GetOrdsInfo_Cate", new object[] {
-                        Key,
-                        Serialnumber,
-                        CateID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrdsInfo_CateAsync(string Key, string Serialnumber, string CateID) {
-            this.GetOrdsInfo_CateAsync(Key, Serialnumber, CateID, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrdsInfo_CateAsync(string Key, string Serialnumber, string CateID, object userState) {
-            if ((this.GetOrdsInfo_CateOperationCompleted == null)) {
-                this.GetOrdsInfo_CateOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdsInfo_CateOperationCompleted);
-            }
-            this.InvokeAsync("GetOrdsInfo_Cate", new object[] {
-                        Key,
-                        Serialnumber,
-                        CateID}, this.GetOrdsInfo_CateOperationCompleted, userState);
-        }
-        
-        private void OnGetOrdsInfo_CateOperationCompleted(object arg) {
-            if ((this.GetOrdsInfo_CateCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrdsInfo_CateCompleted(this, new GetOrdsInfo_CateCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdItemInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetOrdItemInfo(string Key, string OrdID) {
-            object[] results = this.Invoke("GetOrdItemInfo", new object[] {
-                        Key,
-                        OrdID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrdItemInfoAsync(string Key, string OrdID) {
-            this.GetOrdItemInfoAsync(Key, OrdID, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrdItemInfoAsync(string Key, string OrdID, object userState) {
-            if ((this.GetOrdItemInfoOperationCompleted == null)) {
-                this.GetOrdItemInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdItemInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetOrdItemInfo", new object[] {
-                        Key,
-                        OrdID}, this.GetOrdItemInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetOrdItemInfoOperationCompleted(object arg) {
-            if ((this.GetOrdItemInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrdItemInfoCompleted(this, new GetOrdItemInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetEMPName", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetEMPName(string Key) {
-            object[] results = this.Invoke("GetEMPName", new object[] {
-                        Key});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetEMPNameAsync(string Key) {
-            this.GetEMPNameAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetEMPNameAsync(string Key, object userState) {
-            if ((this.GetEMPNameOperationCompleted == null)) {
-                this.GetEMPNameOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetEMPNameOperationCompleted);
-            }
-            this.InvokeAsync("GetEMPName", new object[] {
-                        Key}, this.GetEMPNameOperationCompleted, userState);
-        }
-        
-        private void OnGetEMPNameOperationCompleted(object arg) {
-            if ((this.GetEMPNameCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetEMPNameCompleted(this, new GetEMPNameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQrCode", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetQrCode([System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")] byte[] QrCodeImage) {
-            object[] results = this.Invoke("GetQrCode", new object[] {
-                        QrCodeImage});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetQrCodeAsync(byte[] QrCodeImage) {
-            this.GetQrCodeAsync(QrCodeImage, null);
-        }
-        
-        /// <remarks/>
-        public void GetQrCodeAsync(byte[] QrCodeImage, object userState) {
-            if ((this.GetQrCodeOperationCompleted == null)) {
-                this.GetQrCodeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQrCodeOperationCompleted);
-            }
-            this.InvokeAsync("GetQrCode", new object[] {
-                        QrCodeImage}, this.GetQrCodeOperationCompleted, userState);
-        }
-        
-        private void OnGetQrCodeOperationCompleted(object arg) {
-            if ((this.GetQrCodeCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetQrCodeCompleted(this, new GetQrCodeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQrCodeForPath", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetQrCodeForPath(string Path) {
-            object[] results = this.Invoke("GetQrCodeForPath", new object[] {
-                        Path});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetQrCodeForPathAsync(string Path) {
-            this.GetQrCodeForPathAsync(Path, null);
-        }
-        
-        /// <remarks/>
-        public void GetQrCodeForPathAsync(string Path, object userState) {
-            if ((this.GetQrCodeForPathOperationCompleted == null)) {
-                this.GetQrCodeForPathOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQrCodeForPathOperationCompleted);
-            }
-            this.InvokeAsync("GetQrCodeForPath", new object[] {
-                        Path}, this.GetQrCodeForPathOperationCompleted, userState);
-        }
-        
-        private void OnGetQrCodeForPathOperationCompleted(object arg) {
-            if ((this.GetQrCodeForPathCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetQrCodeForPathCompleted(this, new GetQrCodeForPathCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQrCodeImgage", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] GetQrCodeImgage(string QrCode) {
-            object[] results = this.Invoke("GetQrCodeImgage", new object[] {
-                        QrCode});
-            return ((byte[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetQrCodeImgageAsync(string QrCode) {
-            this.GetQrCodeImgageAsync(QrCode, null);
-        }
-        
-        /// <remarks/>
-        public void GetQrCodeImgageAsync(string QrCode, object userState) {
-            if ((this.GetQrCodeImgageOperationCompleted == null)) {
-                this.GetQrCodeImgageOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQrCodeImgageOperationCompleted);
-            }
-            this.InvokeAsync("GetQrCodeImgage", new object[] {
-                        QrCode}, this.GetQrCodeImgageOperationCompleted, userState);
-        }
-        
-        private void OnGetQrCodeImgageOperationCompleted(object arg) {
-            if ((this.GetQrCodeImgageCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetQrCodeImgageCompleted(this, new GetQrCodeImgageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQrCodeID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetQrCodeID(string QrCode) {
-            object[] results = this.Invoke("GetQrCodeID", new object[] {
-                        QrCode});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetQrCodeIDAsync(string QrCode) {
-            this.GetQrCodeIDAsync(QrCode, null);
-        }
-        
-        /// <remarks/>
-        public void GetQrCodeIDAsync(string QrCode, object userState) {
-            if ((this.GetQrCodeIDOperationCompleted == null)) {
-                this.GetQrCodeIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQrCodeIDOperationCompleted);
-            }
-            this.InvokeAsync("GetQrCodeID", new object[] {
-                        QrCode}, this.GetQrCodeIDOperationCompleted, userState);
-        }
-        
-        private void OnGetQrCodeIDOperationCompleted(object arg) {
-            if ((this.GetQrCodeIDCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetQrCodeIDCompleted(this, new GetQrCodeIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetPatiInfoBase", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetPatiInfoBase(string Key, string Serialnumber) {
-            object[] results = this.Invoke("GetPatiInfoBase", new object[] {
-                        Key,
-                        Serialnumber});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetPatiInfoBaseAsync(string Key, string Serialnumber) {
-            this.GetPatiInfoBaseAsync(Key, Serialnumber, null);
-        }
-        
-        /// <remarks/>
-        public void GetPatiInfoBaseAsync(string Key, string Serialnumber, object userState) {
-            if ((this.GetPatiInfoBaseOperationCompleted == null)) {
-                this.GetPatiInfoBaseOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetPatiInfoBaseOperationCompleted);
-            }
-            this.InvokeAsync("GetPatiInfoBase", new object[] {
-                        Key,
-                        Serialnumber}, this.GetPatiInfoBaseOperationCompleted, userState);
-        }
-        
-        private void OnGetPatiInfoBaseOperationCompleted(object arg) {
-            if ((this.GetPatiInfoBaseCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetPatiInfoBaseCompleted(this, new GetPatiInfoBaseCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetPatiInfoBase_Operator", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetPatiInfoBase_Operator(string Key, string Serialnumber) {
-            object[] results = this.Invoke("GetPatiInfoBase_Operator", new object[] {
-                        Key,
-                        Serialnumber});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetPatiInfoBase_OperatorAsync(string Key, string Serialnumber) {
-            this.GetPatiInfoBase_OperatorAsync(Key, Serialnumber, null);
-        }
-        
-        /// <remarks/>
-        public void GetPatiInfoBase_OperatorAsync(string Key, string Serialnumber, object userState) {
-            if ((this.GetPatiInfoBase_OperatorOperationCompleted == null)) {
-                this.GetPatiInfoBase_OperatorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetPatiInfoBase_OperatorOperationCompleted);
-            }
-            this.InvokeAsync("GetPatiInfoBase_Operator", new object[] {
-                        Key,
-                        Serialnumber}, this.GetPatiInfoBase_OperatorOperationCompleted, userState);
-        }
-        
-        private void OnGetPatiInfoBase_OperatorOperationCompleted(object arg) {
-            if ((this.GetPatiInfoBase_OperatorCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetPatiInfoBase_OperatorCompleted(this, new GetPatiInfoBase_OperatorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetPatiInfoBaseByID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetPatiInfoBaseByID(string ID) {
-            object[] results = this.Invoke("GetPatiInfoBaseByID", new object[] {
-                        ID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetPatiInfoBaseByIDAsync(string ID) {
-            this.GetPatiInfoBaseByIDAsync(ID, null);
-        }
-        
-        /// <remarks/>
-        public void GetPatiInfoBaseByIDAsync(string ID, object userState) {
-            if ((this.GetPatiInfoBaseByIDOperationCompleted == null)) {
-                this.GetPatiInfoBaseByIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetPatiInfoBaseByIDOperationCompleted);
-            }
-            this.InvokeAsync("GetPatiInfoBaseByID", new object[] {
-                        ID}, this.GetPatiInfoBaseByIDOperationCompleted, userState);
-        }
-        
-        private void OnGetPatiInfoBaseByIDOperationCompleted(object arg) {
-            if ((this.GetPatiInfoBaseByIDCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetPatiInfoBaseByIDCompleted(this, new GetPatiInfoBaseByIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetEmpImage", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetEmpImage(string empID) {
-            object[] results = this.Invoke("GetEmpImage", new object[] {
-                        empID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetEmpImageAsync(string empID) {
-            this.GetEmpImageAsync(empID, null);
-        }
-        
-        /// <remarks/>
-        public void GetEmpImageAsync(string empID, object userState) {
-            if ((this.GetEmpImageOperationCompleted == null)) {
-                this.GetEmpImageOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetEmpImageOperationCompleted);
-            }
-            this.InvokeAsync("GetEmpImage", new object[] {
-                        empID}, this.GetEmpImageOperationCompleted, userState);
-        }
-        
-        private void OnGetEmpImageOperationCompleted(object arg) {
-            if ((this.GetEmpImageCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetEmpImageCompleted(this, new GetEmpImageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrInHospNum(string Key) {
-            object[] results = this.Invoke("GetCurrInHospNum", new object[] {
-                        Key});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrInHospNumAsync(string Key) {
-            this.GetCurrInHospNumAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrInHospNumAsync(string Key, object userState) {
-            if ((this.GetCurrInHospNumOperationCompleted == null)) {
-                this.GetCurrInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrInHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrInHospNum", new object[] {
-                        Key}, this.GetCurrInHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrInHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrInHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrInHospNumCompleted(this, new GetCurrInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrOrgInHospNum(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgInHospNum", new object[] {
-                        Key,
-                        WSID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgInHospNumAsync(string Key, string WSID) {
-            this.GetCurrOrgInHospNumAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgInHospNumAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgInHospNumOperationCompleted == null)) {
-                this.GetCurrOrgInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgInHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgInHospNum", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgInHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgInHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrOrgInHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgInHospNumCompleted(this, new GetCurrOrgInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrOrgInHospNum_Item(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgInHospNum_Item", new object[] {
-                        Key,
-                        WSID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgInHospNum_ItemAsync(string Key, string WSID) {
-            this.GetCurrOrgInHospNum_ItemAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgInHospNum_ItemAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgInHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrOrgInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgInHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgInHospNum_Item", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgInHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgInHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrOrgInHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgInHospNum_ItemCompleted(this, new GetCurrOrgInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrInHosp_ByDiag", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrInHosp_ByDiag(string Key) {
-            object[] results = this.Invoke("GetCurrInHosp_ByDiag", new object[] {
-                        Key});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrInHosp_ByDiagAsync(string Key) {
-            this.GetCurrInHosp_ByDiagAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrInHosp_ByDiagAsync(string Key, object userState) {
-            if ((this.GetCurrInHosp_ByDiagOperationCompleted == null)) {
-                this.GetCurrInHosp_ByDiagOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrInHosp_ByDiagOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrInHosp_ByDiag", new object[] {
-                        Key}, this.GetCurrInHosp_ByDiagOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrInHosp_ByDiagOperationCompleted(object arg) {
-            if ((this.GetCurrInHosp_ByDiagCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrInHosp_ByDiagCompleted(this, new GetCurrInHosp_ByDiagCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrInHosp_ByDiag_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrInHosp_ByDiag_Item(string Key, string DiagOrgID) {
-            object[] results = this.Invoke("GetCurrInHosp_ByDiag_Item", new object[] {
-                        Key,
-                        DiagOrgID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrInHosp_ByDiag_ItemAsync(string Key, string DiagOrgID) {
-            this.GetCurrInHosp_ByDiag_ItemAsync(Key, DiagOrgID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrInHosp_ByDiag_ItemAsync(string Key, string DiagOrgID, object userState) {
-            if ((this.GetCurrInHosp_ByDiag_ItemOperationCompleted == null)) {
-                this.GetCurrInHosp_ByDiag_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrInHosp_ByDiag_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrInHosp_ByDiag_Item", new object[] {
-                        Key,
-                        DiagOrgID}, this.GetCurrInHosp_ByDiag_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrInHosp_ByDiag_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrInHosp_ByDiag_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrInHosp_ByDiag_ItemCompleted(this, new GetCurrInHosp_ByDiag_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOutHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrOutHospNum(string Key) {
-            object[] results = this.Invoke("GetCurrOutHospNum", new object[] {
-                        Key});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOutHospNumAsync(string Key) {
-            this.GetCurrOutHospNumAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOutHospNumAsync(string Key, object userState) {
-            if ((this.GetCurrOutHospNumOperationCompleted == null)) {
-                this.GetCurrOutHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOutHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOutHospNum", new object[] {
-                        Key}, this.GetCurrOutHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOutHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrOutHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOutHospNumCompleted(this, new GetCurrOutHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgOutHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrOrgOutHospNum(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgOutHospNum", new object[] {
-                        Key,
-                        WSID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgOutHospNumAsync(string Key, string WSID) {
-            this.GetCurrOrgOutHospNumAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgOutHospNumAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgOutHospNumOperationCompleted == null)) {
-                this.GetCurrOrgOutHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgOutHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgOutHospNum", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgOutHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgOutHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrOrgOutHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgOutHospNumCompleted(this, new GetCurrOrgOutHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOutHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrOutHospNum_Item(string Key) {
-            object[] results = this.Invoke("GetCurrOutHospNum_Item", new object[] {
-                        Key});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOutHospNum_ItemAsync(string Key) {
-            this.GetCurrOutHospNum_ItemAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOutHospNum_ItemAsync(string Key, object userState) {
-            if ((this.GetCurrOutHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrOutHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOutHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOutHospNum_Item", new object[] {
-                        Key}, this.GetCurrOutHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOutHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrOutHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOutHospNum_ItemCompleted(this, new GetCurrOutHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgOutHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrOrgOutHospNum_Item(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgOutHospNum_Item", new object[] {
-                        Key,
-                        WSID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgOutHospNum_ItemAsync(string Key, string WSID) {
-            this.GetCurrOrgOutHospNum_ItemAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgOutHospNum_ItemAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgOutHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrOrgOutHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgOutHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgOutHospNum_Item", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgOutHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgOutHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrOrgOutHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgOutHospNum_ItemCompleted(this, new GetCurrOrgOutHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrLeaveHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrLeaveHospNum(string Key) {
-            object[] results = this.Invoke("GetCurrLeaveHospNum", new object[] {
-                        Key});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrLeaveHospNumAsync(string Key) {
-            this.GetCurrLeaveHospNumAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrLeaveHospNumAsync(string Key, object userState) {
-            if ((this.GetCurrLeaveHospNumOperationCompleted == null)) {
-                this.GetCurrLeaveHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrLeaveHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrLeaveHospNum", new object[] {
-                        Key}, this.GetCurrLeaveHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrLeaveHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrLeaveHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrLeaveHospNumCompleted(this, new GetCurrLeaveHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgLeaveHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrOrgLeaveHospNum(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgLeaveHospNum", new object[] {
-                        Key,
-                        WSID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgLeaveHospNumAsync(string Key, string WSID) {
-            this.GetCurrOrgLeaveHospNumAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgLeaveHospNumAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgLeaveHospNumOperationCompleted == null)) {
-                this.GetCurrOrgLeaveHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgLeaveHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgLeaveHospNum", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgLeaveHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgLeaveHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrOrgLeaveHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgLeaveHospNumCompleted(this, new GetCurrOrgLeaveHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrLeaveHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrLeaveHospNum_Item(string Key) {
-            object[] results = this.Invoke("GetCurrLeaveHospNum_Item", new object[] {
-                        Key});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrLeaveHospNum_ItemAsync(string Key) {
-            this.GetCurrLeaveHospNum_ItemAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrLeaveHospNum_ItemAsync(string Key, object userState) {
-            if ((this.GetCurrLeaveHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrLeaveHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrLeaveHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrLeaveHospNum_Item", new object[] {
-                        Key}, this.GetCurrLeaveHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrLeaveHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrLeaveHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrLeaveHospNum_ItemCompleted(this, new GetCurrLeaveHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgLeaveHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrOrgLeaveHospNum_Item(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgLeaveHospNum_Item", new object[] {
-                        Key,
-                        WSID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgLeaveHospNum_ItemAsync(string Key, string WSID) {
-            this.GetCurrOrgLeaveHospNum_ItemAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgLeaveHospNum_ItemAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgLeaveHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrOrgLeaveHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgLeaveHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgLeaveHospNum_Item", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgLeaveHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgLeaveHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrOrgLeaveHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgLeaveHospNum_ItemCompleted(this, new GetCurrOrgLeaveHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrDayInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrDayInHospNum(string Key) {
-            object[] results = this.Invoke("GetCurrDayInHospNum", new object[] {
-                        Key});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrDayInHospNumAsync(string Key) {
-            this.GetCurrDayInHospNumAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrDayInHospNumAsync(string Key, object userState) {
-            if ((this.GetCurrDayInHospNumOperationCompleted == null)) {
-                this.GetCurrDayInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrDayInHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrDayInHospNum", new object[] {
-                        Key}, this.GetCurrDayInHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrDayInHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrDayInHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrDayInHospNumCompleted(this, new GetCurrDayInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgDayInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrOrgDayInHospNum(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgDayInHospNum", new object[] {
-                        Key,
-                        WSID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgDayInHospNumAsync(string Key, string WSID) {
-            this.GetCurrOrgDayInHospNumAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgDayInHospNumAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgDayInHospNumOperationCompleted == null)) {
-                this.GetCurrOrgDayInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgDayInHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgDayInHospNum", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgDayInHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgDayInHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrOrgDayInHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgDayInHospNumCompleted(this, new GetCurrOrgDayInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrDayInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrDayInHospNum_Item(string Key) {
-            object[] results = this.Invoke("GetCurrDayInHospNum_Item", new object[] {
-                        Key});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrDayInHospNum_ItemAsync(string Key) {
-            this.GetCurrDayInHospNum_ItemAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrDayInHospNum_ItemAsync(string Key, object userState) {
-            if ((this.GetCurrDayInHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrDayInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrDayInHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrDayInHospNum_Item", new object[] {
-                        Key}, this.GetCurrDayInHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrDayInHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrDayInHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrDayInHospNum_ItemCompleted(this, new GetCurrDayInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgDayInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrOrgDayInHospNum_Item(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgDayInHospNum_Item", new object[] {
-                        Key,
-                        WSID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgDayInHospNum_ItemAsync(string Key, string WSID) {
-            this.GetCurrOrgDayInHospNum_ItemAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgDayInHospNum_ItemAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgDayInHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrOrgDayInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgDayInHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgDayInHospNum_Item", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgDayInHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgDayInHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrOrgDayInHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgDayInHospNum_ItemCompleted(this, new GetCurrOrgDayInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrCriticallyIllInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrCriticallyIllInHospNum(string Key) {
-            object[] results = this.Invoke("GetCurrCriticallyIllInHospNum", new object[] {
-                        Key});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrCriticallyIllInHospNumAsync(string Key) {
-            this.GetCurrCriticallyIllInHospNumAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrCriticallyIllInHospNumAsync(string Key, object userState) {
-            if ((this.GetCurrCriticallyIllInHospNumOperationCompleted == null)) {
-                this.GetCurrCriticallyIllInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrCriticallyIllInHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrCriticallyIllInHospNum", new object[] {
-                        Key}, this.GetCurrCriticallyIllInHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrCriticallyIllInHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrCriticallyIllInHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrCriticallyIllInHospNumCompleted(this, new GetCurrCriticallyIllInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgCriticallyIllInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetCurrOrgCriticallyIllInHospNum(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgCriticallyIllInHospNum", new object[] {
-                        Key,
-                        WSID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgCriticallyIllInHospNumAsync(string Key, string WSID) {
-            this.GetCurrOrgCriticallyIllInHospNumAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgCriticallyIllInHospNumAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgCriticallyIllInHospNumOperationCompleted == null)) {
-                this.GetCurrOrgCriticallyIllInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgCriticallyIllInHospNumOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgCriticallyIllInHospNum", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgCriticallyIllInHospNumOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgCriticallyIllInHospNumOperationCompleted(object arg) {
-            if ((this.GetCurrOrgCriticallyIllInHospNumCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgCriticallyIllInHospNumCompleted(this, new GetCurrOrgCriticallyIllInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrCriticallyIllInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrCriticallyIllInHospNum_Item(string Key) {
-            object[] results = this.Invoke("GetCurrCriticallyIllInHospNum_Item", new object[] {
-                        Key});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrCriticallyIllInHospNum_ItemAsync(string Key) {
-            this.GetCurrCriticallyIllInHospNum_ItemAsync(Key, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrCriticallyIllInHospNum_ItemAsync(string Key, object userState) {
-            if ((this.GetCurrCriticallyIllInHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrCriticallyIllInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrCriticallyIllInHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrCriticallyIllInHospNum_Item", new object[] {
-                        Key}, this.GetCurrCriticallyIllInHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrCriticallyIllInHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrCriticallyIllInHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrCriticallyIllInHospNum_ItemCompleted(this, new GetCurrCriticallyIllInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgCriticallyIllInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrOrgCriticallyIllInHospNum_Item(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgCriticallyIllInHospNum_Item", new object[] {
-                        Key,
-                        WSID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgCriticallyIllInHospNum_ItemAsync(string Key, string WSID) {
-            this.GetCurrOrgCriticallyIllInHospNum_ItemAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgCriticallyIllInHospNum_ItemAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgCriticallyIllInHospNum_Item", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrOrgCriticallyIllInHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgCriticallyIllInHospNum_ItemCompleted(this, new GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgOnDayCriticallyIllInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetCurrOrgOnDayCriticallyIllInHospNum_Item(string Key, string WSID) {
-            object[] results = this.Invoke("GetCurrOrgOnDayCriticallyIllInHospNum_Item", new object[] {
-                        Key,
-                        WSID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgOnDayCriticallyIllInHospNum_ItemAsync(string Key, string WSID) {
-            this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetCurrOrgOnDayCriticallyIllInHospNum_ItemAsync(string Key, string WSID, object userState) {
-            if ((this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted == null)) {
-                this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted);
-            }
-            this.InvokeAsync("GetCurrOrgOnDayCriticallyIllInHospNum_Item", new object[] {
-                        Key,
-                        WSID}, this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted, userState);
-        }
-        
-        private void OnGetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted(object arg) {
-            if ((this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompleted(this, new GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetInpatientInfo_Only_ByEmpID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetInpatientInfo_Only_ByEmpID(string Key, string WSID) {
-            object[] results = this.Invoke("GetInpatientInfo_Only_ByEmpID", new object[] {
-                        Key,
-                        WSID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetInpatientInfo_Only_ByEmpIDAsync(string Key, string WSID) {
-            this.GetInpatientInfo_Only_ByEmpIDAsync(Key, WSID, null);
-        }
-        
-        /// <remarks/>
-        public void GetInpatientInfo_Only_ByEmpIDAsync(string Key, string WSID, object userState) {
-            if ((this.GetInpatientInfo_Only_ByEmpIDOperationCompleted == null)) {
-                this.GetInpatientInfo_Only_ByEmpIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetInpatientInfo_Only_ByEmpIDOperationCompleted);
-            }
-            this.InvokeAsync("GetInpatientInfo_Only_ByEmpID", new object[] {
-                        Key,
-                        WSID}, this.GetInpatientInfo_Only_ByEmpIDOperationCompleted, userState);
-        }
-        
-        private void OnGetInpatientInfo_Only_ByEmpIDOperationCompleted(object arg) {
-            if ((this.GetInpatientInfo_Only_ByEmpIDCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetInpatientInfo_Only_ByEmpIDCompleted(this, new GetInpatientInfo_Only_ByEmpIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
+        public event GetOrdsInfoCompletedEventHandler GetOrdsInfoCompleted;
+        
+        /// <remarks/>
+        public event GetOrdsInfo_CateCompletedEventHandler GetOrdsInfo_CateCompleted;
+        
+        /// <remarks/>
+        public event GetOrdItemInfoCompletedEventHandler GetOrdItemInfoCompleted;
+        
+        /// <remarks/>
+        public event GetEMPNameCompletedEventHandler GetEMPNameCompleted;
+        
+        /// <remarks/>
+        public event GetQrCodeCompletedEventHandler GetQrCodeCompleted;
+        
+        /// <remarks/>
+        public event GetQrCodeForPathCompletedEventHandler GetQrCodeForPathCompleted;
+        
+        /// <remarks/>
+        public event GetQrCodeImgageCompletedEventHandler GetQrCodeImgageCompleted;
+        
+        /// <remarks/>
+        public event GetQrCodeIDCompletedEventHandler GetQrCodeIDCompleted;
+        
+        /// <remarks/>
+        public event GetPatiInfoBaseCompletedEventHandler GetPatiInfoBaseCompleted;
+        
+        /// <remarks/>
+        public event GetPatiInfoBase_BOWCompletedEventHandler GetPatiInfoBase_BOWCompleted;
+        
+        /// <remarks/>
+        public event GetPatiInfoBase_OperatorCompletedEventHandler GetPatiInfoBase_OperatorCompleted;
+        
+        /// <remarks/>
+        public event GetPatiInfoBaseByIDCompletedEventHandler GetPatiInfoBaseByIDCompleted;
+        
+        /// <remarks/>
+        public event GetEmpImageCompletedEventHandler GetEmpImageCompleted;
+        
+        /// <remarks/>
+        public event GetCurrInHospNumCompletedEventHandler GetCurrInHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgInHospNumCompletedEventHandler GetCurrOrgInHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgInHospNum_ItemCompletedEventHandler GetCurrOrgInHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrInHosp_ByDiagCompletedEventHandler GetCurrInHosp_ByDiagCompleted;
+        
+        /// <remarks/>
+        public event GetCurrInHosp_ByDiag_ItemCompletedEventHandler GetCurrInHosp_ByDiag_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOutHospNumCompletedEventHandler GetCurrOutHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgOutHospNumCompletedEventHandler GetCurrOrgOutHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOutHospNum_ItemCompletedEventHandler GetCurrOutHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgOutHospNum_ItemCompletedEventHandler GetCurrOrgOutHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrLeaveHospNumCompletedEventHandler GetCurrLeaveHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgLeaveHospNumCompletedEventHandler GetCurrOrgLeaveHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrLeaveHospNum_ItemCompletedEventHandler GetCurrLeaveHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgLeaveHospNum_ItemCompletedEventHandler GetCurrOrgLeaveHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrDayInHospNumCompletedEventHandler GetCurrDayInHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgDayInHospNumCompletedEventHandler GetCurrOrgDayInHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrDayInHospNum_ItemCompletedEventHandler GetCurrDayInHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgDayInHospNum_ItemCompletedEventHandler GetCurrOrgDayInHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrCriticallyIllInHospNumCompletedEventHandler GetCurrCriticallyIllInHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgCriticallyIllInHospNumCompletedEventHandler GetCurrOrgCriticallyIllInHospNumCompleted;
+        
+        /// <remarks/>
+        public event GetCurrCriticallyIllInHospNum_ItemCompletedEventHandler GetCurrCriticallyIllInHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventHandler GetCurrOrgCriticallyIllInHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventHandler GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompleted;
+        
+        /// <remarks/>
+        public event GetInpatientInfo_Only_ByEmpIDCompletedEventHandler GetInpatientInfo_Only_ByEmpIDCompleted;
+        
+        /// <remarks/>
+        public event GetHospInfoCompletedEventHandler GetHospInfoCompleted;
+        
+        /// <remarks/>
+        public event GetOrgInfoCompletedEventHandler GetOrgInfoCompleted;
+        
+        /// <remarks/>
+        public event GetOrgBaseInfoCompletedEventHandler GetOrgBaseInfoCompleted;
+        
+        /// <remarks/>
+        public event GETCODEINFOCompletedEventHandler GETCODEINFOCompleted;
+        
+        /// <remarks/>
+        public event GetDoctorInfoCompletedEventHandler GetDoctorInfoCompleted;
+        
+        /// <remarks/>
+        public event GetResInfoCompletedEventHandler GetResInfoCompleted;
+        
+        /// <remarks/>
+        public event AddPersonCompletedEventHandler AddPersonCompleted;
+        
+        /// <remarks/>
+        public event CreadCardCompletedEventHandler CreadCardCompleted;
+        
+        /// <remarks/>
+        public event RegCheckCompletedEventHandler RegCheckCompleted;
+        
+        /// <remarks/>
+        public event RegDataCompletedEventHandler RegDataCompleted;
+        
+        /// <remarks/>
+        public event UnRegDataCompletedEventHandler UnRegDataCompleted;
+        
+        /// <remarks/>
+        public event GetOrdInfotollCompletedEventHandler GetOrdInfotollCompleted;
+        
+        /// <remarks/>
+        public event SetOrdInftollTwoCompletedEventHandler SetOrdInftollTwoCompleted;
+        
+        /// <remarks/>
+        public event GetOrdInftollTwoCompletedEventHandler GetOrdInftollTwoCompleted;
+        
+        /// <remarks/>
+        public event GetOrdInftollTwo_FeeCompletedEventHandler GetOrdInftollTwo_FeeCompleted;
+        
+        /// <remarks/>
+        public event GetQueCompletedEventHandler GetQueCompleted;
+        
+        /// <remarks/>
+        public event findAllReportCompletedEventHandler findAllReportCompleted;
+        
+        /// <remarks/>
+        public event findAllReportByPatiIDCompletedEventHandler findAllReportByPatiIDCompleted;
+        
+        /// <remarks/>
+        public event findCheckReportCompletedEventHandler findCheckReportCompleted;
+        
+        /// <remarks/>
+        public event findCompleteReportCompletedEventHandler findCompleteReportCompleted;
+        
+        /// <remarks/>
+        public event GetADayCompletedEventHandler GetADayCompleted;
+        
+        /// <remarks/>
+        public event GetSubscriptionCompletedEventHandler GetSubscriptionCompleted;
+        
+        /// <remarks/>
+        public event SetDepositCompletedEventHandler SetDepositCompleted;
+        
+        /// <remarks/>
+        public event GetWindNoCompletedEventHandler GetWindNoCompleted;
+        
+        /// <remarks/>
+        public event GetDayFeeItemCompletedEventHandler GetDayFeeItemCompleted;
+        
+        /// <remarks/>
+        public event MicroPayCompletedEventHandler MicroPayCompleted;
+        
+        /// <remarks/>
+        public event MicroPayQryCompletedEventHandler MicroPayQryCompleted;
+        
+        /// <remarks/>
+        public event MicroPayCancelCompletedEventHandler MicroPayCancelCompleted;
+        
+        /// <remarks/>
+        public event CreateOrderCompletedEventHandler CreateOrderCompleted;
+        
+        /// <remarks/>
+        public event ITEMIINFOCompletedEventHandler ITEMIINFOCompleted;
+        
+        /// <remarks/>
+        public event EMRTYPECompletedEventHandler EMRTYPECompleted;
+        
+        /// <remarks/>
+        public event TEMINFOCompletedEventHandler TEMINFOCompleted;
+        
+        /// <remarks/>
+        public event PATIINFOCompletedEventHandler PATIINFOCompleted;
+        
+        /// <remarks/>
+        public event DEPARTMENTSCompletedEventHandler DEPARTMENTSCompleted;
+        
+        /// <remarks/>
+        public event DOCTORCompletedEventHandler DOCTORCompleted;
+        
+        /// <remarks/>
+        public event OPERITEMCompletedEventHandler OPERITEMCompleted;
+        
+        /// <remarks/>
+        public event OPERDICTCompletedEventHandler OPERDICTCompleted;
+        
+        /// <remarks/>
+        public event ORGINFOCompletedEventHandler ORGINFOCompleted;
+        
+        /// <remarks/>
+        public event ORDDERINFOCompletedEventHandler ORDDERINFOCompleted;
+        
+        /// <remarks/>
+        public event GetOrds_JPCompletedEventHandler GetOrds_JPCompleted;
+        
+        /// <remarks/>
+        public event GetOrgInfo_JPCompletedEventHandler GetOrgInfo_JPCompleted;
+        
+        /// <remarks/>
+        public event GetOrdInfoCompletedEventHandler GetOrdInfoCompleted;
+        
+        /// <remarks/>
+        public event GetSTOrdInfoCompletedEventHandler GetSTOrdInfoCompleted;
+        
+        /// <remarks/>
+        public event GetDrugInfoCompletedEventHandler GetDrugInfoCompleted;
+        
+        /// <remarks/>
+        public event GetOrdItemObjCompletedEventHandler GetOrdItemObjCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetYesterdayOutNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1956,6 +967,64 @@ namespace WindowsFormsApplication1.WebReference {
             if ((this.GetReportCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetReportCompleted(this, new GetReportCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/PatientState", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string PatientState(string CardID) {
+            object[] results = this.Invoke("PatientState", new object[] {
+                        CardID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PatientStateAsync(string CardID) {
+            this.PatientStateAsync(CardID, null);
+        }
+        
+        /// <remarks/>
+        public void PatientStateAsync(string CardID, object userState) {
+            if ((this.PatientStateOperationCompleted == null)) {
+                this.PatientStateOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPatientStateOperationCompleted);
+            }
+            this.InvokeAsync("PatientState", new object[] {
+                        CardID}, this.PatientStateOperationCompleted, userState);
+        }
+        
+        private void OnPatientStateOperationCompleted(object arg) {
+            if ((this.PatientStateCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PatientStateCompleted(this, new PatientStateCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/getORGID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string getORGID(string CardID) {
+            object[] results = this.Invoke("getORGID", new object[] {
+                        CardID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getORGIDAsync(string CardID) {
+            this.getORGIDAsync(CardID, null);
+        }
+        
+        /// <remarks/>
+        public void getORGIDAsync(string CardID, object userState) {
+            if ((this.getORGIDOperationCompleted == null)) {
+                this.getORGIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetORGIDOperationCompleted);
+            }
+            this.InvokeAsync("getORGID", new object[] {
+                        CardID}, this.getORGIDOperationCompleted, userState);
+        }
+        
+        private void OngetORGIDOperationCompleted(object arg) {
+            if ((this.getORGIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getORGIDCompleted(this, new getORGIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2296,6 +1365,37 @@ namespace WindowsFormsApplication1.WebReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetNurOrders_BOW", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetNurOrders_BOW(string Key, string serialnumberAndOrdID) {
+            object[] results = this.Invoke("GetNurOrders_BOW", new object[] {
+                        Key,
+                        serialnumberAndOrdID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetNurOrders_BOWAsync(string Key, string serialnumberAndOrdID) {
+            this.GetNurOrders_BOWAsync(Key, serialnumberAndOrdID, null);
+        }
+        
+        /// <remarks/>
+        public void GetNurOrders_BOWAsync(string Key, string serialnumberAndOrdID, object userState) {
+            if ((this.GetNurOrders_BOWOperationCompleted == null)) {
+                this.GetNurOrders_BOWOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetNurOrders_BOWOperationCompleted);
+            }
+            this.InvokeAsync("GetNurOrders_BOW", new object[] {
+                        Key,
+                        serialnumberAndOrdID}, this.GetNurOrders_BOWOperationCompleted, userState);
+        }
+        
+        private void OnGetNurOrders_BOWOperationCompleted(object arg) {
+            if ((this.GetNurOrders_BOWCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetNurOrders_BOWCompleted(this, new GetNurOrders_BOWCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetNurOrdersTest", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet GetNurOrdersTest(string ItemID) {
             object[] results = this.Invoke("GetNurOrdersTest", new object[] {
@@ -2321,6 +1421,35 @@ namespace WindowsFormsApplication1.WebReference {
             if ((this.GetNurOrdersTestCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetNurOrdersTestCompleted(this, new GetNurOrdersTestCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetNurOrdersItemDP", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetNurOrdersItemDP(string ItemID) {
+            object[] results = this.Invoke("GetNurOrdersItemDP", new object[] {
+                        ItemID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetNurOrdersItemDPAsync(string ItemID) {
+            this.GetNurOrdersItemDPAsync(ItemID, null);
+        }
+        
+        /// <remarks/>
+        public void GetNurOrdersItemDPAsync(string ItemID, object userState) {
+            if ((this.GetNurOrdersItemDPOperationCompleted == null)) {
+                this.GetNurOrdersItemDPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetNurOrdersItemDPOperationCompleted);
+            }
+            this.InvokeAsync("GetNurOrdersItemDP", new object[] {
+                        ItemID}, this.GetNurOrdersItemDPOperationCompleted, userState);
+        }
+        
+        private void OnGetNurOrdersItemDPOperationCompleted(object arg) {
+            if ((this.GetNurOrdersItemDPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetNurOrdersItemDPCompleted(this, new GetNurOrdersItemDPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2387,6 +1516,70 @@ namespace WindowsFormsApplication1.WebReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/NursingExec_BOW", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string NursingExec_BOW(string Key, string serialnumberAndOrdID) {
+            object[] results = this.Invoke("NursingExec_BOW", new object[] {
+                        Key,
+                        serialnumberAndOrdID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void NursingExec_BOWAsync(string Key, string serialnumberAndOrdID) {
+            this.NursingExec_BOWAsync(Key, serialnumberAndOrdID, null);
+        }
+        
+        /// <remarks/>
+        public void NursingExec_BOWAsync(string Key, string serialnumberAndOrdID, object userState) {
+            if ((this.NursingExec_BOWOperationCompleted == null)) {
+                this.NursingExec_BOWOperationCompleted = new System.Threading.SendOrPostCallback(this.OnNursingExec_BOWOperationCompleted);
+            }
+            this.InvokeAsync("NursingExec_BOW", new object[] {
+                        Key,
+                        serialnumberAndOrdID}, this.NursingExec_BOWOperationCompleted, userState);
+        }
+        
+        private void OnNursingExec_BOWOperationCompleted(object arg) {
+            if ((this.NursingExec_BOWCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.NursingExec_BOWCompleted(this, new NursingExec_BOWCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/NursingExec_Trace", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string NursingExec_Trace(string Key, string serialnumberAndOrdID, string code) {
+            object[] results = this.Invoke("NursingExec_Trace", new object[] {
+                        Key,
+                        serialnumberAndOrdID,
+                        code});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void NursingExec_TraceAsync(string Key, string serialnumberAndOrdID, string code) {
+            this.NursingExec_TraceAsync(Key, serialnumberAndOrdID, code, null);
+        }
+        
+        /// <remarks/>
+        public void NursingExec_TraceAsync(string Key, string serialnumberAndOrdID, string code, object userState) {
+            if ((this.NursingExec_TraceOperationCompleted == null)) {
+                this.NursingExec_TraceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnNursingExec_TraceOperationCompleted);
+            }
+            this.InvokeAsync("NursingExec_Trace", new object[] {
+                        Key,
+                        serialnumberAndOrdID,
+                        code}, this.NursingExec_TraceOperationCompleted, userState);
+        }
+        
+        private void OnNursingExec_TraceOperationCompleted(object arg) {
+            if ((this.NursingExec_TraceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.NursingExec_TraceCompleted(this, new NursingExec_TraceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/NursingExec_EMPID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string NursingExec_EMPID(string Key, string serialnumberAndOrdID, string empID) {
             object[] results = this.Invoke("NursingExec_EMPID", new object[] {
@@ -2420,6 +1613,37 @@ namespace WindowsFormsApplication1.WebReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetNurOrders_ZY", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetNurOrders_ZY(string Key, string serialnumberAndOrdID) {
+            object[] results = this.Invoke("GetNurOrders_ZY", new object[] {
+                        Key,
+                        serialnumberAndOrdID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetNurOrders_ZYAsync(string Key, string serialnumberAndOrdID) {
+            this.GetNurOrders_ZYAsync(Key, serialnumberAndOrdID, null);
+        }
+        
+        /// <remarks/>
+        public void GetNurOrders_ZYAsync(string Key, string serialnumberAndOrdID, object userState) {
+            if ((this.GetNurOrders_ZYOperationCompleted == null)) {
+                this.GetNurOrders_ZYOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetNurOrders_ZYOperationCompleted);
+            }
+            this.InvokeAsync("GetNurOrders_ZY", new object[] {
+                        Key,
+                        serialnumberAndOrdID}, this.GetNurOrders_ZYOperationCompleted, userState);
+        }
+        
+        private void OnGetNurOrders_ZYOperationCompleted(object arg) {
+            if ((this.GetNurOrders_ZYCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetNurOrders_ZYCompleted(this, new GetNurOrders_ZYCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/NursingExec_ZY", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string NursingExec_ZY(string Key, string serialnumberAndOrdID) {
             object[] results = this.Invoke("NursingExec_ZY", new object[] {
@@ -2447,6 +1671,134 @@ namespace WindowsFormsApplication1.WebReference {
             if ((this.NursingExec_ZYCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.NursingExec_ZYCompleted(this, new NursingExec_ZYCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/NursingExec_Admin", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string NursingExec_Admin(string Key, string serialnumberAndOrdID) {
+            object[] results = this.Invoke("NursingExec_Admin", new object[] {
+                        Key,
+                        serialnumberAndOrdID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void NursingExec_AdminAsync(string Key, string serialnumberAndOrdID) {
+            this.NursingExec_AdminAsync(Key, serialnumberAndOrdID, null);
+        }
+        
+        /// <remarks/>
+        public void NursingExec_AdminAsync(string Key, string serialnumberAndOrdID, object userState) {
+            if ((this.NursingExec_AdminOperationCompleted == null)) {
+                this.NursingExec_AdminOperationCompleted = new System.Threading.SendOrPostCallback(this.OnNursingExec_AdminOperationCompleted);
+            }
+            this.InvokeAsync("NursingExec_Admin", new object[] {
+                        Key,
+                        serialnumberAndOrdID}, this.NursingExec_AdminOperationCompleted, userState);
+        }
+        
+        private void OnNursingExec_AdminOperationCompleted(object arg) {
+            if ((this.NursingExec_AdminCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.NursingExec_AdminCompleted(this, new NursingExec_AdminCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/NursingExec_BIW_Order", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string NursingExec_BIW_Order(string Key, string serialnumberAndOrdID, string billflag) {
+            object[] results = this.Invoke("NursingExec_BIW_Order", new object[] {
+                        Key,
+                        serialnumberAndOrdID,
+                        billflag});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void NursingExec_BIW_OrderAsync(string Key, string serialnumberAndOrdID, string billflag) {
+            this.NursingExec_BIW_OrderAsync(Key, serialnumberAndOrdID, billflag, null);
+        }
+        
+        /// <remarks/>
+        public void NursingExec_BIW_OrderAsync(string Key, string serialnumberAndOrdID, string billflag, object userState) {
+            if ((this.NursingExec_BIW_OrderOperationCompleted == null)) {
+                this.NursingExec_BIW_OrderOperationCompleted = new System.Threading.SendOrPostCallback(this.OnNursingExec_BIW_OrderOperationCompleted);
+            }
+            this.InvokeAsync("NursingExec_BIW_Order", new object[] {
+                        Key,
+                        serialnumberAndOrdID,
+                        billflag}, this.NursingExec_BIW_OrderOperationCompleted, userState);
+        }
+        
+        private void OnNursingExec_BIW_OrderOperationCompleted(object arg) {
+            if ((this.NursingExec_BIW_OrderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.NursingExec_BIW_OrderCompleted(this, new NursingExec_BIW_OrderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/NursingExec_BIW", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string NursingExec_BIW(string Key, string serialnumberAndOrdID, string empID) {
+            object[] results = this.Invoke("NursingExec_BIW", new object[] {
+                        Key,
+                        serialnumberAndOrdID,
+                        empID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void NursingExec_BIWAsync(string Key, string serialnumberAndOrdID, string empID) {
+            this.NursingExec_BIWAsync(Key, serialnumberAndOrdID, empID, null);
+        }
+        
+        /// <remarks/>
+        public void NursingExec_BIWAsync(string Key, string serialnumberAndOrdID, string empID, object userState) {
+            if ((this.NursingExec_BIWOperationCompleted == null)) {
+                this.NursingExec_BIWOperationCompleted = new System.Threading.SendOrPostCallback(this.OnNursingExec_BIWOperationCompleted);
+            }
+            this.InvokeAsync("NursingExec_BIW", new object[] {
+                        Key,
+                        serialnumberAndOrdID,
+                        empID}, this.NursingExec_BIWOperationCompleted, userState);
+        }
+        
+        private void OnNursingExec_BIWOperationCompleted(object arg) {
+            if ((this.NursingExec_BIWCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.NursingExec_BIWCompleted(this, new NursingExec_BIWCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/NursingExec_Meeting", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string NursingExec_Meeting(string SERIALNUMBER, string empID) {
+            object[] results = this.Invoke("NursingExec_Meeting", new object[] {
+                        SERIALNUMBER,
+                        empID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void NursingExec_MeetingAsync(string SERIALNUMBER, string empID) {
+            this.NursingExec_MeetingAsync(SERIALNUMBER, empID, null);
+        }
+        
+        /// <remarks/>
+        public void NursingExec_MeetingAsync(string SERIALNUMBER, string empID, object userState) {
+            if ((this.NursingExec_MeetingOperationCompleted == null)) {
+                this.NursingExec_MeetingOperationCompleted = new System.Threading.SendOrPostCallback(this.OnNursingExec_MeetingOperationCompleted);
+            }
+            this.InvokeAsync("NursingExec_Meeting", new object[] {
+                        SERIALNUMBER,
+                        empID}, this.NursingExec_MeetingOperationCompleted, userState);
+        }
+        
+        private void OnNursingExec_MeetingOperationCompleted(object arg) {
+            if ((this.NursingExec_MeetingCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.NursingExec_MeetingCompleted(this, new NursingExec_MeetingCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2941,1406 +2293,6 @@ namespace WindowsFormsApplication1.WebReference {
             if ((this.GetEquipInfoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetEquipInfoCompleted(this, new GetEquipInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetHospInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetHospInfo() {
-            object[] results = this.Invoke("GetHospInfo", new object[0]);
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetHospInfoAsync() {
-            this.GetHospInfoAsync(null);
-        }
-        
-        /// <remarks/>
-        public void GetHospInfoAsync(object userState) {
-            if ((this.GetHospInfoOperationCompleted == null)) {
-                this.GetHospInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetHospInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetHospInfo", new object[0], this.GetHospInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetHospInfoOperationCompleted(object arg) {
-            if ((this.GetHospInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetHospInfoCompleted(this, new GetHospInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrgInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetOrgInfo() {
-            object[] results = this.Invoke("GetOrgInfo", new object[0]);
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrgInfoAsync() {
-            this.GetOrgInfoAsync(null);
-        }
-        
-        /// <remarks/>
-        public void GetOrgInfoAsync(object userState) {
-            if ((this.GetOrgInfoOperationCompleted == null)) {
-                this.GetOrgInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrgInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetOrgInfo", new object[0], this.GetOrgInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetOrgInfoOperationCompleted(object arg) {
-            if ((this.GetOrgInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrgInfoCompleted(this, new GetOrgInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrgBaseInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetOrgBaseInfo(string OrgID) {
-            object[] results = this.Invoke("GetOrgBaseInfo", new object[] {
-                        OrgID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrgBaseInfoAsync(string OrgID) {
-            this.GetOrgBaseInfoAsync(OrgID, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrgBaseInfoAsync(string OrgID, object userState) {
-            if ((this.GetOrgBaseInfoOperationCompleted == null)) {
-                this.GetOrgBaseInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrgBaseInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetOrgBaseInfo", new object[] {
-                        OrgID}, this.GetOrgBaseInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetOrgBaseInfoOperationCompleted(object arg) {
-            if ((this.GetOrgBaseInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrgBaseInfoCompleted(this, new GetOrgBaseInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GETCODEINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GETCODEINFO(string Key, string CODETYPEID) {
-            object[] results = this.Invoke("GETCODEINFO", new object[] {
-                        Key,
-                        CODETYPEID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GETCODEINFOAsync(string Key, string CODETYPEID) {
-            this.GETCODEINFOAsync(Key, CODETYPEID, null);
-        }
-        
-        /// <remarks/>
-        public void GETCODEINFOAsync(string Key, string CODETYPEID, object userState) {
-            if ((this.GETCODEINFOOperationCompleted == null)) {
-                this.GETCODEINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGETCODEINFOOperationCompleted);
-            }
-            this.InvokeAsync("GETCODEINFO", new object[] {
-                        Key,
-                        CODETYPEID}, this.GETCODEINFOOperationCompleted, userState);
-        }
-        
-        private void OnGETCODEINFOOperationCompleted(object arg) {
-            if ((this.GETCODEINFOCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GETCODEINFOCompleted(this, new GETCODEINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetDoctorInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetDoctorInfo(string OrgID, string Day) {
-            object[] results = this.Invoke("GetDoctorInfo", new object[] {
-                        OrgID,
-                        Day});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetDoctorInfoAsync(string OrgID, string Day) {
-            this.GetDoctorInfoAsync(OrgID, Day, null);
-        }
-        
-        /// <remarks/>
-        public void GetDoctorInfoAsync(string OrgID, string Day, object userState) {
-            if ((this.GetDoctorInfoOperationCompleted == null)) {
-                this.GetDoctorInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDoctorInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetDoctorInfo", new object[] {
-                        OrgID,
-                        Day}, this.GetDoctorInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetDoctorInfoOperationCompleted(object arg) {
-            if ((this.GetDoctorInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetDoctorInfoCompleted(this, new GetDoctorInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetResInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetResInfo(string EMPID, string DateTypeID, string ResourceTypeID) {
-            object[] results = this.Invoke("GetResInfo", new object[] {
-                        EMPID,
-                        DateTypeID,
-                        ResourceTypeID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetResInfoAsync(string EMPID, string DateTypeID, string ResourceTypeID) {
-            this.GetResInfoAsync(EMPID, DateTypeID, ResourceTypeID, null);
-        }
-        
-        /// <remarks/>
-        public void GetResInfoAsync(string EMPID, string DateTypeID, string ResourceTypeID, object userState) {
-            if ((this.GetResInfoOperationCompleted == null)) {
-                this.GetResInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetResInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetResInfo", new object[] {
-                        EMPID,
-                        DateTypeID,
-                        ResourceTypeID}, this.GetResInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetResInfoOperationCompleted(object arg) {
-            if ((this.GetResInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetResInfoCompleted(this, new GetResInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/AddPerson", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string AddPerson(string patiName, string PersonID, string phoneNum, string CardID) {
-            object[] results = this.Invoke("AddPerson", new object[] {
-                        patiName,
-                        PersonID,
-                        phoneNum,
-                        CardID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void AddPersonAsync(string patiName, string PersonID, string phoneNum, string CardID) {
-            this.AddPersonAsync(patiName, PersonID, phoneNum, CardID, null);
-        }
-        
-        /// <remarks/>
-        public void AddPersonAsync(string patiName, string PersonID, string phoneNum, string CardID, object userState) {
-            if ((this.AddPersonOperationCompleted == null)) {
-                this.AddPersonOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddPersonOperationCompleted);
-            }
-            this.InvokeAsync("AddPerson", new object[] {
-                        patiName,
-                        PersonID,
-                        phoneNum,
-                        CardID}, this.AddPersonOperationCompleted, userState);
-        }
-        
-        private void OnAddPersonOperationCompleted(object arg) {
-            if ((this.AddPersonCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AddPersonCompleted(this, new AddPersonCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/CreadCard", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string CreadCard(string patiName, string PersonID, string phoneNum) {
-            object[] results = this.Invoke("CreadCard", new object[] {
-                        patiName,
-                        PersonID,
-                        phoneNum});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void CreadCardAsync(string patiName, string PersonID, string phoneNum) {
-            this.CreadCardAsync(patiName, PersonID, phoneNum, null);
-        }
-        
-        /// <remarks/>
-        public void CreadCardAsync(string patiName, string PersonID, string phoneNum, object userState) {
-            if ((this.CreadCardOperationCompleted == null)) {
-                this.CreadCardOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCreadCardOperationCompleted);
-            }
-            this.InvokeAsync("CreadCard", new object[] {
-                        patiName,
-                        PersonID,
-                        phoneNum}, this.CreadCardOperationCompleted, userState);
-        }
-        
-        private void OnCreadCardOperationCompleted(object arg) {
-            if ((this.CreadCardCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.CreadCardCompleted(this, new CreadCardCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/RegCheck", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string RegCheck(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount) {
-            object[] results = this.Invoke("RegCheck", new object[] {
-                        CardID,
-                        Regdate,
-                        DateTypeID,
-                        ResourceID,
-                        ResourceTypeID,
-                        UseAcc,
-                        PatiName,
-                        Amount});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void RegCheckAsync(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount) {
-            this.RegCheckAsync(CardID, Regdate, DateTypeID, ResourceID, ResourceTypeID, UseAcc, PatiName, Amount, null);
-        }
-        
-        /// <remarks/>
-        public void RegCheckAsync(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount, object userState) {
-            if ((this.RegCheckOperationCompleted == null)) {
-                this.RegCheckOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegCheckOperationCompleted);
-            }
-            this.InvokeAsync("RegCheck", new object[] {
-                        CardID,
-                        Regdate,
-                        DateTypeID,
-                        ResourceID,
-                        ResourceTypeID,
-                        UseAcc,
-                        PatiName,
-                        Amount}, this.RegCheckOperationCompleted, userState);
-        }
-        
-        private void OnRegCheckOperationCompleted(object arg) {
-            if ((this.RegCheckCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.RegCheckCompleted(this, new RegCheckCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/RegData", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string RegData(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount, string PayModeNo) {
-            object[] results = this.Invoke("RegData", new object[] {
-                        CardID,
-                        Regdate,
-                        DateTypeID,
-                        ResourceID,
-                        ResourceTypeID,
-                        UseAcc,
-                        PatiName,
-                        Amount,
-                        PayModeNo});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void RegDataAsync(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount, string PayModeNo) {
-            this.RegDataAsync(CardID, Regdate, DateTypeID, ResourceID, ResourceTypeID, UseAcc, PatiName, Amount, PayModeNo, null);
-        }
-        
-        /// <remarks/>
-        public void RegDataAsync(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount, string PayModeNo, object userState) {
-            if ((this.RegDataOperationCompleted == null)) {
-                this.RegDataOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegDataOperationCompleted);
-            }
-            this.InvokeAsync("RegData", new object[] {
-                        CardID,
-                        Regdate,
-                        DateTypeID,
-                        ResourceID,
-                        ResourceTypeID,
-                        UseAcc,
-                        PatiName,
-                        Amount,
-                        PayModeNo}, this.RegDataOperationCompleted, userState);
-        }
-        
-        private void OnRegDataOperationCompleted(object arg) {
-            if ((this.RegDataCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.RegDataCompleted(this, new RegDataCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/UnRegData", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string UnRegData(string sSerialnumber) {
-            object[] results = this.Invoke("UnRegData", new object[] {
-                        sSerialnumber});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void UnRegDataAsync(string sSerialnumber) {
-            this.UnRegDataAsync(sSerialnumber, null);
-        }
-        
-        /// <remarks/>
-        public void UnRegDataAsync(string sSerialnumber, object userState) {
-            if ((this.UnRegDataOperationCompleted == null)) {
-                this.UnRegDataOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUnRegDataOperationCompleted);
-            }
-            this.InvokeAsync("UnRegData", new object[] {
-                        sSerialnumber}, this.UnRegDataOperationCompleted, userState);
-        }
-        
-        private void OnUnRegDataOperationCompleted(object arg) {
-            if ((this.UnRegDataCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.UnRegDataCompleted(this, new UnRegDataCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdInfotoll", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetOrdInfotoll(string patiName, string cardID) {
-            object[] results = this.Invoke("GetOrdInfotoll", new object[] {
-                        patiName,
-                        cardID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrdInfotollAsync(string patiName, string cardID) {
-            this.GetOrdInfotollAsync(patiName, cardID, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrdInfotollAsync(string patiName, string cardID, object userState) {
-            if ((this.GetOrdInfotollOperationCompleted == null)) {
-                this.GetOrdInfotollOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdInfotollOperationCompleted);
-            }
-            this.InvokeAsync("GetOrdInfotoll", new object[] {
-                        patiName,
-                        cardID}, this.GetOrdInfotollOperationCompleted, userState);
-        }
-        
-        private void OnGetOrdInfotollOperationCompleted(object arg) {
-            if ((this.GetOrdInfotollCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrdInfotollCompleted(this, new GetOrdInfotollCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/SetOrdInftollTwo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string SetOrdInftollTwo(string patiName, string serialnumber, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName) {
-            object[] results = this.Invoke("SetOrdInftollTwo", new object[] {
-                        patiName,
-                        serialnumber,
-                        PayAmount,
-                        PayModeNo,
-                        BankName,
-                        AccountNo,
-                        EntName});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void SetOrdInftollTwoAsync(string patiName, string serialnumber, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName) {
-            this.SetOrdInftollTwoAsync(patiName, serialnumber, PayAmount, PayModeNo, BankName, AccountNo, EntName, null);
-        }
-        
-        /// <remarks/>
-        public void SetOrdInftollTwoAsync(string patiName, string serialnumber, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName, object userState) {
-            if ((this.SetOrdInftollTwoOperationCompleted == null)) {
-                this.SetOrdInftollTwoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetOrdInftollTwoOperationCompleted);
-            }
-            this.InvokeAsync("SetOrdInftollTwo", new object[] {
-                        patiName,
-                        serialnumber,
-                        PayAmount,
-                        PayModeNo,
-                        BankName,
-                        AccountNo,
-                        EntName}, this.SetOrdInftollTwoOperationCompleted, userState);
-        }
-        
-        private void OnSetOrdInftollTwoOperationCompleted(object arg) {
-            if ((this.SetOrdInftollTwoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.SetOrdInftollTwoCompleted(this, new SetOrdInftollTwoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdInftollTwo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetOrdInftollTwo(string cardID, string patiName, string serialnumberAndOrdID) {
-            object[] results = this.Invoke("GetOrdInftollTwo", new object[] {
-                        cardID,
-                        patiName,
-                        serialnumberAndOrdID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrdInftollTwoAsync(string cardID, string patiName, string serialnumberAndOrdID) {
-            this.GetOrdInftollTwoAsync(cardID, patiName, serialnumberAndOrdID, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrdInftollTwoAsync(string cardID, string patiName, string serialnumberAndOrdID, object userState) {
-            if ((this.GetOrdInftollTwoOperationCompleted == null)) {
-                this.GetOrdInftollTwoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdInftollTwoOperationCompleted);
-            }
-            this.InvokeAsync("GetOrdInftollTwo", new object[] {
-                        cardID,
-                        patiName,
-                        serialnumberAndOrdID}, this.GetOrdInftollTwoOperationCompleted, userState);
-        }
-        
-        private void OnGetOrdInftollTwoOperationCompleted(object arg) {
-            if ((this.GetOrdInftollTwoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrdInftollTwoCompleted(this, new GetOrdInftollTwoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdInftollTwo_Fee", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetOrdInftollTwo_Fee(string cardID, string patiName, string serialnumberAndOrdID) {
-            object[] results = this.Invoke("GetOrdInftollTwo_Fee", new object[] {
-                        cardID,
-                        patiName,
-                        serialnumberAndOrdID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrdInftollTwo_FeeAsync(string cardID, string patiName, string serialnumberAndOrdID) {
-            this.GetOrdInftollTwo_FeeAsync(cardID, patiName, serialnumberAndOrdID, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrdInftollTwo_FeeAsync(string cardID, string patiName, string serialnumberAndOrdID, object userState) {
-            if ((this.GetOrdInftollTwo_FeeOperationCompleted == null)) {
-                this.GetOrdInftollTwo_FeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdInftollTwo_FeeOperationCompleted);
-            }
-            this.InvokeAsync("GetOrdInftollTwo_Fee", new object[] {
-                        cardID,
-                        patiName,
-                        serialnumberAndOrdID}, this.GetOrdInftollTwo_FeeOperationCompleted, userState);
-        }
-        
-        private void OnGetOrdInftollTwo_FeeOperationCompleted(object arg) {
-            if ((this.GetOrdInftollTwo_FeeCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrdInftollTwo_FeeCompleted(this, new GetOrdInftollTwo_FeeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQue", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetQue(string time) {
-            object[] results = this.Invoke("GetQue", new object[] {
-                        time});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetQueAsync(string time) {
-            this.GetQueAsync(time, null);
-        }
-        
-        /// <remarks/>
-        public void GetQueAsync(string time, object userState) {
-            if ((this.GetQueOperationCompleted == null)) {
-                this.GetQueOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQueOperationCompleted);
-            }
-            this.InvokeAsync("GetQue", new object[] {
-                        time}, this.GetQueOperationCompleted, userState);
-        }
-        
-        private void OnGetQueOperationCompleted(object arg) {
-            if ((this.GetQueCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetQueCompleted(this, new GetQueCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/findAllReport", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string findAllReport(string CardID, string BegDate) {
-            object[] results = this.Invoke("findAllReport", new object[] {
-                        CardID,
-                        BegDate});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void findAllReportAsync(string CardID, string BegDate) {
-            this.findAllReportAsync(CardID, BegDate, null);
-        }
-        
-        /// <remarks/>
-        public void findAllReportAsync(string CardID, string BegDate, object userState) {
-            if ((this.findAllReportOperationCompleted == null)) {
-                this.findAllReportOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindAllReportOperationCompleted);
-            }
-            this.InvokeAsync("findAllReport", new object[] {
-                        CardID,
-                        BegDate}, this.findAllReportOperationCompleted, userState);
-        }
-        
-        private void OnfindAllReportOperationCompleted(object arg) {
-            if ((this.findAllReportCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.findAllReportCompleted(this, new findAllReportCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/findAllReportByPatiID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet findAllReportByPatiID(string PatiID, string BegDate, string TYPE) {
-            object[] results = this.Invoke("findAllReportByPatiID", new object[] {
-                        PatiID,
-                        BegDate,
-                        TYPE});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void findAllReportByPatiIDAsync(string PatiID, string BegDate, string TYPE) {
-            this.findAllReportByPatiIDAsync(PatiID, BegDate, TYPE, null);
-        }
-        
-        /// <remarks/>
-        public void findAllReportByPatiIDAsync(string PatiID, string BegDate, string TYPE, object userState) {
-            if ((this.findAllReportByPatiIDOperationCompleted == null)) {
-                this.findAllReportByPatiIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindAllReportByPatiIDOperationCompleted);
-            }
-            this.InvokeAsync("findAllReportByPatiID", new object[] {
-                        PatiID,
-                        BegDate,
-                        TYPE}, this.findAllReportByPatiIDOperationCompleted, userState);
-        }
-        
-        private void OnfindAllReportByPatiIDOperationCompleted(object arg) {
-            if ((this.findAllReportByPatiIDCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.findAllReportByPatiIDCompleted(this, new findAllReportByPatiIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/findCheckReport", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string findCheckReport(string CardID, string BegDate) {
-            object[] results = this.Invoke("findCheckReport", new object[] {
-                        CardID,
-                        BegDate});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void findCheckReportAsync(string CardID, string BegDate) {
-            this.findCheckReportAsync(CardID, BegDate, null);
-        }
-        
-        /// <remarks/>
-        public void findCheckReportAsync(string CardID, string BegDate, object userState) {
-            if ((this.findCheckReportOperationCompleted == null)) {
-                this.findCheckReportOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindCheckReportOperationCompleted);
-            }
-            this.InvokeAsync("findCheckReport", new object[] {
-                        CardID,
-                        BegDate}, this.findCheckReportOperationCompleted, userState);
-        }
-        
-        private void OnfindCheckReportOperationCompleted(object arg) {
-            if ((this.findCheckReportCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.findCheckReportCompleted(this, new findCheckReportCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/findCompleteReport", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string findCompleteReport(string applyID) {
-            object[] results = this.Invoke("findCompleteReport", new object[] {
-                        applyID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void findCompleteReportAsync(string applyID) {
-            this.findCompleteReportAsync(applyID, null);
-        }
-        
-        /// <remarks/>
-        public void findCompleteReportAsync(string applyID, object userState) {
-            if ((this.findCompleteReportOperationCompleted == null)) {
-                this.findCompleteReportOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindCompleteReportOperationCompleted);
-            }
-            this.InvokeAsync("findCompleteReport", new object[] {
-                        applyID}, this.findCompleteReportOperationCompleted, userState);
-        }
-        
-        private void OnfindCompleteReportOperationCompleted(object arg) {
-            if ((this.findCompleteReportCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.findCompleteReportCompleted(this, new findCompleteReportCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetADay", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetADay(string patiName, string CARDID, string Day) {
-            object[] results = this.Invoke("GetADay", new object[] {
-                        patiName,
-                        CARDID,
-                        Day});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetADayAsync(string patiName, string CARDID, string Day) {
-            this.GetADayAsync(patiName, CARDID, Day, null);
-        }
-        
-        /// <remarks/>
-        public void GetADayAsync(string patiName, string CARDID, string Day, object userState) {
-            if ((this.GetADayOperationCompleted == null)) {
-                this.GetADayOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetADayOperationCompleted);
-            }
-            this.InvokeAsync("GetADay", new object[] {
-                        patiName,
-                        CARDID,
-                        Day}, this.GetADayOperationCompleted, userState);
-        }
-        
-        private void OnGetADayOperationCompleted(object arg) {
-            if ((this.GetADayCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetADayCompleted(this, new GetADayCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetSubscription", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetSubscription(string patiName, string CARDID) {
-            object[] results = this.Invoke("GetSubscription", new object[] {
-                        patiName,
-                        CARDID});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetSubscriptionAsync(string patiName, string CARDID) {
-            this.GetSubscriptionAsync(patiName, CARDID, null);
-        }
-        
-        /// <remarks/>
-        public void GetSubscriptionAsync(string patiName, string CARDID, object userState) {
-            if ((this.GetSubscriptionOperationCompleted == null)) {
-                this.GetSubscriptionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetSubscriptionOperationCompleted);
-            }
-            this.InvokeAsync("GetSubscription", new object[] {
-                        patiName,
-                        CARDID}, this.GetSubscriptionOperationCompleted, userState);
-        }
-        
-        private void OnGetSubscriptionOperationCompleted(object arg) {
-            if ((this.GetSubscriptionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetSubscriptionCompleted(this, new GetSubscriptionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/SetDeposit", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string SetDeposit(string patiName, string CARDID, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName) {
-            object[] results = this.Invoke("SetDeposit", new object[] {
-                        patiName,
-                        CARDID,
-                        PayAmount,
-                        PayModeNo,
-                        BankName,
-                        AccountNo,
-                        EntName});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void SetDepositAsync(string patiName, string CARDID, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName) {
-            this.SetDepositAsync(patiName, CARDID, PayAmount, PayModeNo, BankName, AccountNo, EntName, null);
-        }
-        
-        /// <remarks/>
-        public void SetDepositAsync(string patiName, string CARDID, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName, object userState) {
-            if ((this.SetDepositOperationCompleted == null)) {
-                this.SetDepositOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetDepositOperationCompleted);
-            }
-            this.InvokeAsync("SetDeposit", new object[] {
-                        patiName,
-                        CARDID,
-                        PayAmount,
-                        PayModeNo,
-                        BankName,
-                        AccountNo,
-                        EntName}, this.SetDepositOperationCompleted, userState);
-        }
-        
-        private void OnSetDepositOperationCompleted(object arg) {
-            if ((this.SetDepositCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.SetDepositCompleted(this, new SetDepositCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetWindNo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetWindNo(string patiName, string serialnumber) {
-            object[] results = this.Invoke("GetWindNo", new object[] {
-                        patiName,
-                        serialnumber});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetWindNoAsync(string patiName, string serialnumber) {
-            this.GetWindNoAsync(patiName, serialnumber, null);
-        }
-        
-        /// <remarks/>
-        public void GetWindNoAsync(string patiName, string serialnumber, object userState) {
-            if ((this.GetWindNoOperationCompleted == null)) {
-                this.GetWindNoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetWindNoOperationCompleted);
-            }
-            this.InvokeAsync("GetWindNo", new object[] {
-                        patiName,
-                        serialnumber}, this.GetWindNoOperationCompleted, userState);
-        }
-        
-        private void OnGetWindNoOperationCompleted(object arg) {
-            if ((this.GetWindNoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetWindNoCompleted(this, new GetWindNoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetDayFeeItem", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetDayFeeItem(string Day) {
-            object[] results = this.Invoke("GetDayFeeItem", new object[] {
-                        Day});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetDayFeeItemAsync(string Day) {
-            this.GetDayFeeItemAsync(Day, null);
-        }
-        
-        /// <remarks/>
-        public void GetDayFeeItemAsync(string Day, object userState) {
-            if ((this.GetDayFeeItemOperationCompleted == null)) {
-                this.GetDayFeeItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDayFeeItemOperationCompleted);
-            }
-            this.InvokeAsync("GetDayFeeItem", new object[] {
-                        Day}, this.GetDayFeeItemOperationCompleted, userState);
-        }
-        
-        private void OnGetDayFeeItemOperationCompleted(object arg) {
-            if ((this.GetDayFeeItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetDayFeeItemCompleted(this, new GetDayFeeItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/MicroPay", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string MicroPay(string hospital_id, string hospital_area_id, string auth_code, string order_amount, string biz_id, string data_src, string cashier_id, string sign) {
-            object[] results = this.Invoke("MicroPay", new object[] {
-                        hospital_id,
-                        hospital_area_id,
-                        auth_code,
-                        order_amount,
-                        biz_id,
-                        data_src,
-                        cashier_id,
-                        sign});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void MicroPayAsync(string hospital_id, string hospital_area_id, string auth_code, string order_amount, string biz_id, string data_src, string cashier_id, string sign) {
-            this.MicroPayAsync(hospital_id, hospital_area_id, auth_code, order_amount, biz_id, data_src, cashier_id, sign, null);
-        }
-        
-        /// <remarks/>
-        public void MicroPayAsync(string hospital_id, string hospital_area_id, string auth_code, string order_amount, string biz_id, string data_src, string cashier_id, string sign, object userState) {
-            if ((this.MicroPayOperationCompleted == null)) {
-                this.MicroPayOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMicroPayOperationCompleted);
-            }
-            this.InvokeAsync("MicroPay", new object[] {
-                        hospital_id,
-                        hospital_area_id,
-                        auth_code,
-                        order_amount,
-                        biz_id,
-                        data_src,
-                        cashier_id,
-                        sign}, this.MicroPayOperationCompleted, userState);
-        }
-        
-        private void OnMicroPayOperationCompleted(object arg) {
-            if ((this.MicroPayCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.MicroPayCompleted(this, new MicroPayCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/MicroPayQry", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string MicroPayQry(string hospital_id, string biz_id, string sign) {
-            object[] results = this.Invoke("MicroPayQry", new object[] {
-                        hospital_id,
-                        biz_id,
-                        sign});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void MicroPayQryAsync(string hospital_id, string biz_id, string sign) {
-            this.MicroPayQryAsync(hospital_id, biz_id, sign, null);
-        }
-        
-        /// <remarks/>
-        public void MicroPayQryAsync(string hospital_id, string biz_id, string sign, object userState) {
-            if ((this.MicroPayQryOperationCompleted == null)) {
-                this.MicroPayQryOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMicroPayQryOperationCompleted);
-            }
-            this.InvokeAsync("MicroPayQry", new object[] {
-                        hospital_id,
-                        biz_id,
-                        sign}, this.MicroPayQryOperationCompleted, userState);
-        }
-        
-        private void OnMicroPayQryOperationCompleted(object arg) {
-            if ((this.MicroPayQryCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.MicroPayQryCompleted(this, new MicroPayQryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/CreateOrder", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string CreateOrder(string hospital_id, string totle_amt, string visit_id, string patient_id, string real_name, string id_card, string data_src, string biz_id, string pay_type, string sign) {
-            object[] results = this.Invoke("CreateOrder", new object[] {
-                        hospital_id,
-                        totle_amt,
-                        visit_id,
-                        patient_id,
-                        real_name,
-                        id_card,
-                        data_src,
-                        biz_id,
-                        pay_type,
-                        sign});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void CreateOrderAsync(string hospital_id, string totle_amt, string visit_id, string patient_id, string real_name, string id_card, string data_src, string biz_id, string pay_type, string sign) {
-            this.CreateOrderAsync(hospital_id, totle_amt, visit_id, patient_id, real_name, id_card, data_src, biz_id, pay_type, sign, null);
-        }
-        
-        /// <remarks/>
-        public void CreateOrderAsync(string hospital_id, string totle_amt, string visit_id, string patient_id, string real_name, string id_card, string data_src, string biz_id, string pay_type, string sign, object userState) {
-            if ((this.CreateOrderOperationCompleted == null)) {
-                this.CreateOrderOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCreateOrderOperationCompleted);
-            }
-            this.InvokeAsync("CreateOrder", new object[] {
-                        hospital_id,
-                        totle_amt,
-                        visit_id,
-                        patient_id,
-                        real_name,
-                        id_card,
-                        data_src,
-                        biz_id,
-                        pay_type,
-                        sign}, this.CreateOrderOperationCompleted, userState);
-        }
-        
-        private void OnCreateOrderOperationCompleted(object arg) {
-            if ((this.CreateOrderCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.CreateOrderCompleted(this, new CreateOrderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/ITEMIINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string ITEMIINFO() {
-            object[] results = this.Invoke("ITEMIINFO", new object[0]);
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ITEMIINFOAsync() {
-            this.ITEMIINFOAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ITEMIINFOAsync(object userState) {
-            if ((this.ITEMIINFOOperationCompleted == null)) {
-                this.ITEMIINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnITEMIINFOOperationCompleted);
-            }
-            this.InvokeAsync("ITEMIINFO", new object[0], this.ITEMIINFOOperationCompleted, userState);
-        }
-        
-        private void OnITEMIINFOOperationCompleted(object arg) {
-            if ((this.ITEMIINFOCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ITEMIINFOCompleted(this, new ITEMIINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/EMRTYPE", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string EMRTYPE() {
-            object[] results = this.Invoke("EMRTYPE", new object[0]);
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void EMRTYPEAsync() {
-            this.EMRTYPEAsync(null);
-        }
-        
-        /// <remarks/>
-        public void EMRTYPEAsync(object userState) {
-            if ((this.EMRTYPEOperationCompleted == null)) {
-                this.EMRTYPEOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEMRTYPEOperationCompleted);
-            }
-            this.InvokeAsync("EMRTYPE", new object[0], this.EMRTYPEOperationCompleted, userState);
-        }
-        
-        private void OnEMRTYPEOperationCompleted(object arg) {
-            if ((this.EMRTYPECompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.EMRTYPECompleted(this, new EMRTYPECompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/TEMINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string TEMINFO(string Serialnumber) {
-            object[] results = this.Invoke("TEMINFO", new object[] {
-                        Serialnumber});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void TEMINFOAsync(string Serialnumber) {
-            this.TEMINFOAsync(Serialnumber, null);
-        }
-        
-        /// <remarks/>
-        public void TEMINFOAsync(string Serialnumber, object userState) {
-            if ((this.TEMINFOOperationCompleted == null)) {
-                this.TEMINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTEMINFOOperationCompleted);
-            }
-            this.InvokeAsync("TEMINFO", new object[] {
-                        Serialnumber}, this.TEMINFOOperationCompleted, userState);
-        }
-        
-        private void OnTEMINFOOperationCompleted(object arg) {
-            if ((this.TEMINFOCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.TEMINFOCompleted(this, new TEMINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/PATIINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string PATIINFO(string LeaveDay, string AdminDay) {
-            object[] results = this.Invoke("PATIINFO", new object[] {
-                        LeaveDay,
-                        AdminDay});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void PATIINFOAsync(string LeaveDay, string AdminDay) {
-            this.PATIINFOAsync(LeaveDay, AdminDay, null);
-        }
-        
-        /// <remarks/>
-        public void PATIINFOAsync(string LeaveDay, string AdminDay, object userState) {
-            if ((this.PATIINFOOperationCompleted == null)) {
-                this.PATIINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPATIINFOOperationCompleted);
-            }
-            this.InvokeAsync("PATIINFO", new object[] {
-                        LeaveDay,
-                        AdminDay}, this.PATIINFOOperationCompleted, userState);
-        }
-        
-        private void OnPATIINFOOperationCompleted(object arg) {
-            if ((this.PATIINFOCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.PATIINFOCompleted(this, new PATIINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/DEPARTMENTS", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string DEPARTMENTS() {
-            object[] results = this.Invoke("DEPARTMENTS", new object[0]);
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void DEPARTMENTSAsync() {
-            this.DEPARTMENTSAsync(null);
-        }
-        
-        /// <remarks/>
-        public void DEPARTMENTSAsync(object userState) {
-            if ((this.DEPARTMENTSOperationCompleted == null)) {
-                this.DEPARTMENTSOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDEPARTMENTSOperationCompleted);
-            }
-            this.InvokeAsync("DEPARTMENTS", new object[0], this.DEPARTMENTSOperationCompleted, userState);
-        }
-        
-        private void OnDEPARTMENTSOperationCompleted(object arg) {
-            if ((this.DEPARTMENTSCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.DEPARTMENTSCompleted(this, new DEPARTMENTSCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/DOCTOR", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string DOCTOR() {
-            object[] results = this.Invoke("DOCTOR", new object[0]);
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void DOCTORAsync() {
-            this.DOCTORAsync(null);
-        }
-        
-        /// <remarks/>
-        public void DOCTORAsync(object userState) {
-            if ((this.DOCTOROperationCompleted == null)) {
-                this.DOCTOROperationCompleted = new System.Threading.SendOrPostCallback(this.OnDOCTOROperationCompleted);
-            }
-            this.InvokeAsync("DOCTOR", new object[0], this.DOCTOROperationCompleted, userState);
-        }
-        
-        private void OnDOCTOROperationCompleted(object arg) {
-            if ((this.DOCTORCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.DOCTORCompleted(this, new DOCTORCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/OPERITEM", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string OPERITEM(string Serialnumber) {
-            object[] results = this.Invoke("OPERITEM", new object[] {
-                        Serialnumber});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void OPERITEMAsync(string Serialnumber) {
-            this.OPERITEMAsync(Serialnumber, null);
-        }
-        
-        /// <remarks/>
-        public void OPERITEMAsync(string Serialnumber, object userState) {
-            if ((this.OPERITEMOperationCompleted == null)) {
-                this.OPERITEMOperationCompleted = new System.Threading.SendOrPostCallback(this.OnOPERITEMOperationCompleted);
-            }
-            this.InvokeAsync("OPERITEM", new object[] {
-                        Serialnumber}, this.OPERITEMOperationCompleted, userState);
-        }
-        
-        private void OnOPERITEMOperationCompleted(object arg) {
-            if ((this.OPERITEMCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.OPERITEMCompleted(this, new OPERITEMCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/OPERDICT", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string OPERDICT() {
-            object[] results = this.Invoke("OPERDICT", new object[0]);
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void OPERDICTAsync() {
-            this.OPERDICTAsync(null);
-        }
-        
-        /// <remarks/>
-        public void OPERDICTAsync(object userState) {
-            if ((this.OPERDICTOperationCompleted == null)) {
-                this.OPERDICTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnOPERDICTOperationCompleted);
-            }
-            this.InvokeAsync("OPERDICT", new object[0], this.OPERDICTOperationCompleted, userState);
-        }
-        
-        private void OnOPERDICTOperationCompleted(object arg) {
-            if ((this.OPERDICTCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.OPERDICTCompleted(this, new OPERDICTCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/ORGINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string ORGINFO(string Serialnumber) {
-            object[] results = this.Invoke("ORGINFO", new object[] {
-                        Serialnumber});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ORGINFOAsync(string Serialnumber) {
-            this.ORGINFOAsync(Serialnumber, null);
-        }
-        
-        /// <remarks/>
-        public void ORGINFOAsync(string Serialnumber, object userState) {
-            if ((this.ORGINFOOperationCompleted == null)) {
-                this.ORGINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnORGINFOOperationCompleted);
-            }
-            this.InvokeAsync("ORGINFO", new object[] {
-                        Serialnumber}, this.ORGINFOOperationCompleted, userState);
-        }
-        
-        private void OnORGINFOOperationCompleted(object arg) {
-            if ((this.ORGINFOCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ORGINFOCompleted(this, new ORGINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/ORDDERINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string ORDDERINFO(string Serialnumber) {
-            object[] results = this.Invoke("ORDDERINFO", new object[] {
-                        Serialnumber});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ORDDERINFOAsync(string Serialnumber) {
-            this.ORDDERINFOAsync(Serialnumber, null);
-        }
-        
-        /// <remarks/>
-        public void ORDDERINFOAsync(string Serialnumber, object userState) {
-            if ((this.ORDDERINFOOperationCompleted == null)) {
-                this.ORDDERINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnORDDERINFOOperationCompleted);
-            }
-            this.InvokeAsync("ORDDERINFO", new object[] {
-                        Serialnumber}, this.ORDDERINFOOperationCompleted, userState);
-        }
-        
-        private void OnORDDERINFOOperationCompleted(object arg) {
-            if ((this.ORDDERINFOCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ORDDERINFOCompleted(this, new ORDDERINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrds_JP", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetOrds_JP(string SERIALNUMBER, string ORDID) {
-            object[] results = this.Invoke("GetOrds_JP", new object[] {
-                        SERIALNUMBER,
-                        ORDID});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrds_JPAsync(string SERIALNUMBER, string ORDID) {
-            this.GetOrds_JPAsync(SERIALNUMBER, ORDID, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrds_JPAsync(string SERIALNUMBER, string ORDID, object userState) {
-            if ((this.GetOrds_JPOperationCompleted == null)) {
-                this.GetOrds_JPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrds_JPOperationCompleted);
-            }
-            this.InvokeAsync("GetOrds_JP", new object[] {
-                        SERIALNUMBER,
-                        ORDID}, this.GetOrds_JPOperationCompleted, userState);
-        }
-        
-        private void OnGetOrds_JPOperationCompleted(object arg) {
-            if ((this.GetOrds_JPCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrds_JPCompleted(this, new GetOrds_JPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrgInfo_JP", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetOrgInfo_JP(string ORGID_LOC, string SERIALNUMBER, string ORDID, string EXECTIME) {
-            object[] results = this.Invoke("GetOrgInfo_JP", new object[] {
-                        ORGID_LOC,
-                        SERIALNUMBER,
-                        ORDID,
-                        EXECTIME});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrgInfo_JPAsync(string ORGID_LOC, string SERIALNUMBER, string ORDID, string EXECTIME) {
-            this.GetOrgInfo_JPAsync(ORGID_LOC, SERIALNUMBER, ORDID, EXECTIME, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrgInfo_JPAsync(string ORGID_LOC, string SERIALNUMBER, string ORDID, string EXECTIME, object userState) {
-            if ((this.GetOrgInfo_JPOperationCompleted == null)) {
-                this.GetOrgInfo_JPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrgInfo_JPOperationCompleted);
-            }
-            this.InvokeAsync("GetOrgInfo_JP", new object[] {
-                        ORGID_LOC,
-                        SERIALNUMBER,
-                        ORDID,
-                        EXECTIME}, this.GetOrgInfo_JPOperationCompleted, userState);
-        }
-        
-        private void OnGetOrgInfo_JPOperationCompleted(object arg) {
-            if ((this.GetOrgInfo_JPCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrgInfo_JPCompleted(this, new GetOrgInfo_JPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetOrdInfo() {
-            object[] results = this.Invoke("GetOrdInfo", new object[0]);
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrdInfoAsync() {
-            this.GetOrdInfoAsync(null);
-        }
-        
-        /// <remarks/>
-        public void GetOrdInfoAsync(object userState) {
-            if ((this.GetOrdInfoOperationCompleted == null)) {
-                this.GetOrdInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetOrdInfo", new object[0], this.GetOrdInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetOrdInfoOperationCompleted(object arg) {
-            if ((this.GetOrdInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrdInfoCompleted(this, new GetOrdInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetSTOrdInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetSTOrdInfo() {
-            object[] results = this.Invoke("GetSTOrdInfo", new object[0]);
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetSTOrdInfoAsync() {
-            this.GetSTOrdInfoAsync(null);
-        }
-        
-        /// <remarks/>
-        public void GetSTOrdInfoAsync(object userState) {
-            if ((this.GetSTOrdInfoOperationCompleted == null)) {
-                this.GetSTOrdInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetSTOrdInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetSTOrdInfo", new object[0], this.GetSTOrdInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetSTOrdInfoOperationCompleted(object arg) {
-            if ((this.GetSTOrdInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetSTOrdInfoCompleted(this, new GetSTOrdInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetDrugInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetDrugInfo() {
-            object[] results = this.Invoke("GetDrugInfo", new object[0]);
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetDrugInfoAsync() {
-            this.GetDrugInfoAsync(null);
-        }
-        
-        /// <remarks/>
-        public void GetDrugInfoAsync(object userState) {
-            if ((this.GetDrugInfoOperationCompleted == null)) {
-                this.GetDrugInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDrugInfoOperationCompleted);
-            }
-            this.InvokeAsync("GetDrugInfo", new object[0], this.GetDrugInfoOperationCompleted, userState);
-        }
-        
-        private void OnGetDrugInfoOperationCompleted(object arg) {
-            if ((this.GetDrugInfoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetDrugInfoCompleted(this, new GetDrugInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdItemObj", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet GetOrdItemObj(string SubIDs) {
-            object[] results = this.Invoke("GetOrdItemObj", new object[] {
-                        SubIDs});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetOrdItemObjAsync(string SubIDs) {
-            this.GetOrdItemObjAsync(SubIDs, null);
-        }
-        
-        /// <remarks/>
-        public void GetOrdItemObjAsync(string SubIDs, object userState) {
-            if ((this.GetOrdItemObjOperationCompleted == null)) {
-                this.GetOrdItemObjOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdItemObjOperationCompleted);
-            }
-            this.InvokeAsync("GetOrdItemObj", new object[] {
-                        SubIDs}, this.GetOrdItemObjOperationCompleted, userState);
-        }
-        
-        private void OnGetOrdItemObjOperationCompleted(object arg) {
-            if ((this.GetOrdItemObjCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetOrdItemObjCompleted(this, new GetOrdItemObjCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -5258,6 +3210,2520 @@ namespace WindowsFormsApplication1.WebReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdsInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetOrdsInfo(string Key, string Serialnumber) {
+            object[] results = this.Invoke("GetOrdsInfo", new object[] {
+                        Key,
+                        Serialnumber});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrdsInfoAsync(string Key, string Serialnumber) {
+            this.GetOrdsInfoAsync(Key, Serialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrdsInfoAsync(string Key, string Serialnumber, object userState) {
+            if ((this.GetOrdsInfoOperationCompleted == null)) {
+                this.GetOrdsInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdsInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetOrdsInfo", new object[] {
+                        Key,
+                        Serialnumber}, this.GetOrdsInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetOrdsInfoOperationCompleted(object arg) {
+            if ((this.GetOrdsInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrdsInfoCompleted(this, new GetOrdsInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdsInfo_Cate", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetOrdsInfo_Cate(string Key, string Serialnumber, string CateID) {
+            object[] results = this.Invoke("GetOrdsInfo_Cate", new object[] {
+                        Key,
+                        Serialnumber,
+                        CateID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrdsInfo_CateAsync(string Key, string Serialnumber, string CateID) {
+            this.GetOrdsInfo_CateAsync(Key, Serialnumber, CateID, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrdsInfo_CateAsync(string Key, string Serialnumber, string CateID, object userState) {
+            if ((this.GetOrdsInfo_CateOperationCompleted == null)) {
+                this.GetOrdsInfo_CateOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdsInfo_CateOperationCompleted);
+            }
+            this.InvokeAsync("GetOrdsInfo_Cate", new object[] {
+                        Key,
+                        Serialnumber,
+                        CateID}, this.GetOrdsInfo_CateOperationCompleted, userState);
+        }
+        
+        private void OnGetOrdsInfo_CateOperationCompleted(object arg) {
+            if ((this.GetOrdsInfo_CateCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrdsInfo_CateCompleted(this, new GetOrdsInfo_CateCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdItemInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetOrdItemInfo(string Key, string OrdID) {
+            object[] results = this.Invoke("GetOrdItemInfo", new object[] {
+                        Key,
+                        OrdID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrdItemInfoAsync(string Key, string OrdID) {
+            this.GetOrdItemInfoAsync(Key, OrdID, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrdItemInfoAsync(string Key, string OrdID, object userState) {
+            if ((this.GetOrdItemInfoOperationCompleted == null)) {
+                this.GetOrdItemInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdItemInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetOrdItemInfo", new object[] {
+                        Key,
+                        OrdID}, this.GetOrdItemInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetOrdItemInfoOperationCompleted(object arg) {
+            if ((this.GetOrdItemInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrdItemInfoCompleted(this, new GetOrdItemInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetEMPName", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetEMPName(string Key) {
+            object[] results = this.Invoke("GetEMPName", new object[] {
+                        Key});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetEMPNameAsync(string Key) {
+            this.GetEMPNameAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetEMPNameAsync(string Key, object userState) {
+            if ((this.GetEMPNameOperationCompleted == null)) {
+                this.GetEMPNameOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetEMPNameOperationCompleted);
+            }
+            this.InvokeAsync("GetEMPName", new object[] {
+                        Key}, this.GetEMPNameOperationCompleted, userState);
+        }
+        
+        private void OnGetEMPNameOperationCompleted(object arg) {
+            if ((this.GetEMPNameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetEMPNameCompleted(this, new GetEMPNameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQrCode", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetQrCode([System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")] byte[] QrCodeImage) {
+            object[] results = this.Invoke("GetQrCode", new object[] {
+                        QrCodeImage});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetQrCodeAsync(byte[] QrCodeImage) {
+            this.GetQrCodeAsync(QrCodeImage, null);
+        }
+        
+        /// <remarks/>
+        public void GetQrCodeAsync(byte[] QrCodeImage, object userState) {
+            if ((this.GetQrCodeOperationCompleted == null)) {
+                this.GetQrCodeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQrCodeOperationCompleted);
+            }
+            this.InvokeAsync("GetQrCode", new object[] {
+                        QrCodeImage}, this.GetQrCodeOperationCompleted, userState);
+        }
+        
+        private void OnGetQrCodeOperationCompleted(object arg) {
+            if ((this.GetQrCodeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetQrCodeCompleted(this, new GetQrCodeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQrCodeForPath", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetQrCodeForPath(string Path) {
+            object[] results = this.Invoke("GetQrCodeForPath", new object[] {
+                        Path});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetQrCodeForPathAsync(string Path) {
+            this.GetQrCodeForPathAsync(Path, null);
+        }
+        
+        /// <remarks/>
+        public void GetQrCodeForPathAsync(string Path, object userState) {
+            if ((this.GetQrCodeForPathOperationCompleted == null)) {
+                this.GetQrCodeForPathOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQrCodeForPathOperationCompleted);
+            }
+            this.InvokeAsync("GetQrCodeForPath", new object[] {
+                        Path}, this.GetQrCodeForPathOperationCompleted, userState);
+        }
+        
+        private void OnGetQrCodeForPathOperationCompleted(object arg) {
+            if ((this.GetQrCodeForPathCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetQrCodeForPathCompleted(this, new GetQrCodeForPathCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQrCodeImgage", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] GetQrCodeImgage(string QrCode) {
+            object[] results = this.Invoke("GetQrCodeImgage", new object[] {
+                        QrCode});
+            return ((byte[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetQrCodeImgageAsync(string QrCode) {
+            this.GetQrCodeImgageAsync(QrCode, null);
+        }
+        
+        /// <remarks/>
+        public void GetQrCodeImgageAsync(string QrCode, object userState) {
+            if ((this.GetQrCodeImgageOperationCompleted == null)) {
+                this.GetQrCodeImgageOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQrCodeImgageOperationCompleted);
+            }
+            this.InvokeAsync("GetQrCodeImgage", new object[] {
+                        QrCode}, this.GetQrCodeImgageOperationCompleted, userState);
+        }
+        
+        private void OnGetQrCodeImgageOperationCompleted(object arg) {
+            if ((this.GetQrCodeImgageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetQrCodeImgageCompleted(this, new GetQrCodeImgageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQrCodeID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetQrCodeID(string QrCode) {
+            object[] results = this.Invoke("GetQrCodeID", new object[] {
+                        QrCode});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetQrCodeIDAsync(string QrCode) {
+            this.GetQrCodeIDAsync(QrCode, null);
+        }
+        
+        /// <remarks/>
+        public void GetQrCodeIDAsync(string QrCode, object userState) {
+            if ((this.GetQrCodeIDOperationCompleted == null)) {
+                this.GetQrCodeIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQrCodeIDOperationCompleted);
+            }
+            this.InvokeAsync("GetQrCodeID", new object[] {
+                        QrCode}, this.GetQrCodeIDOperationCompleted, userState);
+        }
+        
+        private void OnGetQrCodeIDOperationCompleted(object arg) {
+            if ((this.GetQrCodeIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetQrCodeIDCompleted(this, new GetQrCodeIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetPatiInfoBase", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetPatiInfoBase(string Key, string Serialnumber) {
+            object[] results = this.Invoke("GetPatiInfoBase", new object[] {
+                        Key,
+                        Serialnumber});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetPatiInfoBaseAsync(string Key, string Serialnumber) {
+            this.GetPatiInfoBaseAsync(Key, Serialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void GetPatiInfoBaseAsync(string Key, string Serialnumber, object userState) {
+            if ((this.GetPatiInfoBaseOperationCompleted == null)) {
+                this.GetPatiInfoBaseOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetPatiInfoBaseOperationCompleted);
+            }
+            this.InvokeAsync("GetPatiInfoBase", new object[] {
+                        Key,
+                        Serialnumber}, this.GetPatiInfoBaseOperationCompleted, userState);
+        }
+        
+        private void OnGetPatiInfoBaseOperationCompleted(object arg) {
+            if ((this.GetPatiInfoBaseCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetPatiInfoBaseCompleted(this, new GetPatiInfoBaseCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetPatiInfoBase_BOW", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetPatiInfoBase_BOW(string Key, string Serialnumber) {
+            object[] results = this.Invoke("GetPatiInfoBase_BOW", new object[] {
+                        Key,
+                        Serialnumber});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetPatiInfoBase_BOWAsync(string Key, string Serialnumber) {
+            this.GetPatiInfoBase_BOWAsync(Key, Serialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void GetPatiInfoBase_BOWAsync(string Key, string Serialnumber, object userState) {
+            if ((this.GetPatiInfoBase_BOWOperationCompleted == null)) {
+                this.GetPatiInfoBase_BOWOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetPatiInfoBase_BOWOperationCompleted);
+            }
+            this.InvokeAsync("GetPatiInfoBase_BOW", new object[] {
+                        Key,
+                        Serialnumber}, this.GetPatiInfoBase_BOWOperationCompleted, userState);
+        }
+        
+        private void OnGetPatiInfoBase_BOWOperationCompleted(object arg) {
+            if ((this.GetPatiInfoBase_BOWCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetPatiInfoBase_BOWCompleted(this, new GetPatiInfoBase_BOWCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetPatiInfoBase_Operator", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetPatiInfoBase_Operator(string Key, string Serialnumber) {
+            object[] results = this.Invoke("GetPatiInfoBase_Operator", new object[] {
+                        Key,
+                        Serialnumber});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetPatiInfoBase_OperatorAsync(string Key, string Serialnumber) {
+            this.GetPatiInfoBase_OperatorAsync(Key, Serialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void GetPatiInfoBase_OperatorAsync(string Key, string Serialnumber, object userState) {
+            if ((this.GetPatiInfoBase_OperatorOperationCompleted == null)) {
+                this.GetPatiInfoBase_OperatorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetPatiInfoBase_OperatorOperationCompleted);
+            }
+            this.InvokeAsync("GetPatiInfoBase_Operator", new object[] {
+                        Key,
+                        Serialnumber}, this.GetPatiInfoBase_OperatorOperationCompleted, userState);
+        }
+        
+        private void OnGetPatiInfoBase_OperatorOperationCompleted(object arg) {
+            if ((this.GetPatiInfoBase_OperatorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetPatiInfoBase_OperatorCompleted(this, new GetPatiInfoBase_OperatorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetPatiInfoBaseByID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetPatiInfoBaseByID(string ID) {
+            object[] results = this.Invoke("GetPatiInfoBaseByID", new object[] {
+                        ID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetPatiInfoBaseByIDAsync(string ID) {
+            this.GetPatiInfoBaseByIDAsync(ID, null);
+        }
+        
+        /// <remarks/>
+        public void GetPatiInfoBaseByIDAsync(string ID, object userState) {
+            if ((this.GetPatiInfoBaseByIDOperationCompleted == null)) {
+                this.GetPatiInfoBaseByIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetPatiInfoBaseByIDOperationCompleted);
+            }
+            this.InvokeAsync("GetPatiInfoBaseByID", new object[] {
+                        ID}, this.GetPatiInfoBaseByIDOperationCompleted, userState);
+        }
+        
+        private void OnGetPatiInfoBaseByIDOperationCompleted(object arg) {
+            if ((this.GetPatiInfoBaseByIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetPatiInfoBaseByIDCompleted(this, new GetPatiInfoBaseByIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetEmpImage", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetEmpImage(string empID) {
+            object[] results = this.Invoke("GetEmpImage", new object[] {
+                        empID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetEmpImageAsync(string empID) {
+            this.GetEmpImageAsync(empID, null);
+        }
+        
+        /// <remarks/>
+        public void GetEmpImageAsync(string empID, object userState) {
+            if ((this.GetEmpImageOperationCompleted == null)) {
+                this.GetEmpImageOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetEmpImageOperationCompleted);
+            }
+            this.InvokeAsync("GetEmpImage", new object[] {
+                        empID}, this.GetEmpImageOperationCompleted, userState);
+        }
+        
+        private void OnGetEmpImageOperationCompleted(object arg) {
+            if ((this.GetEmpImageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetEmpImageCompleted(this, new GetEmpImageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrInHospNum(string Key) {
+            object[] results = this.Invoke("GetCurrInHospNum", new object[] {
+                        Key});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrInHospNumAsync(string Key) {
+            this.GetCurrInHospNumAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrInHospNumAsync(string Key, object userState) {
+            if ((this.GetCurrInHospNumOperationCompleted == null)) {
+                this.GetCurrInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrInHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrInHospNum", new object[] {
+                        Key}, this.GetCurrInHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrInHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrInHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrInHospNumCompleted(this, new GetCurrInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrOrgInHospNum(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgInHospNum", new object[] {
+                        Key,
+                        WSID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgInHospNumAsync(string Key, string WSID) {
+            this.GetCurrOrgInHospNumAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgInHospNumAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgInHospNumOperationCompleted == null)) {
+                this.GetCurrOrgInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgInHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgInHospNum", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgInHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgInHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrOrgInHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgInHospNumCompleted(this, new GetCurrOrgInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrOrgInHospNum_Item(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgInHospNum_Item", new object[] {
+                        Key,
+                        WSID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgInHospNum_ItemAsync(string Key, string WSID) {
+            this.GetCurrOrgInHospNum_ItemAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgInHospNum_ItemAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgInHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrOrgInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgInHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgInHospNum_Item", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgInHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgInHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrOrgInHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgInHospNum_ItemCompleted(this, new GetCurrOrgInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrInHosp_ByDiag", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrInHosp_ByDiag(string Key) {
+            object[] results = this.Invoke("GetCurrInHosp_ByDiag", new object[] {
+                        Key});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrInHosp_ByDiagAsync(string Key) {
+            this.GetCurrInHosp_ByDiagAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrInHosp_ByDiagAsync(string Key, object userState) {
+            if ((this.GetCurrInHosp_ByDiagOperationCompleted == null)) {
+                this.GetCurrInHosp_ByDiagOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrInHosp_ByDiagOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrInHosp_ByDiag", new object[] {
+                        Key}, this.GetCurrInHosp_ByDiagOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrInHosp_ByDiagOperationCompleted(object arg) {
+            if ((this.GetCurrInHosp_ByDiagCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrInHosp_ByDiagCompleted(this, new GetCurrInHosp_ByDiagCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrInHosp_ByDiag_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrInHosp_ByDiag_Item(string Key, string DiagOrgID) {
+            object[] results = this.Invoke("GetCurrInHosp_ByDiag_Item", new object[] {
+                        Key,
+                        DiagOrgID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrInHosp_ByDiag_ItemAsync(string Key, string DiagOrgID) {
+            this.GetCurrInHosp_ByDiag_ItemAsync(Key, DiagOrgID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrInHosp_ByDiag_ItemAsync(string Key, string DiagOrgID, object userState) {
+            if ((this.GetCurrInHosp_ByDiag_ItemOperationCompleted == null)) {
+                this.GetCurrInHosp_ByDiag_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrInHosp_ByDiag_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrInHosp_ByDiag_Item", new object[] {
+                        Key,
+                        DiagOrgID}, this.GetCurrInHosp_ByDiag_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrInHosp_ByDiag_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrInHosp_ByDiag_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrInHosp_ByDiag_ItemCompleted(this, new GetCurrInHosp_ByDiag_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOutHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrOutHospNum(string Key) {
+            object[] results = this.Invoke("GetCurrOutHospNum", new object[] {
+                        Key});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOutHospNumAsync(string Key) {
+            this.GetCurrOutHospNumAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOutHospNumAsync(string Key, object userState) {
+            if ((this.GetCurrOutHospNumOperationCompleted == null)) {
+                this.GetCurrOutHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOutHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOutHospNum", new object[] {
+                        Key}, this.GetCurrOutHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOutHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrOutHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOutHospNumCompleted(this, new GetCurrOutHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgOutHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrOrgOutHospNum(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgOutHospNum", new object[] {
+                        Key,
+                        WSID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgOutHospNumAsync(string Key, string WSID) {
+            this.GetCurrOrgOutHospNumAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgOutHospNumAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgOutHospNumOperationCompleted == null)) {
+                this.GetCurrOrgOutHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgOutHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgOutHospNum", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgOutHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgOutHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrOrgOutHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgOutHospNumCompleted(this, new GetCurrOrgOutHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOutHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrOutHospNum_Item(string Key) {
+            object[] results = this.Invoke("GetCurrOutHospNum_Item", new object[] {
+                        Key});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOutHospNum_ItemAsync(string Key) {
+            this.GetCurrOutHospNum_ItemAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOutHospNum_ItemAsync(string Key, object userState) {
+            if ((this.GetCurrOutHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrOutHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOutHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOutHospNum_Item", new object[] {
+                        Key}, this.GetCurrOutHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOutHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrOutHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOutHospNum_ItemCompleted(this, new GetCurrOutHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgOutHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrOrgOutHospNum_Item(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgOutHospNum_Item", new object[] {
+                        Key,
+                        WSID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgOutHospNum_ItemAsync(string Key, string WSID) {
+            this.GetCurrOrgOutHospNum_ItemAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgOutHospNum_ItemAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgOutHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrOrgOutHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgOutHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgOutHospNum_Item", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgOutHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgOutHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrOrgOutHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgOutHospNum_ItemCompleted(this, new GetCurrOrgOutHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrLeaveHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrLeaveHospNum(string Key) {
+            object[] results = this.Invoke("GetCurrLeaveHospNum", new object[] {
+                        Key});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrLeaveHospNumAsync(string Key) {
+            this.GetCurrLeaveHospNumAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrLeaveHospNumAsync(string Key, object userState) {
+            if ((this.GetCurrLeaveHospNumOperationCompleted == null)) {
+                this.GetCurrLeaveHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrLeaveHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrLeaveHospNum", new object[] {
+                        Key}, this.GetCurrLeaveHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrLeaveHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrLeaveHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrLeaveHospNumCompleted(this, new GetCurrLeaveHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgLeaveHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrOrgLeaveHospNum(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgLeaveHospNum", new object[] {
+                        Key,
+                        WSID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgLeaveHospNumAsync(string Key, string WSID) {
+            this.GetCurrOrgLeaveHospNumAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgLeaveHospNumAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgLeaveHospNumOperationCompleted == null)) {
+                this.GetCurrOrgLeaveHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgLeaveHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgLeaveHospNum", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgLeaveHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgLeaveHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrOrgLeaveHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgLeaveHospNumCompleted(this, new GetCurrOrgLeaveHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrLeaveHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrLeaveHospNum_Item(string Key) {
+            object[] results = this.Invoke("GetCurrLeaveHospNum_Item", new object[] {
+                        Key});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrLeaveHospNum_ItemAsync(string Key) {
+            this.GetCurrLeaveHospNum_ItemAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrLeaveHospNum_ItemAsync(string Key, object userState) {
+            if ((this.GetCurrLeaveHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrLeaveHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrLeaveHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrLeaveHospNum_Item", new object[] {
+                        Key}, this.GetCurrLeaveHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrLeaveHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrLeaveHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrLeaveHospNum_ItemCompleted(this, new GetCurrLeaveHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgLeaveHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrOrgLeaveHospNum_Item(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgLeaveHospNum_Item", new object[] {
+                        Key,
+                        WSID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgLeaveHospNum_ItemAsync(string Key, string WSID) {
+            this.GetCurrOrgLeaveHospNum_ItemAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgLeaveHospNum_ItemAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgLeaveHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrOrgLeaveHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgLeaveHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgLeaveHospNum_Item", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgLeaveHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgLeaveHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrOrgLeaveHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgLeaveHospNum_ItemCompleted(this, new GetCurrOrgLeaveHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrDayInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrDayInHospNum(string Key) {
+            object[] results = this.Invoke("GetCurrDayInHospNum", new object[] {
+                        Key});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrDayInHospNumAsync(string Key) {
+            this.GetCurrDayInHospNumAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrDayInHospNumAsync(string Key, object userState) {
+            if ((this.GetCurrDayInHospNumOperationCompleted == null)) {
+                this.GetCurrDayInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrDayInHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrDayInHospNum", new object[] {
+                        Key}, this.GetCurrDayInHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrDayInHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrDayInHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrDayInHospNumCompleted(this, new GetCurrDayInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgDayInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrOrgDayInHospNum(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgDayInHospNum", new object[] {
+                        Key,
+                        WSID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgDayInHospNumAsync(string Key, string WSID) {
+            this.GetCurrOrgDayInHospNumAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgDayInHospNumAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgDayInHospNumOperationCompleted == null)) {
+                this.GetCurrOrgDayInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgDayInHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgDayInHospNum", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgDayInHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgDayInHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrOrgDayInHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgDayInHospNumCompleted(this, new GetCurrOrgDayInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrDayInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrDayInHospNum_Item(string Key) {
+            object[] results = this.Invoke("GetCurrDayInHospNum_Item", new object[] {
+                        Key});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrDayInHospNum_ItemAsync(string Key) {
+            this.GetCurrDayInHospNum_ItemAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrDayInHospNum_ItemAsync(string Key, object userState) {
+            if ((this.GetCurrDayInHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrDayInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrDayInHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrDayInHospNum_Item", new object[] {
+                        Key}, this.GetCurrDayInHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrDayInHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrDayInHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrDayInHospNum_ItemCompleted(this, new GetCurrDayInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgDayInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrOrgDayInHospNum_Item(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgDayInHospNum_Item", new object[] {
+                        Key,
+                        WSID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgDayInHospNum_ItemAsync(string Key, string WSID) {
+            this.GetCurrOrgDayInHospNum_ItemAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgDayInHospNum_ItemAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgDayInHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrOrgDayInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgDayInHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgDayInHospNum_Item", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgDayInHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgDayInHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrOrgDayInHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgDayInHospNum_ItemCompleted(this, new GetCurrOrgDayInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrCriticallyIllInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrCriticallyIllInHospNum(string Key) {
+            object[] results = this.Invoke("GetCurrCriticallyIllInHospNum", new object[] {
+                        Key});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrCriticallyIllInHospNumAsync(string Key) {
+            this.GetCurrCriticallyIllInHospNumAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrCriticallyIllInHospNumAsync(string Key, object userState) {
+            if ((this.GetCurrCriticallyIllInHospNumOperationCompleted == null)) {
+                this.GetCurrCriticallyIllInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrCriticallyIllInHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrCriticallyIllInHospNum", new object[] {
+                        Key}, this.GetCurrCriticallyIllInHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrCriticallyIllInHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrCriticallyIllInHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrCriticallyIllInHospNumCompleted(this, new GetCurrCriticallyIllInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgCriticallyIllInHospNum", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetCurrOrgCriticallyIllInHospNum(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgCriticallyIllInHospNum", new object[] {
+                        Key,
+                        WSID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgCriticallyIllInHospNumAsync(string Key, string WSID) {
+            this.GetCurrOrgCriticallyIllInHospNumAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgCriticallyIllInHospNumAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgCriticallyIllInHospNumOperationCompleted == null)) {
+                this.GetCurrOrgCriticallyIllInHospNumOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgCriticallyIllInHospNumOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgCriticallyIllInHospNum", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgCriticallyIllInHospNumOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgCriticallyIllInHospNumOperationCompleted(object arg) {
+            if ((this.GetCurrOrgCriticallyIllInHospNumCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgCriticallyIllInHospNumCompleted(this, new GetCurrOrgCriticallyIllInHospNumCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrCriticallyIllInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrCriticallyIllInHospNum_Item(string Key) {
+            object[] results = this.Invoke("GetCurrCriticallyIllInHospNum_Item", new object[] {
+                        Key});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrCriticallyIllInHospNum_ItemAsync(string Key) {
+            this.GetCurrCriticallyIllInHospNum_ItemAsync(Key, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrCriticallyIllInHospNum_ItemAsync(string Key, object userState) {
+            if ((this.GetCurrCriticallyIllInHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrCriticallyIllInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrCriticallyIllInHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrCriticallyIllInHospNum_Item", new object[] {
+                        Key}, this.GetCurrCriticallyIllInHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrCriticallyIllInHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrCriticallyIllInHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrCriticallyIllInHospNum_ItemCompleted(this, new GetCurrCriticallyIllInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgCriticallyIllInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrOrgCriticallyIllInHospNum_Item(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgCriticallyIllInHospNum_Item", new object[] {
+                        Key,
+                        WSID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgCriticallyIllInHospNum_ItemAsync(string Key, string WSID) {
+            this.GetCurrOrgCriticallyIllInHospNum_ItemAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgCriticallyIllInHospNum_ItemAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgCriticallyIllInHospNum_Item", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgCriticallyIllInHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrOrgCriticallyIllInHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgCriticallyIllInHospNum_ItemCompleted(this, new GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetCurrOrgOnDayCriticallyIllInHospNum_Item", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetCurrOrgOnDayCriticallyIllInHospNum_Item(string Key, string WSID) {
+            object[] results = this.Invoke("GetCurrOrgOnDayCriticallyIllInHospNum_Item", new object[] {
+                        Key,
+                        WSID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgOnDayCriticallyIllInHospNum_ItemAsync(string Key, string WSID) {
+            this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetCurrOrgOnDayCriticallyIllInHospNum_ItemAsync(string Key, string WSID, object userState) {
+            if ((this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted == null)) {
+                this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted);
+            }
+            this.InvokeAsync("GetCurrOrgOnDayCriticallyIllInHospNum_Item", new object[] {
+                        Key,
+                        WSID}, this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted, userState);
+        }
+        
+        private void OnGetCurrOrgOnDayCriticallyIllInHospNum_ItemOperationCompleted(object arg) {
+            if ((this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompleted(this, new GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetInpatientInfo_Only_ByEmpID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetInpatientInfo_Only_ByEmpID(string Key, string WSID) {
+            object[] results = this.Invoke("GetInpatientInfo_Only_ByEmpID", new object[] {
+                        Key,
+                        WSID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetInpatientInfo_Only_ByEmpIDAsync(string Key, string WSID) {
+            this.GetInpatientInfo_Only_ByEmpIDAsync(Key, WSID, null);
+        }
+        
+        /// <remarks/>
+        public void GetInpatientInfo_Only_ByEmpIDAsync(string Key, string WSID, object userState) {
+            if ((this.GetInpatientInfo_Only_ByEmpIDOperationCompleted == null)) {
+                this.GetInpatientInfo_Only_ByEmpIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetInpatientInfo_Only_ByEmpIDOperationCompleted);
+            }
+            this.InvokeAsync("GetInpatientInfo_Only_ByEmpID", new object[] {
+                        Key,
+                        WSID}, this.GetInpatientInfo_Only_ByEmpIDOperationCompleted, userState);
+        }
+        
+        private void OnGetInpatientInfo_Only_ByEmpIDOperationCompleted(object arg) {
+            if ((this.GetInpatientInfo_Only_ByEmpIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetInpatientInfo_Only_ByEmpIDCompleted(this, new GetInpatientInfo_Only_ByEmpIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetHospInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetHospInfo() {
+            object[] results = this.Invoke("GetHospInfo", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetHospInfoAsync() {
+            this.GetHospInfoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetHospInfoAsync(object userState) {
+            if ((this.GetHospInfoOperationCompleted == null)) {
+                this.GetHospInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetHospInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetHospInfo", new object[0], this.GetHospInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetHospInfoOperationCompleted(object arg) {
+            if ((this.GetHospInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetHospInfoCompleted(this, new GetHospInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrgInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetOrgInfo() {
+            object[] results = this.Invoke("GetOrgInfo", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrgInfoAsync() {
+            this.GetOrgInfoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetOrgInfoAsync(object userState) {
+            if ((this.GetOrgInfoOperationCompleted == null)) {
+                this.GetOrgInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrgInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetOrgInfo", new object[0], this.GetOrgInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetOrgInfoOperationCompleted(object arg) {
+            if ((this.GetOrgInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrgInfoCompleted(this, new GetOrgInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrgBaseInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetOrgBaseInfo(string OrgID) {
+            object[] results = this.Invoke("GetOrgBaseInfo", new object[] {
+                        OrgID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrgBaseInfoAsync(string OrgID) {
+            this.GetOrgBaseInfoAsync(OrgID, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrgBaseInfoAsync(string OrgID, object userState) {
+            if ((this.GetOrgBaseInfoOperationCompleted == null)) {
+                this.GetOrgBaseInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrgBaseInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetOrgBaseInfo", new object[] {
+                        OrgID}, this.GetOrgBaseInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetOrgBaseInfoOperationCompleted(object arg) {
+            if ((this.GetOrgBaseInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrgBaseInfoCompleted(this, new GetOrgBaseInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GETCODEINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GETCODEINFO(string Key, string CODETYPEID) {
+            object[] results = this.Invoke("GETCODEINFO", new object[] {
+                        Key,
+                        CODETYPEID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GETCODEINFOAsync(string Key, string CODETYPEID) {
+            this.GETCODEINFOAsync(Key, CODETYPEID, null);
+        }
+        
+        /// <remarks/>
+        public void GETCODEINFOAsync(string Key, string CODETYPEID, object userState) {
+            if ((this.GETCODEINFOOperationCompleted == null)) {
+                this.GETCODEINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGETCODEINFOOperationCompleted);
+            }
+            this.InvokeAsync("GETCODEINFO", new object[] {
+                        Key,
+                        CODETYPEID}, this.GETCODEINFOOperationCompleted, userState);
+        }
+        
+        private void OnGETCODEINFOOperationCompleted(object arg) {
+            if ((this.GETCODEINFOCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GETCODEINFOCompleted(this, new GETCODEINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetDoctorInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetDoctorInfo(string OrgID, string Day) {
+            object[] results = this.Invoke("GetDoctorInfo", new object[] {
+                        OrgID,
+                        Day});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetDoctorInfoAsync(string OrgID, string Day) {
+            this.GetDoctorInfoAsync(OrgID, Day, null);
+        }
+        
+        /// <remarks/>
+        public void GetDoctorInfoAsync(string OrgID, string Day, object userState) {
+            if ((this.GetDoctorInfoOperationCompleted == null)) {
+                this.GetDoctorInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDoctorInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetDoctorInfo", new object[] {
+                        OrgID,
+                        Day}, this.GetDoctorInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetDoctorInfoOperationCompleted(object arg) {
+            if ((this.GetDoctorInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetDoctorInfoCompleted(this, new GetDoctorInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetResInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetResInfo(string EMPID, string DateTypeID, string ResourceTypeID) {
+            object[] results = this.Invoke("GetResInfo", new object[] {
+                        EMPID,
+                        DateTypeID,
+                        ResourceTypeID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetResInfoAsync(string EMPID, string DateTypeID, string ResourceTypeID) {
+            this.GetResInfoAsync(EMPID, DateTypeID, ResourceTypeID, null);
+        }
+        
+        /// <remarks/>
+        public void GetResInfoAsync(string EMPID, string DateTypeID, string ResourceTypeID, object userState) {
+            if ((this.GetResInfoOperationCompleted == null)) {
+                this.GetResInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetResInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetResInfo", new object[] {
+                        EMPID,
+                        DateTypeID,
+                        ResourceTypeID}, this.GetResInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetResInfoOperationCompleted(object arg) {
+            if ((this.GetResInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetResInfoCompleted(this, new GetResInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/AddPerson", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string AddPerson(string patiName, string PersonID, string phoneNum, string CardID) {
+            object[] results = this.Invoke("AddPerson", new object[] {
+                        patiName,
+                        PersonID,
+                        phoneNum,
+                        CardID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AddPersonAsync(string patiName, string PersonID, string phoneNum, string CardID) {
+            this.AddPersonAsync(patiName, PersonID, phoneNum, CardID, null);
+        }
+        
+        /// <remarks/>
+        public void AddPersonAsync(string patiName, string PersonID, string phoneNum, string CardID, object userState) {
+            if ((this.AddPersonOperationCompleted == null)) {
+                this.AddPersonOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddPersonOperationCompleted);
+            }
+            this.InvokeAsync("AddPerson", new object[] {
+                        patiName,
+                        PersonID,
+                        phoneNum,
+                        CardID}, this.AddPersonOperationCompleted, userState);
+        }
+        
+        private void OnAddPersonOperationCompleted(object arg) {
+            if ((this.AddPersonCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddPersonCompleted(this, new AddPersonCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/CreadCard", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string CreadCard(string patiName, string PersonID, string phoneNum) {
+            object[] results = this.Invoke("CreadCard", new object[] {
+                        patiName,
+                        PersonID,
+                        phoneNum});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CreadCardAsync(string patiName, string PersonID, string phoneNum) {
+            this.CreadCardAsync(patiName, PersonID, phoneNum, null);
+        }
+        
+        /// <remarks/>
+        public void CreadCardAsync(string patiName, string PersonID, string phoneNum, object userState) {
+            if ((this.CreadCardOperationCompleted == null)) {
+                this.CreadCardOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCreadCardOperationCompleted);
+            }
+            this.InvokeAsync("CreadCard", new object[] {
+                        patiName,
+                        PersonID,
+                        phoneNum}, this.CreadCardOperationCompleted, userState);
+        }
+        
+        private void OnCreadCardOperationCompleted(object arg) {
+            if ((this.CreadCardCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CreadCardCompleted(this, new CreadCardCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/RegCheck", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string RegCheck(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount) {
+            object[] results = this.Invoke("RegCheck", new object[] {
+                        CardID,
+                        Regdate,
+                        DateTypeID,
+                        ResourceID,
+                        ResourceTypeID,
+                        UseAcc,
+                        PatiName,
+                        Amount});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RegCheckAsync(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount) {
+            this.RegCheckAsync(CardID, Regdate, DateTypeID, ResourceID, ResourceTypeID, UseAcc, PatiName, Amount, null);
+        }
+        
+        /// <remarks/>
+        public void RegCheckAsync(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount, object userState) {
+            if ((this.RegCheckOperationCompleted == null)) {
+                this.RegCheckOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegCheckOperationCompleted);
+            }
+            this.InvokeAsync("RegCheck", new object[] {
+                        CardID,
+                        Regdate,
+                        DateTypeID,
+                        ResourceID,
+                        ResourceTypeID,
+                        UseAcc,
+                        PatiName,
+                        Amount}, this.RegCheckOperationCompleted, userState);
+        }
+        
+        private void OnRegCheckOperationCompleted(object arg) {
+            if ((this.RegCheckCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RegCheckCompleted(this, new RegCheckCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/RegData", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string RegData(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount, string PayModeNo) {
+            object[] results = this.Invoke("RegData", new object[] {
+                        CardID,
+                        Regdate,
+                        DateTypeID,
+                        ResourceID,
+                        ResourceTypeID,
+                        UseAcc,
+                        PatiName,
+                        Amount,
+                        PayModeNo});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RegDataAsync(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount, string PayModeNo) {
+            this.RegDataAsync(CardID, Regdate, DateTypeID, ResourceID, ResourceTypeID, UseAcc, PatiName, Amount, PayModeNo, null);
+        }
+        
+        /// <remarks/>
+        public void RegDataAsync(string CardID, string Regdate, string DateTypeID, string ResourceID, string ResourceTypeID, string UseAcc, string PatiName, string Amount, string PayModeNo, object userState) {
+            if ((this.RegDataOperationCompleted == null)) {
+                this.RegDataOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegDataOperationCompleted);
+            }
+            this.InvokeAsync("RegData", new object[] {
+                        CardID,
+                        Regdate,
+                        DateTypeID,
+                        ResourceID,
+                        ResourceTypeID,
+                        UseAcc,
+                        PatiName,
+                        Amount,
+                        PayModeNo}, this.RegDataOperationCompleted, userState);
+        }
+        
+        private void OnRegDataOperationCompleted(object arg) {
+            if ((this.RegDataCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RegDataCompleted(this, new RegDataCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/UnRegData", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string UnRegData(string sSerialnumber) {
+            object[] results = this.Invoke("UnRegData", new object[] {
+                        sSerialnumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UnRegDataAsync(string sSerialnumber) {
+            this.UnRegDataAsync(sSerialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void UnRegDataAsync(string sSerialnumber, object userState) {
+            if ((this.UnRegDataOperationCompleted == null)) {
+                this.UnRegDataOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUnRegDataOperationCompleted);
+            }
+            this.InvokeAsync("UnRegData", new object[] {
+                        sSerialnumber}, this.UnRegDataOperationCompleted, userState);
+        }
+        
+        private void OnUnRegDataOperationCompleted(object arg) {
+            if ((this.UnRegDataCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UnRegDataCompleted(this, new UnRegDataCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdInfotoll", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetOrdInfotoll(string patiName, string cardID) {
+            object[] results = this.Invoke("GetOrdInfotoll", new object[] {
+                        patiName,
+                        cardID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrdInfotollAsync(string patiName, string cardID) {
+            this.GetOrdInfotollAsync(patiName, cardID, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrdInfotollAsync(string patiName, string cardID, object userState) {
+            if ((this.GetOrdInfotollOperationCompleted == null)) {
+                this.GetOrdInfotollOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdInfotollOperationCompleted);
+            }
+            this.InvokeAsync("GetOrdInfotoll", new object[] {
+                        patiName,
+                        cardID}, this.GetOrdInfotollOperationCompleted, userState);
+        }
+        
+        private void OnGetOrdInfotollOperationCompleted(object arg) {
+            if ((this.GetOrdInfotollCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrdInfotollCompleted(this, new GetOrdInfotollCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/SetOrdInftollTwo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string SetOrdInftollTwo(string patiName, string serialnumber, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName) {
+            object[] results = this.Invoke("SetOrdInftollTwo", new object[] {
+                        patiName,
+                        serialnumber,
+                        PayAmount,
+                        PayModeNo,
+                        BankName,
+                        AccountNo,
+                        EntName});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SetOrdInftollTwoAsync(string patiName, string serialnumber, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName) {
+            this.SetOrdInftollTwoAsync(patiName, serialnumber, PayAmount, PayModeNo, BankName, AccountNo, EntName, null);
+        }
+        
+        /// <remarks/>
+        public void SetOrdInftollTwoAsync(string patiName, string serialnumber, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName, object userState) {
+            if ((this.SetOrdInftollTwoOperationCompleted == null)) {
+                this.SetOrdInftollTwoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetOrdInftollTwoOperationCompleted);
+            }
+            this.InvokeAsync("SetOrdInftollTwo", new object[] {
+                        patiName,
+                        serialnumber,
+                        PayAmount,
+                        PayModeNo,
+                        BankName,
+                        AccountNo,
+                        EntName}, this.SetOrdInftollTwoOperationCompleted, userState);
+        }
+        
+        private void OnSetOrdInftollTwoOperationCompleted(object arg) {
+            if ((this.SetOrdInftollTwoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SetOrdInftollTwoCompleted(this, new SetOrdInftollTwoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdInftollTwo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetOrdInftollTwo(string cardID, string patiName, string serialnumberAndOrdID) {
+            object[] results = this.Invoke("GetOrdInftollTwo", new object[] {
+                        cardID,
+                        patiName,
+                        serialnumberAndOrdID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrdInftollTwoAsync(string cardID, string patiName, string serialnumberAndOrdID) {
+            this.GetOrdInftollTwoAsync(cardID, patiName, serialnumberAndOrdID, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrdInftollTwoAsync(string cardID, string patiName, string serialnumberAndOrdID, object userState) {
+            if ((this.GetOrdInftollTwoOperationCompleted == null)) {
+                this.GetOrdInftollTwoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdInftollTwoOperationCompleted);
+            }
+            this.InvokeAsync("GetOrdInftollTwo", new object[] {
+                        cardID,
+                        patiName,
+                        serialnumberAndOrdID}, this.GetOrdInftollTwoOperationCompleted, userState);
+        }
+        
+        private void OnGetOrdInftollTwoOperationCompleted(object arg) {
+            if ((this.GetOrdInftollTwoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrdInftollTwoCompleted(this, new GetOrdInftollTwoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdInftollTwo_Fee", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetOrdInftollTwo_Fee(string cardID, string patiName, string serialnumberAndOrdID) {
+            object[] results = this.Invoke("GetOrdInftollTwo_Fee", new object[] {
+                        cardID,
+                        patiName,
+                        serialnumberAndOrdID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrdInftollTwo_FeeAsync(string cardID, string patiName, string serialnumberAndOrdID) {
+            this.GetOrdInftollTwo_FeeAsync(cardID, patiName, serialnumberAndOrdID, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrdInftollTwo_FeeAsync(string cardID, string patiName, string serialnumberAndOrdID, object userState) {
+            if ((this.GetOrdInftollTwo_FeeOperationCompleted == null)) {
+                this.GetOrdInftollTwo_FeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdInftollTwo_FeeOperationCompleted);
+            }
+            this.InvokeAsync("GetOrdInftollTwo_Fee", new object[] {
+                        cardID,
+                        patiName,
+                        serialnumberAndOrdID}, this.GetOrdInftollTwo_FeeOperationCompleted, userState);
+        }
+        
+        private void OnGetOrdInftollTwo_FeeOperationCompleted(object arg) {
+            if ((this.GetOrdInftollTwo_FeeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrdInftollTwo_FeeCompleted(this, new GetOrdInftollTwo_FeeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetQue", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetQue(string time) {
+            object[] results = this.Invoke("GetQue", new object[] {
+                        time});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetQueAsync(string time) {
+            this.GetQueAsync(time, null);
+        }
+        
+        /// <remarks/>
+        public void GetQueAsync(string time, object userState) {
+            if ((this.GetQueOperationCompleted == null)) {
+                this.GetQueOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQueOperationCompleted);
+            }
+            this.InvokeAsync("GetQue", new object[] {
+                        time}, this.GetQueOperationCompleted, userState);
+        }
+        
+        private void OnGetQueOperationCompleted(object arg) {
+            if ((this.GetQueCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetQueCompleted(this, new GetQueCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/findAllReport", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string findAllReport(string CardID, string BegDate) {
+            object[] results = this.Invoke("findAllReport", new object[] {
+                        CardID,
+                        BegDate});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void findAllReportAsync(string CardID, string BegDate) {
+            this.findAllReportAsync(CardID, BegDate, null);
+        }
+        
+        /// <remarks/>
+        public void findAllReportAsync(string CardID, string BegDate, object userState) {
+            if ((this.findAllReportOperationCompleted == null)) {
+                this.findAllReportOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindAllReportOperationCompleted);
+            }
+            this.InvokeAsync("findAllReport", new object[] {
+                        CardID,
+                        BegDate}, this.findAllReportOperationCompleted, userState);
+        }
+        
+        private void OnfindAllReportOperationCompleted(object arg) {
+            if ((this.findAllReportCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.findAllReportCompleted(this, new findAllReportCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/findAllReportByPatiID", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet findAllReportByPatiID(string PatiID, string BegDate, string TYPE) {
+            object[] results = this.Invoke("findAllReportByPatiID", new object[] {
+                        PatiID,
+                        BegDate,
+                        TYPE});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void findAllReportByPatiIDAsync(string PatiID, string BegDate, string TYPE) {
+            this.findAllReportByPatiIDAsync(PatiID, BegDate, TYPE, null);
+        }
+        
+        /// <remarks/>
+        public void findAllReportByPatiIDAsync(string PatiID, string BegDate, string TYPE, object userState) {
+            if ((this.findAllReportByPatiIDOperationCompleted == null)) {
+                this.findAllReportByPatiIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindAllReportByPatiIDOperationCompleted);
+            }
+            this.InvokeAsync("findAllReportByPatiID", new object[] {
+                        PatiID,
+                        BegDate,
+                        TYPE}, this.findAllReportByPatiIDOperationCompleted, userState);
+        }
+        
+        private void OnfindAllReportByPatiIDOperationCompleted(object arg) {
+            if ((this.findAllReportByPatiIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.findAllReportByPatiIDCompleted(this, new findAllReportByPatiIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/findCheckReport", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string findCheckReport(string CardID, string BegDate) {
+            object[] results = this.Invoke("findCheckReport", new object[] {
+                        CardID,
+                        BegDate});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void findCheckReportAsync(string CardID, string BegDate) {
+            this.findCheckReportAsync(CardID, BegDate, null);
+        }
+        
+        /// <remarks/>
+        public void findCheckReportAsync(string CardID, string BegDate, object userState) {
+            if ((this.findCheckReportOperationCompleted == null)) {
+                this.findCheckReportOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindCheckReportOperationCompleted);
+            }
+            this.InvokeAsync("findCheckReport", new object[] {
+                        CardID,
+                        BegDate}, this.findCheckReportOperationCompleted, userState);
+        }
+        
+        private void OnfindCheckReportOperationCompleted(object arg) {
+            if ((this.findCheckReportCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.findCheckReportCompleted(this, new findCheckReportCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/findCompleteReport", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string findCompleteReport(string applyID) {
+            object[] results = this.Invoke("findCompleteReport", new object[] {
+                        applyID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void findCompleteReportAsync(string applyID) {
+            this.findCompleteReportAsync(applyID, null);
+        }
+        
+        /// <remarks/>
+        public void findCompleteReportAsync(string applyID, object userState) {
+            if ((this.findCompleteReportOperationCompleted == null)) {
+                this.findCompleteReportOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindCompleteReportOperationCompleted);
+            }
+            this.InvokeAsync("findCompleteReport", new object[] {
+                        applyID}, this.findCompleteReportOperationCompleted, userState);
+        }
+        
+        private void OnfindCompleteReportOperationCompleted(object arg) {
+            if ((this.findCompleteReportCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.findCompleteReportCompleted(this, new findCompleteReportCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetADay", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetADay(string patiName, string CARDID, string Day) {
+            object[] results = this.Invoke("GetADay", new object[] {
+                        patiName,
+                        CARDID,
+                        Day});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetADayAsync(string patiName, string CARDID, string Day) {
+            this.GetADayAsync(patiName, CARDID, Day, null);
+        }
+        
+        /// <remarks/>
+        public void GetADayAsync(string patiName, string CARDID, string Day, object userState) {
+            if ((this.GetADayOperationCompleted == null)) {
+                this.GetADayOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetADayOperationCompleted);
+            }
+            this.InvokeAsync("GetADay", new object[] {
+                        patiName,
+                        CARDID,
+                        Day}, this.GetADayOperationCompleted, userState);
+        }
+        
+        private void OnGetADayOperationCompleted(object arg) {
+            if ((this.GetADayCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetADayCompleted(this, new GetADayCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetSubscription", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetSubscription(string patiName, string CARDID) {
+            object[] results = this.Invoke("GetSubscription", new object[] {
+                        patiName,
+                        CARDID});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetSubscriptionAsync(string patiName, string CARDID) {
+            this.GetSubscriptionAsync(patiName, CARDID, null);
+        }
+        
+        /// <remarks/>
+        public void GetSubscriptionAsync(string patiName, string CARDID, object userState) {
+            if ((this.GetSubscriptionOperationCompleted == null)) {
+                this.GetSubscriptionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetSubscriptionOperationCompleted);
+            }
+            this.InvokeAsync("GetSubscription", new object[] {
+                        patiName,
+                        CARDID}, this.GetSubscriptionOperationCompleted, userState);
+        }
+        
+        private void OnGetSubscriptionOperationCompleted(object arg) {
+            if ((this.GetSubscriptionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetSubscriptionCompleted(this, new GetSubscriptionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/SetDeposit", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string SetDeposit(string patiName, string CARDID, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName) {
+            object[] results = this.Invoke("SetDeposit", new object[] {
+                        patiName,
+                        CARDID,
+                        PayAmount,
+                        PayModeNo,
+                        BankName,
+                        AccountNo,
+                        EntName});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SetDepositAsync(string patiName, string CARDID, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName) {
+            this.SetDepositAsync(patiName, CARDID, PayAmount, PayModeNo, BankName, AccountNo, EntName, null);
+        }
+        
+        /// <remarks/>
+        public void SetDepositAsync(string patiName, string CARDID, decimal PayAmount, string PayModeNo, string BankName, string AccountNo, string EntName, object userState) {
+            if ((this.SetDepositOperationCompleted == null)) {
+                this.SetDepositOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetDepositOperationCompleted);
+            }
+            this.InvokeAsync("SetDeposit", new object[] {
+                        patiName,
+                        CARDID,
+                        PayAmount,
+                        PayModeNo,
+                        BankName,
+                        AccountNo,
+                        EntName}, this.SetDepositOperationCompleted, userState);
+        }
+        
+        private void OnSetDepositOperationCompleted(object arg) {
+            if ((this.SetDepositCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SetDepositCompleted(this, new SetDepositCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetWindNo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetWindNo(string patiName, string serialnumber) {
+            object[] results = this.Invoke("GetWindNo", new object[] {
+                        patiName,
+                        serialnumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetWindNoAsync(string patiName, string serialnumber) {
+            this.GetWindNoAsync(patiName, serialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void GetWindNoAsync(string patiName, string serialnumber, object userState) {
+            if ((this.GetWindNoOperationCompleted == null)) {
+                this.GetWindNoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetWindNoOperationCompleted);
+            }
+            this.InvokeAsync("GetWindNo", new object[] {
+                        patiName,
+                        serialnumber}, this.GetWindNoOperationCompleted, userState);
+        }
+        
+        private void OnGetWindNoOperationCompleted(object arg) {
+            if ((this.GetWindNoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetWindNoCompleted(this, new GetWindNoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetDayFeeItem", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetDayFeeItem(string Day) {
+            object[] results = this.Invoke("GetDayFeeItem", new object[] {
+                        Day});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetDayFeeItemAsync(string Day) {
+            this.GetDayFeeItemAsync(Day, null);
+        }
+        
+        /// <remarks/>
+        public void GetDayFeeItemAsync(string Day, object userState) {
+            if ((this.GetDayFeeItemOperationCompleted == null)) {
+                this.GetDayFeeItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDayFeeItemOperationCompleted);
+            }
+            this.InvokeAsync("GetDayFeeItem", new object[] {
+                        Day}, this.GetDayFeeItemOperationCompleted, userState);
+        }
+        
+        private void OnGetDayFeeItemOperationCompleted(object arg) {
+            if ((this.GetDayFeeItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetDayFeeItemCompleted(this, new GetDayFeeItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/MicroPay", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string MicroPay(string hospital_id, string hospital_area_id, string auth_code, string order_amount, string biz_id, string data_src, string cashier_id, string sign) {
+            object[] results = this.Invoke("MicroPay", new object[] {
+                        hospital_id,
+                        hospital_area_id,
+                        auth_code,
+                        order_amount,
+                        biz_id,
+                        data_src,
+                        cashier_id,
+                        sign});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void MicroPayAsync(string hospital_id, string hospital_area_id, string auth_code, string order_amount, string biz_id, string data_src, string cashier_id, string sign) {
+            this.MicroPayAsync(hospital_id, hospital_area_id, auth_code, order_amount, biz_id, data_src, cashier_id, sign, null);
+        }
+        
+        /// <remarks/>
+        public void MicroPayAsync(string hospital_id, string hospital_area_id, string auth_code, string order_amount, string biz_id, string data_src, string cashier_id, string sign, object userState) {
+            if ((this.MicroPayOperationCompleted == null)) {
+                this.MicroPayOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMicroPayOperationCompleted);
+            }
+            this.InvokeAsync("MicroPay", new object[] {
+                        hospital_id,
+                        hospital_area_id,
+                        auth_code,
+                        order_amount,
+                        biz_id,
+                        data_src,
+                        cashier_id,
+                        sign}, this.MicroPayOperationCompleted, userState);
+        }
+        
+        private void OnMicroPayOperationCompleted(object arg) {
+            if ((this.MicroPayCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.MicroPayCompleted(this, new MicroPayCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/MicroPayQry", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string MicroPayQry(string hospital_id, string biz_id, string sign) {
+            object[] results = this.Invoke("MicroPayQry", new object[] {
+                        hospital_id,
+                        biz_id,
+                        sign});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void MicroPayQryAsync(string hospital_id, string biz_id, string sign) {
+            this.MicroPayQryAsync(hospital_id, biz_id, sign, null);
+        }
+        
+        /// <remarks/>
+        public void MicroPayQryAsync(string hospital_id, string biz_id, string sign, object userState) {
+            if ((this.MicroPayQryOperationCompleted == null)) {
+                this.MicroPayQryOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMicroPayQryOperationCompleted);
+            }
+            this.InvokeAsync("MicroPayQry", new object[] {
+                        hospital_id,
+                        biz_id,
+                        sign}, this.MicroPayQryOperationCompleted, userState);
+        }
+        
+        private void OnMicroPayQryOperationCompleted(object arg) {
+            if ((this.MicroPayQryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.MicroPayQryCompleted(this, new MicroPayQryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/MicroPayCancel", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string MicroPayCancel(string biz_id) {
+            object[] results = this.Invoke("MicroPayCancel", new object[] {
+                        biz_id});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void MicroPayCancelAsync(string biz_id) {
+            this.MicroPayCancelAsync(biz_id, null);
+        }
+        
+        /// <remarks/>
+        public void MicroPayCancelAsync(string biz_id, object userState) {
+            if ((this.MicroPayCancelOperationCompleted == null)) {
+                this.MicroPayCancelOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMicroPayCancelOperationCompleted);
+            }
+            this.InvokeAsync("MicroPayCancel", new object[] {
+                        biz_id}, this.MicroPayCancelOperationCompleted, userState);
+        }
+        
+        private void OnMicroPayCancelOperationCompleted(object arg) {
+            if ((this.MicroPayCancelCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.MicroPayCancelCompleted(this, new MicroPayCancelCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/CreateOrder", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string CreateOrder(string hospital_id, string totle_amt, string visit_id, string patient_id, string real_name, string id_card, string data_src, string biz_id, string pay_type, string sign) {
+            object[] results = this.Invoke("CreateOrder", new object[] {
+                        hospital_id,
+                        totle_amt,
+                        visit_id,
+                        patient_id,
+                        real_name,
+                        id_card,
+                        data_src,
+                        biz_id,
+                        pay_type,
+                        sign});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CreateOrderAsync(string hospital_id, string totle_amt, string visit_id, string patient_id, string real_name, string id_card, string data_src, string biz_id, string pay_type, string sign) {
+            this.CreateOrderAsync(hospital_id, totle_amt, visit_id, patient_id, real_name, id_card, data_src, biz_id, pay_type, sign, null);
+        }
+        
+        /// <remarks/>
+        public void CreateOrderAsync(string hospital_id, string totle_amt, string visit_id, string patient_id, string real_name, string id_card, string data_src, string biz_id, string pay_type, string sign, object userState) {
+            if ((this.CreateOrderOperationCompleted == null)) {
+                this.CreateOrderOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCreateOrderOperationCompleted);
+            }
+            this.InvokeAsync("CreateOrder", new object[] {
+                        hospital_id,
+                        totle_amt,
+                        visit_id,
+                        patient_id,
+                        real_name,
+                        id_card,
+                        data_src,
+                        biz_id,
+                        pay_type,
+                        sign}, this.CreateOrderOperationCompleted, userState);
+        }
+        
+        private void OnCreateOrderOperationCompleted(object arg) {
+            if ((this.CreateOrderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CreateOrderCompleted(this, new CreateOrderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/ITEMIINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string ITEMIINFO() {
+            object[] results = this.Invoke("ITEMIINFO", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ITEMIINFOAsync() {
+            this.ITEMIINFOAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ITEMIINFOAsync(object userState) {
+            if ((this.ITEMIINFOOperationCompleted == null)) {
+                this.ITEMIINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnITEMIINFOOperationCompleted);
+            }
+            this.InvokeAsync("ITEMIINFO", new object[0], this.ITEMIINFOOperationCompleted, userState);
+        }
+        
+        private void OnITEMIINFOOperationCompleted(object arg) {
+            if ((this.ITEMIINFOCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ITEMIINFOCompleted(this, new ITEMIINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/EMRTYPE", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string EMRTYPE() {
+            object[] results = this.Invoke("EMRTYPE", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EMRTYPEAsync() {
+            this.EMRTYPEAsync(null);
+        }
+        
+        /// <remarks/>
+        public void EMRTYPEAsync(object userState) {
+            if ((this.EMRTYPEOperationCompleted == null)) {
+                this.EMRTYPEOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEMRTYPEOperationCompleted);
+            }
+            this.InvokeAsync("EMRTYPE", new object[0], this.EMRTYPEOperationCompleted, userState);
+        }
+        
+        private void OnEMRTYPEOperationCompleted(object arg) {
+            if ((this.EMRTYPECompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EMRTYPECompleted(this, new EMRTYPECompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/TEMINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string TEMINFO(string Serialnumber) {
+            object[] results = this.Invoke("TEMINFO", new object[] {
+                        Serialnumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void TEMINFOAsync(string Serialnumber) {
+            this.TEMINFOAsync(Serialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void TEMINFOAsync(string Serialnumber, object userState) {
+            if ((this.TEMINFOOperationCompleted == null)) {
+                this.TEMINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTEMINFOOperationCompleted);
+            }
+            this.InvokeAsync("TEMINFO", new object[] {
+                        Serialnumber}, this.TEMINFOOperationCompleted, userState);
+        }
+        
+        private void OnTEMINFOOperationCompleted(object arg) {
+            if ((this.TEMINFOCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.TEMINFOCompleted(this, new TEMINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/PATIINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string PATIINFO(string LeaveDay, string AdminDay) {
+            object[] results = this.Invoke("PATIINFO", new object[] {
+                        LeaveDay,
+                        AdminDay});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PATIINFOAsync(string LeaveDay, string AdminDay) {
+            this.PATIINFOAsync(LeaveDay, AdminDay, null);
+        }
+        
+        /// <remarks/>
+        public void PATIINFOAsync(string LeaveDay, string AdminDay, object userState) {
+            if ((this.PATIINFOOperationCompleted == null)) {
+                this.PATIINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPATIINFOOperationCompleted);
+            }
+            this.InvokeAsync("PATIINFO", new object[] {
+                        LeaveDay,
+                        AdminDay}, this.PATIINFOOperationCompleted, userState);
+        }
+        
+        private void OnPATIINFOOperationCompleted(object arg) {
+            if ((this.PATIINFOCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PATIINFOCompleted(this, new PATIINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/DEPARTMENTS", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string DEPARTMENTS() {
+            object[] results = this.Invoke("DEPARTMENTS", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DEPARTMENTSAsync() {
+            this.DEPARTMENTSAsync(null);
+        }
+        
+        /// <remarks/>
+        public void DEPARTMENTSAsync(object userState) {
+            if ((this.DEPARTMENTSOperationCompleted == null)) {
+                this.DEPARTMENTSOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDEPARTMENTSOperationCompleted);
+            }
+            this.InvokeAsync("DEPARTMENTS", new object[0], this.DEPARTMENTSOperationCompleted, userState);
+        }
+        
+        private void OnDEPARTMENTSOperationCompleted(object arg) {
+            if ((this.DEPARTMENTSCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DEPARTMENTSCompleted(this, new DEPARTMENTSCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/DOCTOR", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string DOCTOR() {
+            object[] results = this.Invoke("DOCTOR", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DOCTORAsync() {
+            this.DOCTORAsync(null);
+        }
+        
+        /// <remarks/>
+        public void DOCTORAsync(object userState) {
+            if ((this.DOCTOROperationCompleted == null)) {
+                this.DOCTOROperationCompleted = new System.Threading.SendOrPostCallback(this.OnDOCTOROperationCompleted);
+            }
+            this.InvokeAsync("DOCTOR", new object[0], this.DOCTOROperationCompleted, userState);
+        }
+        
+        private void OnDOCTOROperationCompleted(object arg) {
+            if ((this.DOCTORCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DOCTORCompleted(this, new DOCTORCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/OPERITEM", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string OPERITEM(string Serialnumber) {
+            object[] results = this.Invoke("OPERITEM", new object[] {
+                        Serialnumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void OPERITEMAsync(string Serialnumber) {
+            this.OPERITEMAsync(Serialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void OPERITEMAsync(string Serialnumber, object userState) {
+            if ((this.OPERITEMOperationCompleted == null)) {
+                this.OPERITEMOperationCompleted = new System.Threading.SendOrPostCallback(this.OnOPERITEMOperationCompleted);
+            }
+            this.InvokeAsync("OPERITEM", new object[] {
+                        Serialnumber}, this.OPERITEMOperationCompleted, userState);
+        }
+        
+        private void OnOPERITEMOperationCompleted(object arg) {
+            if ((this.OPERITEMCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.OPERITEMCompleted(this, new OPERITEMCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/OPERDICT", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string OPERDICT() {
+            object[] results = this.Invoke("OPERDICT", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void OPERDICTAsync() {
+            this.OPERDICTAsync(null);
+        }
+        
+        /// <remarks/>
+        public void OPERDICTAsync(object userState) {
+            if ((this.OPERDICTOperationCompleted == null)) {
+                this.OPERDICTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnOPERDICTOperationCompleted);
+            }
+            this.InvokeAsync("OPERDICT", new object[0], this.OPERDICTOperationCompleted, userState);
+        }
+        
+        private void OnOPERDICTOperationCompleted(object arg) {
+            if ((this.OPERDICTCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.OPERDICTCompleted(this, new OPERDICTCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/ORGINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string ORGINFO(string Serialnumber) {
+            object[] results = this.Invoke("ORGINFO", new object[] {
+                        Serialnumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ORGINFOAsync(string Serialnumber) {
+            this.ORGINFOAsync(Serialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void ORGINFOAsync(string Serialnumber, object userState) {
+            if ((this.ORGINFOOperationCompleted == null)) {
+                this.ORGINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnORGINFOOperationCompleted);
+            }
+            this.InvokeAsync("ORGINFO", new object[] {
+                        Serialnumber}, this.ORGINFOOperationCompleted, userState);
+        }
+        
+        private void OnORGINFOOperationCompleted(object arg) {
+            if ((this.ORGINFOCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ORGINFOCompleted(this, new ORGINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/ORDDERINFO", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string ORDDERINFO(string Serialnumber) {
+            object[] results = this.Invoke("ORDDERINFO", new object[] {
+                        Serialnumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ORDDERINFOAsync(string Serialnumber) {
+            this.ORDDERINFOAsync(Serialnumber, null);
+        }
+        
+        /// <remarks/>
+        public void ORDDERINFOAsync(string Serialnumber, object userState) {
+            if ((this.ORDDERINFOOperationCompleted == null)) {
+                this.ORDDERINFOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnORDDERINFOOperationCompleted);
+            }
+            this.InvokeAsync("ORDDERINFO", new object[] {
+                        Serialnumber}, this.ORDDERINFOOperationCompleted, userState);
+        }
+        
+        private void OnORDDERINFOOperationCompleted(object arg) {
+            if ((this.ORDDERINFOCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ORDDERINFOCompleted(this, new ORDDERINFOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrds_JP", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetOrds_JP(string SERIALNUMBER, string ORDID) {
+            object[] results = this.Invoke("GetOrds_JP", new object[] {
+                        SERIALNUMBER,
+                        ORDID});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrds_JPAsync(string SERIALNUMBER, string ORDID) {
+            this.GetOrds_JPAsync(SERIALNUMBER, ORDID, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrds_JPAsync(string SERIALNUMBER, string ORDID, object userState) {
+            if ((this.GetOrds_JPOperationCompleted == null)) {
+                this.GetOrds_JPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrds_JPOperationCompleted);
+            }
+            this.InvokeAsync("GetOrds_JP", new object[] {
+                        SERIALNUMBER,
+                        ORDID}, this.GetOrds_JPOperationCompleted, userState);
+        }
+        
+        private void OnGetOrds_JPOperationCompleted(object arg) {
+            if ((this.GetOrds_JPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrds_JPCompleted(this, new GetOrds_JPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrgInfo_JP", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetOrgInfo_JP(string ORGID_LOC, string SERIALNUMBER, string ORDID, string EXECTIME) {
+            object[] results = this.Invoke("GetOrgInfo_JP", new object[] {
+                        ORGID_LOC,
+                        SERIALNUMBER,
+                        ORDID,
+                        EXECTIME});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrgInfo_JPAsync(string ORGID_LOC, string SERIALNUMBER, string ORDID, string EXECTIME) {
+            this.GetOrgInfo_JPAsync(ORGID_LOC, SERIALNUMBER, ORDID, EXECTIME, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrgInfo_JPAsync(string ORGID_LOC, string SERIALNUMBER, string ORDID, string EXECTIME, object userState) {
+            if ((this.GetOrgInfo_JPOperationCompleted == null)) {
+                this.GetOrgInfo_JPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrgInfo_JPOperationCompleted);
+            }
+            this.InvokeAsync("GetOrgInfo_JP", new object[] {
+                        ORGID_LOC,
+                        SERIALNUMBER,
+                        ORDID,
+                        EXECTIME}, this.GetOrgInfo_JPOperationCompleted, userState);
+        }
+        
+        private void OnGetOrgInfo_JPOperationCompleted(object arg) {
+            if ((this.GetOrgInfo_JPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrgInfo_JPCompleted(this, new GetOrgInfo_JPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetOrdInfo() {
+            object[] results = this.Invoke("GetOrdInfo", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrdInfoAsync() {
+            this.GetOrdInfoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetOrdInfoAsync(object userState) {
+            if ((this.GetOrdInfoOperationCompleted == null)) {
+                this.GetOrdInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetOrdInfo", new object[0], this.GetOrdInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetOrdInfoOperationCompleted(object arg) {
+            if ((this.GetOrdInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrdInfoCompleted(this, new GetOrdInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetSTOrdInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetSTOrdInfo() {
+            object[] results = this.Invoke("GetSTOrdInfo", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetSTOrdInfoAsync() {
+            this.GetSTOrdInfoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetSTOrdInfoAsync(object userState) {
+            if ((this.GetSTOrdInfoOperationCompleted == null)) {
+                this.GetSTOrdInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetSTOrdInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetSTOrdInfo", new object[0], this.GetSTOrdInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetSTOrdInfoOperationCompleted(object arg) {
+            if ((this.GetSTOrdInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetSTOrdInfoCompleted(this, new GetSTOrdInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetDrugInfo", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetDrugInfo() {
+            object[] results = this.Invoke("GetDrugInfo", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetDrugInfoAsync() {
+            this.GetDrugInfoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetDrugInfoAsync(object userState) {
+            if ((this.GetDrugInfoOperationCompleted == null)) {
+                this.GetDrugInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDrugInfoOperationCompleted);
+            }
+            this.InvokeAsync("GetDrugInfo", new object[0], this.GetDrugInfoOperationCompleted, userState);
+        }
+        
+        private void OnGetDrugInfoOperationCompleted(object arg) {
+            if ((this.GetDrugInfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetDrugInfoCompleted(this, new GetDrugInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.dlnsoft.com/GetOrdItemObj", RequestNamespace="http://www.dlnsoft.com/", ResponseNamespace="http://www.dlnsoft.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetOrdItemObj(string SubIDs) {
+            object[] results = this.Invoke("GetOrdItemObj", new object[] {
+                        SubIDs});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetOrdItemObjAsync(string SubIDs) {
+            this.GetOrdItemObjAsync(SubIDs, null);
+        }
+        
+        /// <remarks/>
+        public void GetOrdItemObjAsync(string SubIDs, object userState) {
+            if ((this.GetOrdItemObjOperationCompleted == null)) {
+                this.GetOrdItemObjOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrdItemObjOperationCompleted);
+            }
+            this.InvokeAsync("GetOrdItemObj", new object[] {
+                        SubIDs}, this.GetOrdItemObjOperationCompleted, userState);
+        }
+        
+        private void OnGetOrdItemObjOperationCompleted(object arg) {
+            if ((this.GetOrdItemObjCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetOrdItemObjCompleted(this, new GetOrdItemObjCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -5273,916 +5739,6 @@ namespace WindowsFormsApplication1.WebReference {
                 return true;
             }
             return false;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrdsInfoCompletedEventHandler(object sender, GetOrdsInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrdsInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrdsInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrdsInfo_CateCompletedEventHandler(object sender, GetOrdsInfo_CateCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrdsInfo_CateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrdsInfo_CateCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrdItemInfoCompletedEventHandler(object sender, GetOrdItemInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrdItemInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrdItemInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetEMPNameCompletedEventHandler(object sender, GetEMPNameCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetEMPNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetEMPNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetQrCodeCompletedEventHandler(object sender, GetQrCodeCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetQrCodeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetQrCodeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetQrCodeForPathCompletedEventHandler(object sender, GetQrCodeForPathCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetQrCodeForPathCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetQrCodeForPathCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetQrCodeImgageCompletedEventHandler(object sender, GetQrCodeImgageCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetQrCodeImgageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetQrCodeImgageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public byte[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((byte[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetQrCodeIDCompletedEventHandler(object sender, GetQrCodeIDCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetQrCodeIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetQrCodeIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetPatiInfoBaseCompletedEventHandler(object sender, GetPatiInfoBaseCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetPatiInfoBaseCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetPatiInfoBaseCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetPatiInfoBase_OperatorCompletedEventHandler(object sender, GetPatiInfoBase_OperatorCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetPatiInfoBase_OperatorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetPatiInfoBase_OperatorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetPatiInfoBaseByIDCompletedEventHandler(object sender, GetPatiInfoBaseByIDCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetPatiInfoBaseByIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetPatiInfoBaseByIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetEmpImageCompletedEventHandler(object sender, GetEmpImageCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetEmpImageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetEmpImageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrInHospNumCompletedEventHandler(object sender, GetCurrInHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgInHospNumCompletedEventHandler(object sender, GetCurrOrgInHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgInHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgInHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrInHosp_ByDiagCompletedEventHandler(object sender, GetCurrInHosp_ByDiagCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrInHosp_ByDiagCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrInHosp_ByDiagCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrInHosp_ByDiag_ItemCompletedEventHandler(object sender, GetCurrInHosp_ByDiag_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrInHosp_ByDiag_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrInHosp_ByDiag_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOutHospNumCompletedEventHandler(object sender, GetCurrOutHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOutHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOutHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgOutHospNumCompletedEventHandler(object sender, GetCurrOrgOutHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgOutHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgOutHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOutHospNum_ItemCompletedEventHandler(object sender, GetCurrOutHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOutHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOutHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgOutHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgOutHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgOutHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgOutHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrLeaveHospNumCompletedEventHandler(object sender, GetCurrLeaveHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrLeaveHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrLeaveHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgLeaveHospNumCompletedEventHandler(object sender, GetCurrOrgLeaveHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgLeaveHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgLeaveHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrLeaveHospNum_ItemCompletedEventHandler(object sender, GetCurrLeaveHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrLeaveHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrLeaveHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgLeaveHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgLeaveHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgLeaveHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgLeaveHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrDayInHospNumCompletedEventHandler(object sender, GetCurrDayInHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrDayInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrDayInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgDayInHospNumCompletedEventHandler(object sender, GetCurrOrgDayInHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgDayInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgDayInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrDayInHospNum_ItemCompletedEventHandler(object sender, GetCurrDayInHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrDayInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrDayInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgDayInHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgDayInHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgDayInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgDayInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrCriticallyIllInHospNumCompletedEventHandler(object sender, GetCurrCriticallyIllInHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrCriticallyIllInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrCriticallyIllInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgCriticallyIllInHospNumCompletedEventHandler(object sender, GetCurrOrgCriticallyIllInHospNumCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgCriticallyIllInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgCriticallyIllInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrCriticallyIllInHospNum_ItemCompletedEventHandler(object sender, GetCurrCriticallyIllInHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrCriticallyIllInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrCriticallyIllInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetInpatientInfo_Only_ByEmpIDCompletedEventHandler(object sender, GetInpatientInfo_Only_ByEmpIDCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetInpatientInfo_Only_ByEmpIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetInpatientInfo_Only_ByEmpIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
         }
     }
     
@@ -6286,6 +5842,58 @@ namespace WindowsFormsApplication1.WebReference {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void PatientStateCompletedEventHandler(object sender, PatientStateCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PatientStateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PatientStateCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void getORGIDCompletedEventHandler(object sender, getORGIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getORGIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getORGIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -6552,6 +6160,32 @@ namespace WindowsFormsApplication1.WebReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetNurOrders_BOWCompletedEventHandler(object sender, GetNurOrders_BOWCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetNurOrders_BOWCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetNurOrders_BOWCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetNurOrdersTestCompletedEventHandler(object sender, GetNurOrdersTestCompletedEventArgs e);
     
     /// <remarks/>
@@ -6563,6 +6197,32 @@ namespace WindowsFormsApplication1.WebReference {
         private object[] results;
         
         internal GetNurOrdersTestCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetNurOrdersItemDPCompletedEventHandler(object sender, GetNurOrdersItemDPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetNurOrdersItemDPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetNurOrdersItemDPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -6630,6 +6290,58 @@ namespace WindowsFormsApplication1.WebReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void NursingExec_BOWCompletedEventHandler(object sender, NursingExec_BOWCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class NursingExec_BOWCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal NursingExec_BOWCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void NursingExec_TraceCompletedEventHandler(object sender, NursingExec_TraceCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class NursingExec_TraceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal NursingExec_TraceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void NursingExec_EMPIDCompletedEventHandler(object sender, NursingExec_EMPIDCompletedEventArgs e);
     
     /// <remarks/>
@@ -6656,6 +6368,32 @@ namespace WindowsFormsApplication1.WebReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetNurOrders_ZYCompletedEventHandler(object sender, GetNurOrders_ZYCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetNurOrders_ZYCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetNurOrders_ZYCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void NursingExec_ZYCompletedEventHandler(object sender, NursingExec_ZYCompletedEventArgs e);
     
     /// <remarks/>
@@ -6667,6 +6405,110 @@ namespace WindowsFormsApplication1.WebReference {
         private object[] results;
         
         internal NursingExec_ZYCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void NursingExec_AdminCompletedEventHandler(object sender, NursingExec_AdminCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class NursingExec_AdminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal NursingExec_AdminCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void NursingExec_BIW_OrderCompletedEventHandler(object sender, NursingExec_BIW_OrderCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class NursingExec_BIW_OrderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal NursingExec_BIW_OrderCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void NursingExec_BIWCompletedEventHandler(object sender, NursingExec_BIWCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class NursingExec_BIWCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal NursingExec_BIWCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void NursingExec_MeetingCompletedEventHandler(object sender, NursingExec_MeetingCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class NursingExec_MeetingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal NursingExec_MeetingCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -7083,1150 +6925,6 @@ namespace WindowsFormsApplication1.WebReference {
         private object[] results;
         
         internal GetEquipInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetHospInfoCompletedEventHandler(object sender, GetHospInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetHospInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetHospInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrgInfoCompletedEventHandler(object sender, GetOrgInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrgInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrgInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrgBaseInfoCompletedEventHandler(object sender, GetOrgBaseInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrgBaseInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrgBaseInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GETCODEINFOCompletedEventHandler(object sender, GETCODEINFOCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GETCODEINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GETCODEINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetDoctorInfoCompletedEventHandler(object sender, GetDoctorInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetDoctorInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetDoctorInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetResInfoCompletedEventHandler(object sender, GetResInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetResInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetResInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void AddPersonCompletedEventHandler(object sender, AddPersonCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AddPersonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal AddPersonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void CreadCardCompletedEventHandler(object sender, CreadCardCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class CreadCardCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal CreadCardCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void RegCheckCompletedEventHandler(object sender, RegCheckCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegCheckCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegCheckCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void RegDataCompletedEventHandler(object sender, RegDataCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegDataCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void UnRegDataCompletedEventHandler(object sender, UnRegDataCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class UnRegDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal UnRegDataCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrdInfotollCompletedEventHandler(object sender, GetOrdInfotollCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrdInfotollCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrdInfotollCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void SetOrdInftollTwoCompletedEventHandler(object sender, SetOrdInftollTwoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class SetOrdInftollTwoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal SetOrdInftollTwoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrdInftollTwoCompletedEventHandler(object sender, GetOrdInftollTwoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrdInftollTwoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrdInftollTwoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrdInftollTwo_FeeCompletedEventHandler(object sender, GetOrdInftollTwo_FeeCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrdInftollTwo_FeeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrdInftollTwo_FeeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetQueCompletedEventHandler(object sender, GetQueCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetQueCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetQueCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void findAllReportCompletedEventHandler(object sender, findAllReportCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class findAllReportCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal findAllReportCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void findAllReportByPatiIDCompletedEventHandler(object sender, findAllReportByPatiIDCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class findAllReportByPatiIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal findAllReportByPatiIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void findCheckReportCompletedEventHandler(object sender, findCheckReportCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class findCheckReportCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal findCheckReportCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void findCompleteReportCompletedEventHandler(object sender, findCompleteReportCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class findCompleteReportCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal findCompleteReportCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetADayCompletedEventHandler(object sender, GetADayCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetADayCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetADayCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetSubscriptionCompletedEventHandler(object sender, GetSubscriptionCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetSubscriptionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetSubscriptionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void SetDepositCompletedEventHandler(object sender, SetDepositCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class SetDepositCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal SetDepositCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetWindNoCompletedEventHandler(object sender, GetWindNoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetWindNoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetWindNoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetDayFeeItemCompletedEventHandler(object sender, GetDayFeeItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetDayFeeItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetDayFeeItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void MicroPayCompletedEventHandler(object sender, MicroPayCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class MicroPayCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal MicroPayCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void MicroPayQryCompletedEventHandler(object sender, MicroPayQryCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class MicroPayQryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal MicroPayQryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void CreateOrderCompletedEventHandler(object sender, CreateOrderCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class CreateOrderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal CreateOrderCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void ITEMIINFOCompletedEventHandler(object sender, ITEMIINFOCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ITEMIINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ITEMIINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void EMRTYPECompletedEventHandler(object sender, EMRTYPECompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class EMRTYPECompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal EMRTYPECompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void TEMINFOCompletedEventHandler(object sender, TEMINFOCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class TEMINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal TEMINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void PATIINFOCompletedEventHandler(object sender, PATIINFOCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class PATIINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal PATIINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void DEPARTMENTSCompletedEventHandler(object sender, DEPARTMENTSCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class DEPARTMENTSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal DEPARTMENTSCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void DOCTORCompletedEventHandler(object sender, DOCTORCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class DOCTORCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal DOCTORCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void OPERITEMCompletedEventHandler(object sender, OPERITEMCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class OPERITEMCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal OPERITEMCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void OPERDICTCompletedEventHandler(object sender, OPERDICTCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class OPERDICTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal OPERDICTCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void ORGINFOCompletedEventHandler(object sender, ORGINFOCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ORGINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ORGINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void ORDDERINFOCompletedEventHandler(object sender, ORDDERINFOCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ORDDERINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ORDDERINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrds_JPCompletedEventHandler(object sender, GetOrds_JPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrds_JPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrds_JPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrgInfo_JPCompletedEventHandler(object sender, GetOrgInfo_JPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrgInfo_JPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrgInfo_JPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrdInfoCompletedEventHandler(object sender, GetOrdInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrdInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrdInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetSTOrdInfoCompletedEventHandler(object sender, GetSTOrdInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetSTOrdInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetSTOrdInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetDrugInfoCompletedEventHandler(object sender, GetDrugInfoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetDrugInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetDrugInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void GetOrdItemObjCompletedEventHandler(object sender, GetOrdItemObjCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetOrdItemObjCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetOrdItemObjCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -8981,6 +7679,2112 @@ namespace WindowsFormsApplication1.WebReference {
         private object[] results;
         
         internal GetInpatientInfo_OnlyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrdsInfoCompletedEventHandler(object sender, GetOrdsInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrdsInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrdsInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrdsInfo_CateCompletedEventHandler(object sender, GetOrdsInfo_CateCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrdsInfo_CateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrdsInfo_CateCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrdItemInfoCompletedEventHandler(object sender, GetOrdItemInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrdItemInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrdItemInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetEMPNameCompletedEventHandler(object sender, GetEMPNameCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetEMPNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetEMPNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetQrCodeCompletedEventHandler(object sender, GetQrCodeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetQrCodeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetQrCodeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetQrCodeForPathCompletedEventHandler(object sender, GetQrCodeForPathCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetQrCodeForPathCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetQrCodeForPathCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetQrCodeImgageCompletedEventHandler(object sender, GetQrCodeImgageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetQrCodeImgageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetQrCodeImgageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public byte[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((byte[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetQrCodeIDCompletedEventHandler(object sender, GetQrCodeIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetQrCodeIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetQrCodeIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetPatiInfoBaseCompletedEventHandler(object sender, GetPatiInfoBaseCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetPatiInfoBaseCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetPatiInfoBaseCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetPatiInfoBase_BOWCompletedEventHandler(object sender, GetPatiInfoBase_BOWCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetPatiInfoBase_BOWCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetPatiInfoBase_BOWCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetPatiInfoBase_OperatorCompletedEventHandler(object sender, GetPatiInfoBase_OperatorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetPatiInfoBase_OperatorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetPatiInfoBase_OperatorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetPatiInfoBaseByIDCompletedEventHandler(object sender, GetPatiInfoBaseByIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetPatiInfoBaseByIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetPatiInfoBaseByIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetEmpImageCompletedEventHandler(object sender, GetEmpImageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetEmpImageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetEmpImageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrInHospNumCompletedEventHandler(object sender, GetCurrInHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgInHospNumCompletedEventHandler(object sender, GetCurrOrgInHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgInHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgInHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrInHosp_ByDiagCompletedEventHandler(object sender, GetCurrInHosp_ByDiagCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrInHosp_ByDiagCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrInHosp_ByDiagCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrInHosp_ByDiag_ItemCompletedEventHandler(object sender, GetCurrInHosp_ByDiag_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrInHosp_ByDiag_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrInHosp_ByDiag_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOutHospNumCompletedEventHandler(object sender, GetCurrOutHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOutHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOutHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgOutHospNumCompletedEventHandler(object sender, GetCurrOrgOutHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgOutHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgOutHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOutHospNum_ItemCompletedEventHandler(object sender, GetCurrOutHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOutHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOutHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgOutHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgOutHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgOutHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgOutHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrLeaveHospNumCompletedEventHandler(object sender, GetCurrLeaveHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrLeaveHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrLeaveHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgLeaveHospNumCompletedEventHandler(object sender, GetCurrOrgLeaveHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgLeaveHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgLeaveHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrLeaveHospNum_ItemCompletedEventHandler(object sender, GetCurrLeaveHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrLeaveHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrLeaveHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgLeaveHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgLeaveHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgLeaveHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgLeaveHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrDayInHospNumCompletedEventHandler(object sender, GetCurrDayInHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrDayInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrDayInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgDayInHospNumCompletedEventHandler(object sender, GetCurrOrgDayInHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgDayInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgDayInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrDayInHospNum_ItemCompletedEventHandler(object sender, GetCurrDayInHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrDayInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrDayInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgDayInHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgDayInHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgDayInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgDayInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrCriticallyIllInHospNumCompletedEventHandler(object sender, GetCurrCriticallyIllInHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrCriticallyIllInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrCriticallyIllInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgCriticallyIllInHospNumCompletedEventHandler(object sender, GetCurrOrgCriticallyIllInHospNumCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgCriticallyIllInHospNumCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgCriticallyIllInHospNumCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrCriticallyIllInHospNum_ItemCompletedEventHandler(object sender, GetCurrCriticallyIllInHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrCriticallyIllInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrCriticallyIllInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgCriticallyIllInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventHandler(object sender, GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCurrOrgOnDayCriticallyIllInHospNum_ItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetInpatientInfo_Only_ByEmpIDCompletedEventHandler(object sender, GetInpatientInfo_Only_ByEmpIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetInpatientInfo_Only_ByEmpIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetInpatientInfo_Only_ByEmpIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetHospInfoCompletedEventHandler(object sender, GetHospInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetHospInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetHospInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrgInfoCompletedEventHandler(object sender, GetOrgInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrgInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrgInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrgBaseInfoCompletedEventHandler(object sender, GetOrgBaseInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrgBaseInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrgBaseInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GETCODEINFOCompletedEventHandler(object sender, GETCODEINFOCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GETCODEINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GETCODEINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetDoctorInfoCompletedEventHandler(object sender, GetDoctorInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetDoctorInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetDoctorInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetResInfoCompletedEventHandler(object sender, GetResInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetResInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetResInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void AddPersonCompletedEventHandler(object sender, AddPersonCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AddPersonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AddPersonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void CreadCardCompletedEventHandler(object sender, CreadCardCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CreadCardCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CreadCardCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void RegCheckCompletedEventHandler(object sender, RegCheckCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegCheckCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegCheckCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void RegDataCompletedEventHandler(object sender, RegDataCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegDataCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void UnRegDataCompletedEventHandler(object sender, UnRegDataCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UnRegDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UnRegDataCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrdInfotollCompletedEventHandler(object sender, GetOrdInfotollCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrdInfotollCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrdInfotollCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void SetOrdInftollTwoCompletedEventHandler(object sender, SetOrdInftollTwoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SetOrdInftollTwoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SetOrdInftollTwoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrdInftollTwoCompletedEventHandler(object sender, GetOrdInftollTwoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrdInftollTwoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrdInftollTwoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrdInftollTwo_FeeCompletedEventHandler(object sender, GetOrdInftollTwo_FeeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrdInftollTwo_FeeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrdInftollTwo_FeeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetQueCompletedEventHandler(object sender, GetQueCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetQueCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetQueCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void findAllReportCompletedEventHandler(object sender, findAllReportCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class findAllReportCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal findAllReportCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void findAllReportByPatiIDCompletedEventHandler(object sender, findAllReportByPatiIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class findAllReportByPatiIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal findAllReportByPatiIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void findCheckReportCompletedEventHandler(object sender, findCheckReportCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class findCheckReportCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal findCheckReportCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void findCompleteReportCompletedEventHandler(object sender, findCompleteReportCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class findCompleteReportCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal findCompleteReportCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetADayCompletedEventHandler(object sender, GetADayCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetADayCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetADayCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetSubscriptionCompletedEventHandler(object sender, GetSubscriptionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetSubscriptionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetSubscriptionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void SetDepositCompletedEventHandler(object sender, SetDepositCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SetDepositCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SetDepositCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetWindNoCompletedEventHandler(object sender, GetWindNoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetWindNoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetWindNoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetDayFeeItemCompletedEventHandler(object sender, GetDayFeeItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetDayFeeItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetDayFeeItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void MicroPayCompletedEventHandler(object sender, MicroPayCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class MicroPayCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal MicroPayCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void MicroPayQryCompletedEventHandler(object sender, MicroPayQryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class MicroPayQryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal MicroPayQryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void MicroPayCancelCompletedEventHandler(object sender, MicroPayCancelCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class MicroPayCancelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal MicroPayCancelCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void CreateOrderCompletedEventHandler(object sender, CreateOrderCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CreateOrderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CreateOrderCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void ITEMIINFOCompletedEventHandler(object sender, ITEMIINFOCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ITEMIINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ITEMIINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void EMRTYPECompletedEventHandler(object sender, EMRTYPECompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EMRTYPECompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EMRTYPECompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void TEMINFOCompletedEventHandler(object sender, TEMINFOCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class TEMINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal TEMINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void PATIINFOCompletedEventHandler(object sender, PATIINFOCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PATIINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PATIINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void DEPARTMENTSCompletedEventHandler(object sender, DEPARTMENTSCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DEPARTMENTSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DEPARTMENTSCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void DOCTORCompletedEventHandler(object sender, DOCTORCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DOCTORCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DOCTORCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void OPERITEMCompletedEventHandler(object sender, OPERITEMCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class OPERITEMCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal OPERITEMCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void OPERDICTCompletedEventHandler(object sender, OPERDICTCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class OPERDICTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal OPERDICTCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void ORGINFOCompletedEventHandler(object sender, ORGINFOCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ORGINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ORGINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void ORDDERINFOCompletedEventHandler(object sender, ORDDERINFOCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ORDDERINFOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ORDDERINFOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrds_JPCompletedEventHandler(object sender, GetOrds_JPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrds_JPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrds_JPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrgInfo_JPCompletedEventHandler(object sender, GetOrgInfo_JPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrgInfo_JPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrgInfo_JPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrdInfoCompletedEventHandler(object sender, GetOrdInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrdInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrdInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetSTOrdInfoCompletedEventHandler(object sender, GetSTOrdInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetSTOrdInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetSTOrdInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetDrugInfoCompletedEventHandler(object sender, GetDrugInfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetDrugInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetDrugInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetOrdItemObjCompletedEventHandler(object sender, GetOrdItemObjCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetOrdItemObjCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetOrdItemObjCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
