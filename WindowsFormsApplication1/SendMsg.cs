@@ -91,29 +91,34 @@ namespace WindowsFormsApplication1
                         {
                             if (hasValue && !String.IsNullOrEmpty(report_phone))
                             {
-                                string[] tel = new string[2];
-                                tel[0] = report_phone; tel[1] = "15366973170";
-                                for (int j = 0; j < tel.Length; j++)
+                                if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6))
                                 {
-                                    report_phone = tel[j];
-                                    //发送短信
-                                    bool flag = bc.sendMsg(report_phone, messageContent);
-                                    if (flag)
+                                    string[] tel = new string[2];
+                                    tel[0] = report_phone; tel[1] = "15366973170";
+                                    for (int j = 0; j < tel.Length; j++)
                                     {
-                                        bool s3 = bll.ExistMinute(report_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), _add_time);
-                                        if (s3 == true)
-                                        {
-                                            Model.BIF01022 model3 = new Model.BIF01022();
-                                            model3.Patient_id = equipmentname;
-                                            model3.Item_name = TemperatureValue;
-                                            model3.Current_result = HumidityValue;
-                                            model3.EmpMobileNum = Phone;
-                                            model3.State = 6;
-                                            bll2.Update1(model3);
-                                        }
+                                        report_phone = tel[j];
+                                        //发送短信
 
+                                        bool flag = bc.sendMsg(report_phone, messageContent);
+                                        if (flag)
+                                        {
+                                            bool s3 = bll.ExistMinute(report_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), _add_time);
+                                            if (s3 == true)
+                                            {
+                                                Model.BIF01022 model3 = new Model.BIF01022();
+                                                model3.Patient_id = equipmentname;
+                                                model3.Item_name = TemperatureValue;
+                                                model3.Current_result = HumidityValue;
+                                                model3.EmpMobileNum = Phone;
+                                                model3.State = 6;
+                                                bll2.Update1(model3);
+                                            }
+
+                                        }
                                     }
                                 }
+                                    
                             }
                             if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6))//不存在或者状态为0 发送
                             {
@@ -137,6 +142,7 @@ namespace WindowsFormsApplication1
         #region LIS危急值
         public static int SendLis()
         {
+            DbHelperSQLP db = new DbHelperSQLP(PubConstant.GetConnectionString("ConnectionString2"));
             Bll.Sms_outbox bll = new Bll.Sms_outbox();
             Bll.BIF01022 bll2 = new Bll.BIF01022();
             BaseClass bc = new BaseClass();
@@ -185,14 +191,23 @@ namespace WindowsFormsApplication1
                                     model.EmpMobileNum = phone;
                                     model.State = 1;
                                     bll2.Update(model);
+                                    //更新LIS回复时间
+                                    string receiveTime = bll.getReceivetime(phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                    string sql = "update TB_REPORTLIMIT set ReceiveTime='" + receiveTime + "' where patient_id='" + patient_id + "' and patient_name='" + patient + "' and item_name='" + Item + "' and current_result='" + score + "'";
+                                    db.ExecuteSql(sql);
                                 }
                                 else
                                 {
-                                    //发送短信
-                                    bool flag = bc.sendMsg(phone, messageContent);
-                                    if (flag)
+                                    int rows = bc.getRecordCount(phone, Item, score, patient_id, 0);//获取已经发送没回复的行数
+                                    if (!bll2.Exists(phone, Item, score, patient_id, 1)&&rows<4)//不存在或者状态为0 发送
                                     {
-                                        bc.writeLog(patient_id, patient, Item, score, phone, doctor, 0);
+                                        //发送短信
+                                        bool flag = bc.sendMsg(phone, messageContent);
+                                        if (flag)
+                                        {
+                                            bc.writeLog(patient_id, patient, Item, score, phone, doctor, 0);
+                                        }
+
                                     }
 
                                 }
@@ -200,7 +215,8 @@ namespace WindowsFormsApplication1
                             else
                             {
 
-                                if (!bll2.Exists(phone, Item, score, patient_id, 1))//不存在或者状态为0 发送
+                                int rows = bc.getRecordCount(phone, Item, score, patient_id, 0);//获取已经发送没回复的行数
+                                if (!bll2.Exists(phone, Item, score, patient_id, 1) && rows < 4)//不存在或者状态为0 发送
                                 {
                                     //发送短信
                                     bool flag = bc.sendMsg(phone, messageContent);
@@ -227,52 +243,52 @@ namespace WindowsFormsApplication1
                             {
                                 string nowTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                                 DateTime beginTime = Convert.ToDateTime(nowTime).AddMinutes(-10);
-                                bool s1 = bll.ExistMinute(phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                bool s1 = bll.ExistMinute(tel[0], beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                bool s2 = bll.ExistMinute(tel[1], beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
                                 bool hasValue = bll2.Exists(tel[0], Item, score, patient_id, 0);
-                                if (s1 == true)
+                                if (s1 == true|| s2 == true)
                                 {
                                     if (hasValue)//存在
                                     {
-                                        bool s3 = bll.ExistMinute(phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
-                                        if (s3 == true)
-                                        {
-                                            Model.BIF01022 model = new Model.BIF01022();
-                                            model.Patient_id = patient_id;
-                                            model.Item_name = Item;
-                                            model.Current_result = score;
-                                            model.EmpMobileNum = tel[0];
-                                            model.State = 1;
-                                            bll2.Update(model);
-                                        }
-
+                                        Model.BIF01022 model = new Model.BIF01022();
+                                        model.Patient_id = patient_id;
+                                        model.Item_name = Item;
+                                        model.Current_result = score;
+                                        model.EmpMobileNum = tel[0];
+                                        model.State = 1;
+                                        bll2.Update(model);
+                                        //更新LIS回复时间
+                                        string receiveTime = bll.getReceivetime(phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                        string sql = "update TB_REPORTLIMIT set ReceiveTime='"+receiveTime+"' where patient_id='"+patient_id+"' and patient_name='"+patient+"' and item_name='"+Item+"' and current_result='"+score+"'";
+                                        db.ExecuteSql(sql);
                                     }
                                     else
                                     {
-                                        //发送短信
-                                        bool flag = bc.sendMsg(phone, messageContent);
-                                        if (flag)
+                                        int rows = bc.getRecordCount(tel[0], Item, score, patient_id, 0);//获取已经发送没回复的行数
+                                        if (!bll2.Exists(tel[0], Item, score, patient_id, 1)&&rows<7)//不存在或者状态为0 发送
                                         {
-                                            if (j == 0)
+                                            bool flag = bc.sendMsg(phone, messageContent); //发送短信
+                                            if (flag)
                                             {
-                                                bc.writeLog(patient_id, patient, Item, score, phone, doctor, 0);
+                                                bc.writeLog(patient_id, patient, Item, score, tel[0], doctor, 0);
                                             }
                                         }
+                                                                                            
+                                            
 
                                     }
                                 }
                                 else
                                 {
 
-                                    if (!bll2.Exists(tel[0], Item, score, patient_id, 1))//不存在或者状态为0 发送
+                                    int rows = bc.getRecordCount(tel[0], Item, score, patient_id, 0);//获取已经发送没回复的行数
+                                    if (!bll2.Exists(tel[0], Item, score, patient_id, 1) && rows < 7)//不存在或者状态为0 发送
                                     {
                                         //发送短信
                                         bool flag = bc.sendMsg(phone, messageContent);
                                         if (flag)
                                         {
-                                            if (j == 0)
-                                            {
-                                                bc.writeLog(patient_id, patient, Item, score, phone, doctor, 0);
-                                            }
+                                            bc.writeLog(patient_id, patient, Item, score, tel[0], doctor, 0);
                                         }
                                     }
 
@@ -370,14 +386,16 @@ namespace WindowsFormsApplication1
                                         }
                                         else
                                         {
-                                            model.Update_time = bll.getReceivetime(inspect_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                            string receiveTime = bll.getReceivetime(inspect_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                            model.Update_time = receiveTime;
                                             bll2.Update2(model);
-                                            string sql2 = "update BIF01021 set ReceiveTime ='" + model.Update_time + "' where Patient_id='" + patientID + "'";
+                                            string sql2 = "update BIF01021 set ReceiveTime ='" + receiveTime + "' where patientID='" + patientID + "'";
                                             DbHelperSQL.ExecuteSql(sql2);
                                         }
 
                                     }
-                                    if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1))//不存在或者状态为0 发送
+                                    int rows = bc.getRecordCount(inspect_phone, inspect, "", patientID, 0);//获取已经发送没回复的行数
+                                    if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1)&&rows<4)//不存在或者状态为0 发送
                                     {
                                         //发送短信
                                         bool flag = bc.sendMsg(inspect_phone, messageContent);
@@ -389,7 +407,8 @@ namespace WindowsFormsApplication1
                                 }
                                 else
                                 {
-                                    if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1))//不存在或者状态为0 发送
+                                    int rows = bc.getRecordCount(inspect_phone, inspect, "", patientID, 0);//获取已经发送没回复的行数
+                                    if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1) && rows < 4)//不存在或者状态为0 发送
                                     {
                                         //发送短信
                                         bool flag = bc.sendMsg(inspect_phone, messageContent);
@@ -432,14 +451,16 @@ namespace WindowsFormsApplication1
                                     }
                                     else
                                     {
-                                        model.Update_time = bll.getReceivetime(inspect_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                        string receiveTime= bll.getReceivetime(inspect_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                        model.Update_time = receiveTime;
                                         bll2.Update2(model);
-                                        string sql2 = "update BIF01021 set ReceiveTime ='" + model.Update_time + "' where Patient_id='" + patientID + "'";
+                                        string sql2 = "update BIF01021 set ReceiveTime ='" + receiveTime + "' where patientID='" + patientID + "'";
                                         DbHelperSQL.ExecuteSql(sql2);
                                     }
 
                                 }
-                                if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1))//不存在或者状态为0 发送
+                                int rows = bc.getRecordCount(inspect_phone, inspect, "", patientID, 0);//获取已经发送没回复的行数
+                                if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1) && rows < 7)//不存在或者状态为0 发送
                                 {
                                     string[] tel = new string[2];
                                     tel[0] = inspect_phone; tel[1] = "17851839909";
@@ -456,8 +477,10 @@ namespace WindowsFormsApplication1
                             }
                             else
                             {
-                                if (hasValue && !String.IsNullOrEmpty(report_phone))//状态为0 发送给报告医生
+                                int rows = bc.getRecordCount(inspect_phone, inspect, "", patientID, 0);//获取已经发送没回复的行数
+                                if (hasValue && !String.IsNullOrEmpty(report_phone) && rows < 7)//状态为0 发送给报告医生
                                 {
+                                    
                                     //发送短信
                                     bool flag = bc.sendMsg(report_phone, "5272718510009|" + report_Name + "|" + inspect_Doc);
                                     if (flag)
@@ -475,14 +498,20 @@ namespace WindowsFormsApplication1
                                                 model3.Current_result = "";
                                                 model3.EmpMobileNum = inspect_phone;
                                                 model3.State = 1;
-                                                bll2.Update(model3);
+                                                if (bll2.Update(model3))
+                                                {
+                                                    string receiveTime = bll.getReceivetime(report_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                                    string sql2 = "update BIF01021 set ReceiveTime ='" + receiveTime + "' where patientID='" + patientID + "'";
+                                                    DbHelperSQL.ExecuteSql(sql2);
+                                                }
+                                                
                                             }
 
                                         }
 
                                     }
                                 }
-                                if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1))//不存在或者状态为0 发送
+                                if (!bll2.Exists(inspect_phone, inspect, "", patientID, 1) && rows < 7)//不存在或者状态为0 发送
                                 {
                                     string[] tel = new string[2];
                                     tel[0] = inspect_phone; tel[1] = "17851839909";

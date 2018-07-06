@@ -208,10 +208,10 @@ namespace WindowsFormsApplication1
             //    label1.Text = "暂无数据";
             //}
             //label1.Text = SendMsg.SendJob()+"";
-            label1.Text=SendMsg.SendLis()+"";
+            //label1.Text=SendMsg.SendPACSValue()+"";
             //SendJCI.SendDoor();
             //label1.Text = "OK";
-            //SendMsg.SendJob();
+            SendMsg.SendJob();
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
