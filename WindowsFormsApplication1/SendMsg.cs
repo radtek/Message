@@ -39,8 +39,8 @@ namespace WindowsFormsApplication1
                     equipmentname = dr["equipmentname"].ToString();
                     TemperatureValue = dr["TemperatureValue"].ToString();
                     HumidityValue = dr["HumidityValue"].ToString();
-                    //Phone = dr["Phone"].ToString();
-                    Phone = "15261277153";
+                    Phone = dr["Phone"].ToString();
+                    //Phone = "15261277153";
                     report_phone = dr["Phone2"] + "";
                     EMDID = dr["EMDID"].ToString();
                     NODEIndex = Convert.ToInt32(dr["NODEIndex"].ToString());
@@ -76,7 +76,8 @@ namespace WindowsFormsApplication1
                                 }
 
                             }
-                            if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6))
+                            int rows = bc.getRecordCount1(Phone, TemperatureValue, equipmentname, 5);//获取已经发送没回复的行数
+                            if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6)&&rows<5)
                             {
                                 //发送短信
                                 bool flag =bc.sendMsg(Phone, messageContent);
@@ -89,9 +90,10 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
+                            int rows = bc.getRecordCount1(Phone, TemperatureValue, equipmentname, 5);//获取已经发送没回复的行数
                             if (hasValue && !String.IsNullOrEmpty(report_phone))
                             {
-                                if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6))
+                                if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6) && rows < 5)
                                 {
                                     string[] tel = new string[2];
                                     tel[0] = report_phone; tel[1] = "15366973170";
@@ -120,7 +122,7 @@ namespace WindowsFormsApplication1
                                 }
                                     
                             }
-                            if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6))//不存在或者状态为0 发送
+                            if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6) && rows < 5)//不存在或者状态为0 发送
                             {
                                 //发送短信
                                 bool flag = bc.sendMsg(Phone, messageContent);

@@ -2,3 +2,4 @@ D:\vs\WindowsFormsApplication1\Model\bin\Debug\Model.dll
 D:\vs\WindowsFormsApplication1\Model\bin\Debug\Model.pdb
 D:\vs\WindowsFormsApplication1\Model\obj\Debug\Model.dll
 D:\vs\WindowsFormsApplication1\Model\obj\Debug\Model.pdb
+D:\vs\WindowsFormsApplication1\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
