@@ -10,6 +10,7 @@ using Quartz;
 using Quartz.Impl;
 using Topshelf;
 using Commmon;
+using System.IO;
 
 namespace WindowsFormsApplication1
 {
@@ -18,84 +19,25 @@ namespace WindowsFormsApplication1
 
         public Form2()
         {
-            HostFactory.Run(x =>                                 //1
-            {
-                x.Service<HelloJob>();
-                x.RunAsLocalSystem();                            //6
-
-                x.SetDescription("Sample Topshelf Host");        //7
-                x.SetDisplayName("Stuff");                       //8
-                x.SetServiceName("Stuff");                       //9
-            });
-
-            HostFactory.Run(x =>                                 //1
-            {
-                x.Service<HelloJob2>();
-                x.RunAsLocalSystem();                            //6
-
-                x.SetDescription("Sample2 Topshelf Host");        //7
-                x.SetDisplayName("Stuff2");                       //8
-                x.SetServiceName("Stuff2");                       //9
-            });
-
-            HostFactory.Run(x =>                                 //1
-            {
-                x.Service<HelloJob3>();
-                x.RunAsLocalSystem();                            //6
-
-                x.SetDescription("Sample3 Topshelf Host");        //7
-                x.SetDisplayName("Stuff3");                       //8
-                x.SetServiceName("Stuff3");                       //9
-            });
-            HostFactory.Run(x =>                                 //1
-            {
-                x.Service<JCIJob>();
-                x.RunAsLocalSystem();                            //6
-
-                x.SetDescription("JCIJob Topshelf Host");        //7
-                x.SetDisplayName("JCIJob");                       //8
-                x.SetServiceName("JCIJob");                       //9
-            });
-            HostFactory.Run(x =>                                 //1
-            {
-                x.Service<HelloJob4>();
-                x.RunAsLocalSystem();                            //6
-
-                x.SetDescription("HelloJob4 Topshelf Host");        //7
-                x.SetDisplayName("HelloJob4");                       //8
-                x.SetServiceName("HelloJob4");                       //9
-            });
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.BaseDirectory + "log4net.config"));
             int second = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second"]);
             int second2 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second2"]);
             int second3 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second3"]);
+            int second4 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second4"]);
             //从工厂中获取一个调度器实例化
             IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
+            //scheduler.Start();       //开启调度器
 
-            scheduler.Start();       //开启调度器
-
-            //==========例子1（简单使用）===========
-
-            IJobDetail job1 = JobBuilder.Create<HelloJob>()  //创建一个作业
+            //推送Lis危急值
+            #region 推送Lis危急值
+            IJobDetail job1 = JobBuilder.Create<HelloJob>()
                 .WithIdentity("作业名称", "作业组")
                 .Build();
-            IJobDetail job2 = JobBuilder.Create<HelloJob2>()  //创建一个作业
-                .WithIdentity("作业名称2", "作业组2")
-                .Build();
-            IJobDetail job3 = JobBuilder.Create<HelloJob3>()  //创建一个作业
-                .WithIdentity("作业名称3", "作业组3")
-                .Build();
-            IJobDetail job4 = JobBuilder.Create<JCIJob>()  //创建一个作业
-                .WithIdentity("作业名称4", "作业组4")
-                .Build();
-            IJobDetail jboDoor = JobBuilder.Create<HelloJob4>()  //创建一个作业
-                .WithIdentity("作业名称door", "作业组door")
-                .Build();
-
             ITrigger trigger1 = TriggerBuilder.Create()
                                         .WithIdentity("触发器名称", "触发器组")
                                         .StartNow()                        //现在开始
@@ -103,6 +45,14 @@ namespace WindowsFormsApplication1
                                             .WithIntervalInSeconds(second)
                                             .RepeatForever())              //不间断重复执行
                                         .Build();
+            scheduler.ScheduleJob(job1, trigger1);      //把作业，触发器加入调度器。
+            #endregion
+            
+            //推送冷链
+            #region 推送冷链
+            IJobDetail job2 = JobBuilder.Create<HelloJob2>()  //创建一个作业
+                .WithIdentity("作业名称2", "作业组2")
+                .Build();
             ITrigger trigger2 = TriggerBuilder.Create()
                                         .WithIdentity("触发器名称2", "触发器组2")
                                         .StartNow()
@@ -110,14 +60,29 @@ namespace WindowsFormsApplication1
                                             .WithIntervalInSeconds(second2)
                                             .RepeatForever())
                                         .Build();
-            ITrigger trigger3 = TriggerBuilder.Create()
-                                        .WithIdentity("触发器名称3", "触发器组3")
-                                        .StartNow()
-                                        .WithSimpleSchedule(x => x
-                                            .WithIntervalInSeconds(second3)
-                                            .RepeatForever())
-                                        .Build();
+            scheduler.ScheduleJob(job2, trigger2);
+            #endregion
 
+            //推送pacs-【暂停】
+            #region 推送pacs
+            //IJobDetail job3 = JobBuilder.Create<HelloJob3>()  //创建一个作业
+            //    .WithIdentity("作业名称3", "作业组3")
+            //    .Build();
+            //ITrigger trigger3 = TriggerBuilder.Create()
+            //                            .WithIdentity("触发器名称3", "触发器组3")
+            //                            .StartNow()
+            //                            .WithSimpleSchedule(x => x
+            //                                .WithIntervalInSeconds(second3)
+            //                                .RepeatForever())
+            //                            .Build();
+            //scheduler.ScheduleJob(job3, trigger3);
+            #endregion
+
+            //推送JCI文件
+            #region 推送JCI文件
+            IJobDetail job4 = JobBuilder.Create<JCIJob>()  //创建一个作业
+                .WithIdentity("作业名称4", "作业组4")
+                .Build();
             ITrigger trigger4 = TriggerBuilder.Create()
                                         .WithIdentity("触发器名称4", "触发器组4")
                                         .StartNow()
@@ -125,93 +90,55 @@ namespace WindowsFormsApplication1
                                             .WithIntervalInHours(24)
                                             .RepeatForever())
                                         .Build();
-            ITrigger tgDoor = TriggerBuilder.Create()
-                                        .WithIdentity("触发器名称tgDoor", "触发器组tgDoor")
+            scheduler.ScheduleJob(job4, trigger4);
+            #endregion
+
+            //推送门禁-【暂停】
+            #region 推送门禁
+            //IJobDetail jboDoor = JobBuilder.Create<HelloJob4>()  //创建一个作业
+            //    .WithIdentity("作业名称door", "作业组door")
+            //    .Build();
+            //ITrigger tgDoor = TriggerBuilder.Create()
+            //                            .WithIdentity("触发器名称tgDoor", "触发器组tgDoor")
+            //                            .StartNow()
+            //                            .WithSimpleSchedule(x => x
+            //                                .WithIntervalInSeconds(second4)
+            //                                .RepeatForever())
+            //                            .Build();
+            //scheduler.ScheduleJob(jboDoor, tgDoor);
+            #endregion
+
+            //推送营养会诊
+            #region 推送营养会诊
+            IJobDetail jobMetting = JobBuilder.Create<MettingJob>()  //创建一个作业
+                .WithIdentity("作业名称Metting", "作业组Metting")
+                .Build();
+            ITrigger tgMetting = TriggerBuilder.Create()
+                                        .WithIdentity("触发器名称tgMetting", "触发器组tgMetting")
                                         .StartNow()
                                         .WithSimpleSchedule(x => x
-                                            .WithIntervalInHours(24)
+                                            .WithIntervalInHours(1)
                                             .RepeatForever())
                                         .Build();
+            scheduler.ScheduleJob(jobMetting, tgMetting);
+            #endregion
 
-            scheduler.ScheduleJob(job1, trigger1);      //把作业，触发器加入调度器。
-            scheduler.ScheduleJob(job2, trigger2);
-            scheduler.ScheduleJob(job3, trigger3);
-            scheduler.ScheduleJob(job4, trigger4);
-            scheduler.ScheduleJob(jboDoor, tgDoor);
+            HostFactory.Run(x =>
+            {
+                x.UseLog4Net();
+                x.Service<ServiceRunner>();
+
+                x.SetDescription("推送危急值短信");
+                x.SetDisplayName("Dln短信服务");
+                x.SetServiceName("Dln短信服务");
+
+                x.EnablePauseAndContinue();
+            });
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //DbHelperSQLP db = new DbHelperSQLP(PubConstant.GetConnectionString("ConnectionString2"));
-            //string sql = "select B.EMDID, BuildingName,orgname,equipmentname,TemperatureValue,HumidityValue,Phone,MonitoringTime"
-            //            + " from MonitorITEM A inner"
-            //            + " join EMDMAIN B  on A.EMDID = B.EMDID"
-            //            + " where (TemperatureValue < 2 or TemperatureValue> 8) and MonitoringTime between convert(char(19), DATEADD(hour, -4, GETDATE()), 120) and CONVERT(varchar, GETDATE(), 120) ";
-            //label1.Text= db.GetSingle(sql).ToString();
-            //Bll.Sms_outbox bll = new Bll.Sms_outbox();
-            //Bll.BIF01022 bll2 = new Bll.BIF01022();
-            //DateTime beginTime = Convert.ToDateTime(bll.getSentSms());
-            //DateTime endTime = beginTime.AddMinutes(5); 
-            //bool s = bll.ExistMinute("13951190130", "2018-03-01 17:23:55", "2018-03-01 17:28:55");
-            //if (s == true)
-            //{
-            //    //Model.BIF01022 model = new Model.BIF01022();
-            //    //model.Patient_id = "1";
-            //    //model.Item_name = "3";
-            //    //model.Current_result = "4";
-            //    //model.EmpMobileNum = "13951190130";
-            //    //model.State = 1;
-            //    //if (bll2.Update(model))
-            //    //{
-            //    //    label1.Text = "更新成功";
-            //    //}
-
-            //    string Patient_id = "1";
-            //    string Item_name = "3";
-            //    string Current_result = "4";
-            //    string EmpMobileNum = "13951190130";
-            //    if (bll2.Exists(EmpMobileNum, Item_name, Current_result, Patient_id,1))
-            //    {
-            //        label1.Text = "下次不用发了";
-            //    }
-
-            //}
-            //Model.BIF01022 model = new Model.BIF01022();
-            //model.Patient_id = "12";
-            //model.Patient_name="张三";
-            //model.Item_name = "项目";
-            //model.Current_result = "99";
-            //model.EmpMobileNum = "15261277153";
-            //model.EMPNAME = "医生";
-            //model.State = 0;
-            //model.Add_time = "2018-03-05";
-            //if (bll2.Add(model))
-            //{
-            //    label1.Text = "success";
-            //}
-            //WebReference.Service1 _client = new WebReference.Service1();
-            //DataSet ds_report = _client.GetReport();
-            //if (ds_report != null && ds_report.Tables[0].Rows.Count != 0)
-            //{
-            //    int i = SendMsg.Send();
-            //    if (i > 0)
-            //    {
-            //        label1.Text = i+"条发送成功！";
-            //    }
-            //    else
-            //    {
-            //        label1.Text = "发送失败！";
-            //    }
-            //}
-            //else
-            //{
-            //    label1.Text = "暂无数据";
-            //}
-            //label1.Text = SendMsg.SendJob()+"";
-            //label1.Text=SendMsg.SendPACSValue()+"";
-            //SendJCI.SendDoor();
-            //label1.Text = "OK";
-            SendMsg.SendJob();
+            
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
@@ -219,7 +146,17 @@ namespace WindowsFormsApplication1
             System.Environment.Exit(0);
         }
 
-
-        
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("您确认退出，将不再推送危急值？", "系统提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                e.Cancel = false;
+                System.Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

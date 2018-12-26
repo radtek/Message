@@ -5,6 +5,8 @@ using System.Text;
 using System.Data;
 using Commmon;
 using System.Text.RegularExpressions;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace WindowsFormsApplication1
 {
@@ -13,138 +15,169 @@ namespace WindowsFormsApplication1
         #region 温湿度报警
         public static int SendJob()
         {
-            BaseClass bc = new BaseClass();
-            Bll.Sms_outbox bll = new Bll.Sms_outbox();
-            Bll.BIF01022 bll2 = new Bll.BIF01022();
-            DbHelperSQLP db = new DbHelperSQLP(PubConstant.GetConnectionString("ConnectionString2"));
-            string sql = "select B.EMDID, BuildingName,orgname,equipmentname,TemperatureValue,HumidityValue,Phone,MonitoringTime,NEXTTIME,B.NODEIndex,Phone2"
-                        + " from MonitorITEM A"
-                        + " INNER join EMDMAIN B  on A.EMDID = B.EMDID AND A.NODEIndex = B.NODEIndex"
-                        + " where (TemperatureValue>(select top 1 EMDMAIN.MaxTemperatureValue from EMDMAIN where EMDMAIN.EMDID=B.EMDID) or TemperatureValue<(select top 1 EMDMAIN.MinTemperatureValue from EMDMAIN where EMDMAIN.EMDID=B.EMDID)) "
-                        + " and MonitoringTime between convert(char(19), DATEADD(hour, -1, GETDATE()), 120) and CONVERT(varchar, GETDATE(), 120)";
-            //'2018-04-03 00:00:00' and '2018-04-03 02:59:59'
-            DataSet ds_report = db.Query(sql);
-            int i = 0, NODEIndex = 0;
-            DataTable dt = null;
-            string BuildingName = "", orgname = "", equipmentname = "", TemperatureValue = "", HumidityValue = "", Phone = "", EMDID = "", NEXTTIME = "", report_phone = "";
-            string messageID2 = System.Configuration.ConfigurationManager.AppSettings["MessageID2"].ToString();
-            
-            if (ds_report != null && ds_report.Tables[0].Rows.Count != 0)
+            string timeStr = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string morning = "07:40", morningEnd = "18:00";
+            TimeSpan dayAM = DateTime.Parse(morning).TimeOfDay;
+            TimeSpan dayPM = DateTime.Parse(morningEnd).TimeOfDay;
+            DateTime t1 = Convert.ToDateTime(timeStr);
+            TimeSpan dspNow = t1.TimeOfDay;
+            if (dayAM <= dspNow && dspNow <= dayPM)
             {
-                dt = ds_report.Tables[0];
-                foreach (DataRow dr in dt.Rows)
+                BaseClass bc = new BaseClass();
+                Bll.Sms_outbox bll = new Bll.Sms_outbox();
+                Bll.BIF01022 bll2 = new Bll.BIF01022();
+                DbHelperSQLP db = new DbHelperSQLP(PubConstant.GetConnectionString("ConnectionString2"));
+                string sql = "select B.EMDID, BuildingName,orgname,equipmentname,TemperatureValue,HumidityValue,Phone,MonitoringTime,NEXTTIME,B.NODEIndex,Phone2"
+                            + " from MonitorITEM A"
+                            + " INNER join EMDMAIN B  on A.EMDID = B.EMDID AND A.NODEIndex = B.NODEIndex"
+                            + " where (TemperatureValue>(select top 1 EMDMAIN.MaxTemperatureValue from EMDMAIN where EMDMAIN.EMDID=B.EMDID) or TemperatureValue<(select top 1 EMDMAIN.MinTemperatureValue from EMDMAIN where EMDMAIN.EMDID=B.EMDID)) "
+                            + " and MonitoringTime between convert(char(19), DATEADD(hour, -1, GETDATE()), 120) and CONVERT(varchar, GETDATE(), 120) and TemperatureValue!=0 order by EMDID,MonitoringTime desc";
+                //'2018-04-03 00:00:00' and '2018-04-03 02:59:59'
+                DataSet ds_report = db.Query(sql);
+                int ii = 0, NODEIndex = 0;
+                DataTable dt = null;
+                string BuildingName = "", orgname = "", equipmentname = "", TemperatureValue = "", HumidityValue = "", Phone = "", EMDID = "", NEXTTIME = "", report_phone = "";
+                string messageID2 = System.Configuration.ConfigurationManager.AppSettings["MessageID2"].ToString();
+
+                if (ds_report != null && ds_report.Tables[0].Rows.Count != 0)
                 {
-                    BuildingName = dr["BuildingName"].ToString();
-                    orgname = dr["orgname"].ToString();
-                    equipmentname = dr["equipmentname"].ToString();
-                    TemperatureValue = dr["TemperatureValue"].ToString();
-                    HumidityValue = dr["HumidityValue"].ToString();
-                    Phone = dr["Phone"].ToString();
-                    //Phone = "15261277153";
-                    report_phone = dr["Phone2"] + "";
-                    EMDID = dr["EMDID"].ToString();
-                    NODEIndex = Convert.ToInt32(dr["NODEIndex"].ToString());
-                    NEXTTIME = dr["NEXTTIME"].ToString();
-                    Guid guid = Guid.NewGuid();
-                    string id = guid.ToString();
-                    string _add_time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    if (!string.IsNullOrEmpty(BuildingName) && !string.IsNullOrEmpty(orgname) && !string.IsNullOrEmpty(equipmentname) && !string.IsNullOrEmpty(TemperatureValue) && !string.IsNullOrEmpty(HumidityValue) && !string.IsNullOrEmpty(Phone))
+                    dt = ds_report.Tables[0];
+                    for (int j = 0; j < dt.Rows.Count; j++)
                     {
-                        string messageContent = messageID2 + "|" + BuildingName + "|" + orgname + "|" + equipmentname + "|" + TemperatureValue;
-                        DateTime beginTime = Convert.ToDateTime(_add_time).AddMinutes(-5);
-                        bool s1 = bll.ExistMinute(Phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), _add_time);
-                        bool hasValue = bll2.Exists1(Phone, TemperatureValue, equipmentname, 5);
-                        if (s1 == true)//五分钟之内
+                        BuildingName = dt.Rows[j]["BuildingName"].ToString();
+                        orgname = dt.Rows[j]["orgname"].ToString();
+                        equipmentname = dt.Rows[j]["equipmentname"].ToString();
+                        TemperatureValue = dt.Rows[j]["TemperatureValue"].ToString();
+                        HumidityValue = dt.Rows[j]["HumidityValue"].ToString();
+                        Phone = dt.Rows[j]["Phone"].ToString();
+                        report_phone = dt.Rows[j]["Phone2"] + "";
+                        EMDID = dt.Rows[j]["EMDID"].ToString();
+                        if (j > 0)
                         {
-                            if (hasValue)//存在
+                            if (dt.Rows[j - 1]["EMDID"] != null && dt.Rows[j - 1]["EMDID"].ToString() != ""&& EMDID == dt.Rows[j - 1]["EMDID"].ToString())
                             {
-                                string updateTime = bll2.getUpdate_time1(Phone, TemperatureValue, equipmentname, 5);
-                                Model.BIF01022 model = new Model.BIF01022();
-                                model.Patient_id = equipmentname;
-                                model.Item_name = TemperatureValue;
-                                model.Current_result = HumidityValue;
-                                model.EmpMobileNum = Phone;
-                                model.State = 6;
-                                if (!String.IsNullOrEmpty(updateTime))
-                                {
-                                    bll2.Update1(model);
-                                }
-                                else
-                                {
-                                    model.Update_time = bll.getReceivetime(Phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), _add_time);
-                                    bll2.Update3(model);
-                                }
-
-                            }
-                            int rows = bc.getRecordCount1(Phone, TemperatureValue, equipmentname, 5);//获取已经发送没回复的行数
-                            if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6)&&rows<5)
-                            {
-                                //发送短信
-                                bool flag =bc.sendMsg(Phone, messageContent);
-                                if (flag)
-                                {
-                                    bc.writeLog(equipmentname,"", TemperatureValue, HumidityValue, Phone,"",5);
-                                }
-
+                                continue;
                             }
                         }
-                        else
+                        NODEIndex = Convert.ToInt32(dt.Rows[j]["NODEIndex"].ToString());
+                        NEXTTIME = dt.Rows[j]["NEXTTIME"].ToString();
+                        Guid guid = Guid.NewGuid();
+                        string id = guid.ToString();
+                        string _add_time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        if (!string.IsNullOrEmpty(BuildingName) && !string.IsNullOrEmpty(orgname) && !string.IsNullOrEmpty(equipmentname) && !string.IsNullOrEmpty(TemperatureValue) && !string.IsNullOrEmpty(HumidityValue) && !string.IsNullOrEmpty(Phone))
                         {
-                            int rows = bc.getRecordCount1(Phone, TemperatureValue, equipmentname, 5);//获取已经发送没回复的行数
-                            if (hasValue && !String.IsNullOrEmpty(report_phone))
+                            string messageContent = messageID2 + "|" + BuildingName + "|" + orgname + "|" + equipmentname + "|" + TemperatureValue;
+                            DateTime beginTime = Convert.ToDateTime(_add_time).AddMinutes(-5);
+                            bool s1 = bll.ExistMinute(Phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), _add_time);
+                            bool hasValue = bll2.Exists1(Phone, TemperatureValue, equipmentname, 5);
+                            if (s1 == true)//五分钟之内
                             {
-                                if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6) && rows < 5)
+                                if (hasValue)//存在
                                 {
-                                    string[] tel = new string[2];
-                                    tel[0] = report_phone; tel[1] = "15366973170";
-                                    for (int j = 0; j < tel.Length; j++)
+                                    string updateTime = bll2.getUpdate_time1(Phone, TemperatureValue, equipmentname, 5);
+                                    Model.BIF01022 model = new Model.BIF01022();
+                                    model.Patient_id = equipmentname;
+                                    model.Item_name = TemperatureValue;
+                                    model.Current_result = HumidityValue;
+                                    model.EmpMobileNum = Phone;
+                                    model.State = 6;
+                                    if (!String.IsNullOrEmpty(updateTime))
                                     {
-                                        report_phone = tel[j];
-                                        //发送短信
+                                        bll2.Update1(model);
+                                    }
+                                    else
+                                    {
+                                        model.Update_time = bll.getReceivetime(Phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), _add_time);
+                                        bll2.Update3(model);
+                                    }
 
-                                        bool flag = bc.sendMsg(report_phone, messageContent);
-                                        if (flag)
+                                }
+                                int rows = bc.getRecordCount1(Phone, TemperatureValue, equipmentname, 5);//获取已经发送没回复的行数
+                                if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6) && rows < 2)
+                                {
+                                    //发送短信
+                                    bool flag = bc.sendMsg(Phone, messageContent);
+                                    if (flag)
+                                    {
+                                        bc.writeLog(equipmentname, "", TemperatureValue, HumidityValue, Phone, "", 5);
+                                    }
+
+                                }
+                            }
+                            else
+                            {
+                                int rows = bc.getRecordCount1(Phone, TemperatureValue, equipmentname, 5);//获取已经发送没回复的行数
+                                if (hasValue && !String.IsNullOrEmpty(report_phone))
+                                {
+                                    if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6) && rows < 2)
+                                    {
+                                        string[] tel = new string[2];
+                                        tel[0] = report_phone; tel[1] = "15366973170";
+                                        for (int jj = 0; jj < tel.Length; jj++)
                                         {
-                                            bool s3 = bll.ExistMinute(report_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), _add_time);
-                                            if (s3 == true)
-                                            {
-                                                Model.BIF01022 model3 = new Model.BIF01022();
-                                                model3.Patient_id = equipmentname;
-                                                model3.Item_name = TemperatureValue;
-                                                model3.Current_result = HumidityValue;
-                                                model3.EmpMobileNum = Phone;
-                                                model3.State = 6;
-                                                bll2.Update1(model3);
-                                            }
+                                            report_phone = tel[jj];
+                                            //发送短信
 
+                                            bool flag = bc.sendMsg(report_phone, messageContent);
+                                            if (flag)
+                                            {
+                                                bool s3 = bll.ExistMinute(report_phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), _add_time);
+                                                if (s3 == true)
+                                                {
+                                                    Model.BIF01022 model3 = new Model.BIF01022();
+                                                    model3.Patient_id = equipmentname;
+                                                    model3.Item_name = TemperatureValue;
+                                                    model3.Current_result = HumidityValue;
+                                                    model3.EmpMobileNum = Phone;
+                                                    model3.State = 6;
+                                                    bll2.Update1(model3);
+                                                }
+
+                                            }
                                         }
                                     }
-                                }
-                                    
-                            }
-                            if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6) && rows < 5)//不存在或者状态为0 发送
-                            {
-                                //发送短信
-                                bool flag = bc.sendMsg(Phone, messageContent);
-                                if (flag)
-                                {
-                                    bc.writeLog(equipmentname, "", TemperatureValue, HumidityValue, Phone, "", 5);
-                                }
 
+                                }
+                                if (!bll2.Exists1(Phone, TemperatureValue, equipmentname, 6) && rows < 2)//不存在或者状态为0 发送
+                                {
+                                    //发送短信
+                                    bool flag = bc.sendMsg(Phone, messageContent);
+                                    if (flag)
+                                    {
+                                        bc.writeLog(equipmentname, "", TemperatureValue, HumidityValue, Phone, "", 5);
+                                    }
+
+                                }
                             }
                         }
                     }
+                    //foreach (DataRow dr in dt.Rows)
+                    //{
+                    //    BuildingName = dr["BuildingName"].ToString();
+                    //    orgname = dr["orgname"].ToString();
+                    //    equipmentname = dr["equipmentname"].ToString();
+                    //    TemperatureValue = dr["TemperatureValue"].ToString();
+                    //    HumidityValue = dr["HumidityValue"].ToString();
+                    //    Phone = dr["Phone"].ToString();
+                    //    //Phone = "15261277153";
+                    //    report_phone = dr["Phone2"] + "";
+                    //    EMDID = dr["EMDID"].ToString();
+                    //    NODEIndex = Convert.ToInt32(dr["NODEIndex"].ToString());
+                    //    NEXTTIME = dr["NEXTTIME"].ToString();
+                       
+                    //}//foreach结束
                 }
-            }
 
-            return i;
+                return ii;
+            }
+            return 0;
         }
         #endregion
 
         #region LIS危急值
         public static int SendLis()
         {
-            DbHelperSQLP db = new DbHelperSQLP(PubConstant.GetConnectionString("ConnectionString2"));
+            DbHelperSQLP db = new DbHelperSQLP(PubConstant.GetConnectionString("ConnectionString4"));
             Bll.Sms_outbox bll = new Bll.Sms_outbox();
             Bll.BIF01022 bll2 = new Bll.BIF01022();
             BaseClass bc = new BaseClass();
@@ -152,14 +185,16 @@ namespace WindowsFormsApplication1
             WebReference.Service1 _client = new WebReference.Service1();
             DataTable dt = null;
             DataSet ds_report = _client.GetReport();
-            string patient_id = "", phone = "", doctor = "", patient = "", Item = "", score = "", limit = "", Source_doctor = "";
+            string patient_id = "", phone = "", doctor = "", patient = "", Item = "", score = "", limit = "", Source_doctor = "",birthDay;
             string messageID = System.Configuration.ConfigurationManager.AppSettings["MessageID"].ToString();
             string _add_time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string nowDay = DateTime.Now.ToString("yyyy-MM-dd");
             if (ds_report != null && ds_report.Tables[0].Rows.Count != 0)
             {
                 dt = _client.GetReport().Tables[0];
                 foreach (DataRow dr in dt.Rows)
                 {
+                    birthDay = getBirthDayBOW(dr["Patient_id"]+"");
                     patient_id = dr["Patient_id"].ToString();
                     doctor = dr["Source_doctor"].ToString();
                     string s = dr["Patient_name"].ToString();
@@ -171,7 +206,7 @@ namespace WindowsFormsApplication1
                     string Patient_state = dr["Patient_state"].ToString();
                     string Diagorgid = dr["Diagorgid"] + "";
 
-                    string messageContent = messageID + "|" + doctor + "|" + patient + "|" + Item + "|" + score + "|" + limit;
+                    string messageContent = messageID + "|" + doctor + "|" + patient +" "+ birthDay+ "|" + Item + "|" + score + "|" + limit;
                     if (Patient_state == "BIW")
                     {
                         phone = getPhoneByDiagOrgID(Diagorgid);
@@ -194,9 +229,13 @@ namespace WindowsFormsApplication1
                                     model.State = 1;
                                     bll2.Update(model);
                                     //更新LIS回复时间
-                                    string receiveTime = bll.getReceivetime(phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
-                                    string sql = "update TB_REPORTLIMIT set ReceiveTime='" + receiveTime + "' where patient_id='" + patient_id + "' and patient_name='" + patient + "' and item_name='" + Item + "' and current_result='" + score + "'";
-                                    db.ExecuteSql(sql);
+                                    if (String.IsNullOrEmpty(db.GetSingle("select ReceiveTime from TB_REPORTLIMIT where patient_id='" + patient_id + "' and patient_name='" + patient + "' and item_name='" + Item + "' and current_result='" + score + "' and test_date>='" + nowDay + "'") +""))
+                                    {
+                                        string receiveTime = bll.getReceivetime(phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                        string sql = "update TB_REPORTLIMIT set ReceiveTime='" + receiveTime + "' where patient_id='" + patient_id + "' and patient_name='" + patient + "' and item_name='" + Item + "' and current_result='" + score + "' and test_date>='"+nowDay+"'";
+                                        db.ExecuteSql(sql);
+                                    }
+                                    
                                 }
                                 else
                                 {
@@ -260,9 +299,12 @@ namespace WindowsFormsApplication1
                                         model.State = 1;
                                         bll2.Update(model);
                                         //更新LIS回复时间
-                                        string receiveTime = bll.getReceivetime(phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
-                                        string sql = "update TB_REPORTLIMIT set ReceiveTime='"+receiveTime+"' where patient_id='"+patient_id+"' and patient_name='"+patient+"' and item_name='"+Item+"' and current_result='"+score+"'";
-                                        db.ExecuteSql(sql);
+                                        if (String.IsNullOrEmpty(db.GetSingle("select ReceiveTime from TB_REPORTLIMIT where patient_id='" + patient_id + "' and patient_name='" + patient + "' and item_name='" + Item + "' and current_result='" + score + "' and test_date>='" + nowDay + "'") + ""))
+                                        {
+                                            string receiveTime = bll.getReceivetime(phone, beginTime.ToString("yyyy-MM-dd HH:mm:ss"), nowTime);
+                                            string sql = "update TB_REPORTLIMIT set ReceiveTime='" + receiveTime + "' where patient_id='" + patient_id + "' and patient_name='" + patient + "' and item_name='" + Item + "' and current_result='" + score + "' and test_date>='" + nowDay + "'";
+                                            db.ExecuteSql(sql);
+                                        }
                                     }
                                     else
                                     {
@@ -537,6 +579,58 @@ namespace WindowsFormsApplication1
 
             return i;
         }
+        #endregion
+
+        #region 推送会诊申请
+        public static void SendMetting()
+        {
+            string timeStr = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string morning = "08:00", morningEnd = "18:00";
+            TimeSpan dayAM = DateTime.Parse(morning).TimeOfDay;
+            TimeSpan dayPM = DateTime.Parse(morningEnd).TimeOfDay;
+            DateTime t1 = Convert.ToDateTime(timeStr);
+            TimeSpan dspNow = t1.TimeOfDay;
+            if (dayAM <= dspNow && dspNow <= dayPM)
+            {
+                BaseClass bc = new BaseClass();
+                WebReference.Service1 _client = new WebReference.Service1();
+                DataTable dt = null;
+                DataSet ds_report = _client.GetDoctorMeeting();
+                string condiagorgid = "", phone = "", applydate = "", ConDiagOrgName = "";
+                string messageID = "5272718510015";
+                if (ds_report != null && ds_report.Tables[0].Rows.Count != 0)
+                {
+                    dt = ds_report.Tables[0];
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        condiagorgid = dr["condiagorgid"]+"";
+                        ConDiagOrgName = dr["ConDiagOrgName"] + "";
+                        applydate = !String.IsNullOrEmpty(dr["applydate"] + "") ?Convert.ToDateTime(dr["applydate"]+"").ToString("yyyy-MM-dd HH:mm"): dr["applydate"] + "";
+                        phone = getPushPhone(condiagorgid);
+                        string messageContent = messageID + "|" + ConDiagOrgName + "|" + applydate ;
+                        if (!String.IsNullOrEmpty(phone)&& !String.IsNullOrEmpty(ConDiagOrgName) &&!String.IsNullOrEmpty(applydate))
+                        {
+                            if (condiagorgid == "010101030801")
+                            {
+                                string[] arrayPhone = phone.Split(',');
+                                for (int i = 0; i < arrayPhone.Length; i++)
+                                {
+                                    //发送短信
+                                    bc.sendMsg(arrayPhone[i], messageContent);
+                                }
+                            }
+                            else
+                            {
+                                //发送短信
+                                bc.sendMsg(phone, messageContent);
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
         #endregion
 
         #region LIS危急值暂停使用
@@ -871,6 +965,10 @@ namespace WindowsFormsApplication1
         
         private static string getPhone(string empid)
         {
+            if (empid == "孙杰")
+            {
+                return "13773941276";
+            }
             WebReference.Service1 _client = new WebReference.Service1();
             DataSet ds = _client.GetDoctorPhone(empid);
             if (ds != null && ds.Tables[0].Rows.Count != 0)
@@ -882,6 +980,40 @@ namespace WindowsFormsApplication1
                 }
             }
             return "";
+        }
+
+        //private static string getBirthDay(string empid)
+        //{
+        //    WebReference.Service1 _client = new WebReference.Service1();
+        //    string s = _client.GetPatiInfoByCardID(empid);
+        //    XmlDocument xx = new XmlDocument();
+        //    xx.LoadXml(s);//加载xml
+        //    XmlNodeList xxList = xx.GetElementsByTagName("Nuerse"); //取得节点名为row的XmlNode集合
+        //    foreach (XmlNode xxNode in xxList)
+        //    {
+        //       return xxNode.Attributes["BirthDate"].Value; //col节点name属性值
+        //    }
+        //    return "";
+        //}
+        private static string getBirthDayBOW(string empid)
+        {
+            WebReference.Service1 _client = new WebReference.Service1();
+            string s = _client.GetPatiInfoByCardID(empid);
+            XElement root = XElement.Parse(@"" + s + "");
+            string DDBH = root.Element("Nuerse").Element("BirthDate").Value+"";
+            if (!String.IsNullOrEmpty(DDBH)&&DDBH.Length>10)
+            {
+                return DDBH.Substring(0, 10);
+            }
+            return "";
+        }
+        private static string getBirthDayBIW(string empid)
+        {
+            WebReference.Service1 _client = new WebReference.Service1();
+            string s = _client.GetPatiInfoByInPatiID(empid);
+            XElement root = XElement.Parse(@"" + s + "");
+            string DDBH = root.Element("Nuerse").Element("BirthDate").Value+"";
+            return DDBH;
         }
         private static string getName(string empid)
         {
@@ -907,6 +1039,20 @@ namespace WindowsFormsApplication1
                 foreach (DataRow dr in dt.Rows)
                 {
                     return dr["OrgTell"] + "";
+                }
+            }
+            return "";
+        }
+        private static string getPushPhone(string id)
+        {
+            string sql = "select PushTel from OrgPhone where orgid='" + id + "'";
+            DataSet ds = DbHelperSQL.Query(sql);
+            DataTable dt = ds.Tables[0];
+            if (ds != null && dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    return dr["PushTel"] + "";
                 }
             }
             return "";

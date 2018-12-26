@@ -7,16 +7,19 @@ using System.Windows.Forms;
 using Topshelf;
 using Commmon;
 using System.Data;
+using log4net;
+using Quartz.Impl;
 
 namespace WindowsFormsApplication1
 {
-    public class HelloJob : IJob, ServiceControl
+    public class HelloJob : IJob
     {
+        //private readonly ILog _logger = LogManager.GetLogger(typeof(HelloJob));
+        //_logger.InfoFormat("HelloJob测试");
         public void Execute(IJobExecutionContext context)
         {
-            //MessageBox.Show("dffff");
 
-            //SendMsg.Send();
+            //MessageBox.Show("HelloJob");
             try
             {
                 SendMsg.SendLis();
@@ -26,20 +29,7 @@ namespace WindowsFormsApplication1
 
                 throw;
             }
-            
 
-        }
-
-
-
-        public bool Start(HostControl hostControl)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Stop(HostControl hostControl)
-        {
-            throw new NotImplementedException();
         }
     }
 }

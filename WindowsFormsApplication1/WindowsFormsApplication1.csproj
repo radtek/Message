@@ -95,9 +95,8 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="HelloJob4.cs" />
+    <Compile Include="MettingJob.cs" />
     <Compile Include="JCIJob.cs" />
-    <Compile Include="HelloJob3.cs" />
     <Compile Include="HelloJob2.cs" />
     <Compile Include="HelloJob.cs" />
     <Compile Include="Program.cs" />
@@ -109,6 +108,7 @@
     </Compile>
     <Compile Include="SendJCI.cs" />
     <Compile Include="SendMsg.cs" />
+    <Compile Include="ServiceRunner.cs" />
     <Compile Include="Web References\WebReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,6 +123,9 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,6 +133,9 @@
     <None Include="quartz.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WebReference\OrderDinerModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WebReference\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
