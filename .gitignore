@@ -1,4 +1,3 @@
 
-*.config
-*.cs
-WindowsFormsApplication1/SendMsg.cs
+.vs/config/applicationhost.config
+.vs/WindowsFormsApplication1/v14/.suo
