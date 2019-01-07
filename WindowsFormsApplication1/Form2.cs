@@ -47,7 +47,7 @@ namespace WindowsFormsApplication1
                                         .Build();
             scheduler.ScheduleJob(job1, trigger1);      //把作业，触发器加入调度器。
             #endregion
-            
+
             //推送冷链
             #region 推送冷链
             IJobDetail job2 = JobBuilder.Create<HelloJob2>()  //创建一个作业
@@ -83,12 +83,16 @@ namespace WindowsFormsApplication1
             IJobDetail job4 = JobBuilder.Create<JCIJob>()  //创建一个作业
                 .WithIdentity("作业名称4", "作业组4")
                 .Build();
+            //ITrigger trigger4 = TriggerBuilder.Create()
+            //                            .WithIdentity("触发器名称4", "触发器组4")
+            //                            .StartNow()
+            //                            .WithSimpleSchedule(x => x
+            //                                .WithIntervalInHours(24)
+            //                                .RepeatForever())
+            //                            .Build();
             ITrigger trigger4 = TriggerBuilder.Create()
                                         .WithIdentity("触发器名称4", "触发器组4")
-                                        .StartNow()
-                                        .WithSimpleSchedule(x => x
-                                            .WithIntervalInHours(24)
-                                            .RepeatForever())
+                                        .WithCronSchedule("0 15 8 * * ?")
                                         .Build();
             scheduler.ScheduleJob(job4, trigger4);
             #endregion

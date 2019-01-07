@@ -5,3 +5,10 @@
 
 bin
 debug
+WindowsFormsApplication1/obj/x86/Debug/WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+WindowsFormsApplication1/obj/x86/Debug/WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+WindowsFormsApplication1/obj/x86/Debug/WindowsFormsApplication1.exe
+*.pdb
+*.pdb
+*.dll
+*.cache
