@@ -14,3 +14,4 @@ WindowsFormsApplication1/obj/x86/Debug/WindowsFormsApplication1.exe
 *.cache
 .vs/WindowsFormsApplication1/v14/.suo
 .vs/WindowsFormsApplication1/v14/.suo
+*.dll
