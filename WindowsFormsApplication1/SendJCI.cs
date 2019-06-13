@@ -28,8 +28,8 @@ namespace WindowsFormsApplication1
                 {
                     phone = dr["tel"] + "";
                     //phone = "15261277153";
-                    revise_time = Convert.ToDateTime(dr["revise_time"]).ToString("yyyy-MM-dd");
-                    long_time = Convert.ToDateTime(dr["long_time"]).ToString("yyyy-MM-dd");
+                    revise_time = !String.IsNullOrEmpty(dr["revise_time"] + "")?Convert.ToDateTime(dr["revise_time"]).ToString("yyyy-MM-dd"):"";
+                    long_time = !String.IsNullOrEmpty(dr["long_time"] + "")?Convert.ToDateTime(dr["long_time"]).ToString("yyyy-MM-dd"):"";
                     if ((dsNow == revise_time || dsNow == long_time)&&!String.IsNullOrEmpty(phone))
                     {
                         Model.Sms_outbox model = new Model.Sms_outbox();

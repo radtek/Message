@@ -10,6 +10,7 @@ using Quartz;
 using Quartz.Impl;
 using System.Xml;
 using System.Xml.Linq;
+using System.IO;
 
 namespace WindowsFormsApplication1
 {
@@ -36,6 +37,12 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+            //log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.BaseDirectory + "log4net.config"));
+            //log.Info("定时任务启动");
+            //ReserveJob.Send();
+            SmokingJob.Send();
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {

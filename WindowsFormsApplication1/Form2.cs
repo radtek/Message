@@ -24,7 +24,9 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
             log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.BaseDirectory + "log4net.config"));
+            log.Info("---------定时任务启动----------");
             int second = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second"]);
             int second2 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second2"]);
             int second3 = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Second3"]);
@@ -127,6 +129,19 @@ namespace WindowsFormsApplication1
             scheduler.ScheduleJob(jobMetting, tgMetting);
             #endregion
 
+            //推送戒烟
+            #region 推送戒烟
+            IJobDetail smokeJob = JobBuilder.Create<SmokingJob>()  //创建一个作业
+                .WithIdentity("作业名称smoke", "作业组smoke")
+                .Build();
+
+            ITrigger smoketrigger = TriggerBuilder.Create()
+                                        .WithIdentity("触发器名称smoke", "触发器组smoke")
+                                        .WithCronSchedule("0 15 8 ? * TUE")
+                                        .Build();
+            scheduler.ScheduleJob(smokeJob, smoketrigger);
+            #endregion
+
             HostFactory.Run(x =>
             {
                 x.UseLog4Net();
@@ -138,6 +153,7 @@ namespace WindowsFormsApplication1
 
                 x.EnablePauseAndContinue();
             });
+
         }
 
         private void button1_Click(object sender, EventArgs e)

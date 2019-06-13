@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 {
     public class JCIJob : IJob
     {
+        log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public void Execute(IJobExecutionContext context)
         {
             //MessageBox.Show("JCIJob");
@@ -28,11 +29,12 @@ namespace WindowsFormsApplication1
             try
             {
                 SendJCI.Send();
+                ReserveJob.Send();
+                log.Info("JCIJob执行结束");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                log.Info(ex.ToString());
             } 
         }
     }
