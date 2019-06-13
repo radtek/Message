@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
             {
                 SendJCI.Send();
                 ReserveJob.Send();
-                log.Info("JCIJob执行结束");
+                //log.Info("JCIJob执行结束");
             }
             catch (Exception ex)
             {

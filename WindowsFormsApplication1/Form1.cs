@@ -42,7 +42,6 @@ namespace WindowsFormsApplication1
             //log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.BaseDirectory + "log4net.config"));
             //log.Info("定时任务启动");
             //ReserveJob.Send();
-            SmokingJob.Send();
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
